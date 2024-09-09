@@ -10,6 +10,8 @@ public class NumerosFelices {
 	double camtidad = 2.2;
 	double camtidad23 = 23.23;
 	
+	double camtidad234 = 234.234;
+	
 	public static void main(String [] args) {
 	}
 	
