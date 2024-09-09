@@ -8,7 +8,7 @@ public class NumerosFelices {
 	String cad2 = "mundo";
 	
 	double camtidad = 2.2;
-	
+	double camtidad23 = 23.23;
 	
 	public static void main(String [] args) {
 	}
