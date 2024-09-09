@@ -8,6 +8,7 @@ public class NumerosFelices {
 	String cad2 = "mundo";
 	public static void main(String [] args) {
 	}
+	
 	public String cadena() {
 		return cad;
 	}
