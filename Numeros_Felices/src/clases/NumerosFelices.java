@@ -4,6 +4,7 @@ public class NumerosFelices {
 	public static void main(String [] args) {
 		int num = 123;
 		int num2 = 444;
-		int num3 = 555; 
+		int num3 = 555;
+		String cad = "hola";
 	}
 }
