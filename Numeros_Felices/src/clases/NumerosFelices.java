@@ -1,7 +1,10 @@
 package clases;
 
-public class NumerosFelices{
-	public void superior() {
-		return;
-	}
+
+
+
+
+
+public class NumerosFelices {
+
 }
