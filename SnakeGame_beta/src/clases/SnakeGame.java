@@ -9,6 +9,9 @@ import java.awt.event.KeyEvent;
 import java.util.Random;
 
 public class SnakeGame extends JPanel implements ActionListener {
+	
+	//Esto se agrego para verificar la version de la clase serializable
+	private static final long serialVersionUID = 1L;
 
     private final int WIDTH = 300;
     private final int HEIGHT = 300;
