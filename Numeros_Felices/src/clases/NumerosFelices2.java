@@ -4,11 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class NumerosFelices2 {
-    public static void main(String[] args) {
-        NumerosFelices2 prueba1 = new NumerosFelices2();
-        System.out.println(prueba1.esFeliz(22)); // Ejemplo de uso
-        prueba1.sacarTiempo(); // Medir el tiempo para un rango de números
-    }
     
     public boolean esFeliz(int numero) {
         Set<Integer> vistos = new HashSet<>();
@@ -27,6 +22,14 @@ public class NumerosFelices2 {
             numero /= 10;
         }
         return suma;
+    }
+    
+    public void recorrido() {
+    	int num = 1;
+    	while(num < 100) {
+    		esFeliz(num);
+    		num++;
+    	}
     }
 
     /*
