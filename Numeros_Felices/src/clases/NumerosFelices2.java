@@ -1,29 +1,36 @@
 package clases;
-/**
- * Write a description of class Implementacion1 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class NumerosFelices2
-{
-    public boolean esFeliz(int numero){
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class NumerosFelices2 {
+    public static void main(String[] args) {
+        NumerosFelices2 prueba1 = new NumerosFelices2();
+        System.out.println(prueba1.esFeliz(22)); // Ejemplo de uso
+        prueba1.sacarTiempo(); // Medir el tiempo para un rango de números
+    }
+    
+    public boolean esFeliz(int numero) {
+        Set<Integer> vistos = new HashSet<>();
+        while (numero != 1 && !vistos.contains(numero)) {
+            vistos.add(numero);
+            numero = sumaDeCuadradosDeDigitos(numero);
+        }
+        return numero == 1;
+    }
+    
+    private int sumaDeCuadradosDeDigitos(int numero) {
         int suma = 0;
-        while(numero > 0){
-            int aux = numero%10;
-            suma += aux*aux;
+        while (numero > 0) {
+            int digito = numero % 10;
+            suma += digito * digito;
             numero /= 10;
         }
-        if(suma == 1){
-            return true;
-        }else if ((suma == 4 || suma == 0) || numero < 0){
-            return false;
-        }else{
-            return esFeliz(suma);
-        }
+        return suma;
     }
 
-    public void sacarTiempo(){
+    /*
+    public void sacarTiempo() {
         int min = 1;
         int max = 500000;
         long inicio = System.nanoTime();
@@ -32,6 +39,7 @@ public class NumerosFelices2
         }
         long fin = System.nanoTime();
         long tiempoTotal = fin - inicio;
-        System.out.println(tiempoTotal);
+        System.out.println("Tiempo total: " + tiempoTotal + " nanosegundos");
     }
+    */
 }
