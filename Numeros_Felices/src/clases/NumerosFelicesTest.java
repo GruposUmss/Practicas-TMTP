@@ -1,17 +1,38 @@
 package clases;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertTrue; 
-
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import java.time.Duration;
 
 class NumerosFelicesTest {
 	
 	@Test
-	public void testNF() {
-		NumerosFelices2 numFel = new NumerosFelices2();
-		numFel.recorrido();
+	public void testNumFel1_1() {
+		NumerosFelices1 numFel1 = new NumerosFelices1();
 		
+		numFel1.recorrido(100);
 	}
+	
+	
+	@Test
+    public void testNumFel1_2() {
+        NumerosFelices1 numFel1 = new NumerosFelices1();
 
+        long startTime = System.nanoTime(); 
+        numFel1.recorrido(10000000);
+        long endTime = System.nanoTime(); 
+
+        double durationInNanos = (endTime - startTime) / 1_000_000_000.0;
+        System.out.printf("El tiempo de ejecucion del recorrido fue: %.9f segundos%n", durationInNanos);
+    }
+	
+	
+	@Test
+	public void testNumFel1_3() {
+		NumerosFelices1 numFel1 = new NumerosFelices1();
+		
+		assertTimeout(Duration.ofSeconds(5), () -> {
+            numFel1.recorrido(100);
+        });
+	}
 }

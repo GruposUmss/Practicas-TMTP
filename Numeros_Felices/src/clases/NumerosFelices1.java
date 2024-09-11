@@ -1,14 +1,14 @@
 package clases;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
-public class NumerosFelices2 {
-    
-    public boolean esFeliz(int numero) {
-        Set<Integer> vistos = new HashSet<>();
-        while (numero != 1 && !vistos.contains(numero)) {
-            vistos.add(numero);
+public class NumerosFelices1 {
+
+	public boolean esFeliz(int numero) {
+        List<Integer> lista = new ArrayList<>();
+        while (numero != 1 && !lista.contains(numero)) {
+            lista.add(numero);
             numero = sumaDeCuadradosDeDigitos(numero);
         }
         return numero == 1;
@@ -18,7 +18,7 @@ public class NumerosFelices2 {
         int suma = 0;
         while (numero > 0) {
             int digito = numero % 10;
-            suma += digito * digito;
+            suma += Math.pow(digito, 2);
             numero /= 10;
         }
         return suma;
