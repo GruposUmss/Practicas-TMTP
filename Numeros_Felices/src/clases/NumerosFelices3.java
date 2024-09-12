@@ -41,8 +41,11 @@ public class NumerosFelices3 {
     }
 
     public static void main(String[] args) {
-        NumerosFelices3 numerosFelices = new NumerosFelices3();
+        
+    	_NumerosFelices3 numerosFelices = new NumerosFelices3()
         numerosFelices.recorrido(100);
     }
+    
+    
 }
 
