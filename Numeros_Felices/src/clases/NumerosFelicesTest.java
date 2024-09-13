@@ -4,10 +4,7 @@ import org.junit.jupiter.api.Test;
 
 class NumerosFelicesTest {
 	
-	int rango = 100;
-	
-	
-	
+	int rango = 1500000;
 	
 	@Test
     public void testNumFel1() {
