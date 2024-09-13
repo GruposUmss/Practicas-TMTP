@@ -6,6 +6,9 @@ class NumerosFelicesTest {
 	
 	int rango = 100;
 	
+	
+	
+	
 	@Test
     public void testNumFel1() {
         NumerosFelices1 numFel1 = new NumerosFelices1();
