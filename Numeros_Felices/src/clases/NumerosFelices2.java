@@ -9,12 +9,12 @@ public class NumerosFelices2 {
         Set<Integer> vistos = new HashSet<>();
         while (numero != 1 && !vistos.contains(numero)) {
             vistos.add(numero);
-            numero = sumaDeCuadradosDeDigitos(numero);
+            numero = sumaDeCuadrados(numero);
         }
         return numero == 1;
     }
     
-    private int sumaDeCuadradosDeDigitos(int numero) {
+    private int sumaDeCuadrados(int numero) {
         int suma = 0;
         while (numero > 0) {
             int digito = numero % 10;

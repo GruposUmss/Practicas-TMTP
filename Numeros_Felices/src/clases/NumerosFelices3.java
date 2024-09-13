@@ -24,7 +24,7 @@ public class NumerosFelices3 {
         int suma = 0;
         while (numero > 0) {
             int digito = numero % 10;
-            suma += digito * digito;
+            suma += Math.pow(digito, 2);
             numero /= 10;
         }
         return suma;
@@ -32,17 +32,7 @@ public class NumerosFelices3 {
 
     public void recorrido(int rango) {
         for (int num = 1; num <= rango; num++) {
-            if (esFeliz(num)) {
-                System.out.println(num + " es un número feliz.");
-            } else {
-                System.out.println(num + " no es un número feliz.");
-            }
+        	esFeliz(num);
         }
     }
-
-    public static void main(String[] args) {
-        NumerosFelices3 numerosFelices = new NumerosFelices3();
-        numerosFelices.recorrido(100);
-    }
 }
-

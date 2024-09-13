@@ -76,7 +76,7 @@ public class SnakeGame extends JPanel implements ActionListener {
     }
 
     private void drawObjects(Graphics g) {
-        g.setColor(Color.red);
+        g.setColor(Color.blue);
         g.fillRect(appleX, appleY, DOT_SIZE, DOT_SIZE);
 
         for (int z = 0; z < dots; z++) {
