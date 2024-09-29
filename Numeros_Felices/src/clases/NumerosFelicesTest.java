@@ -2,6 +2,9 @@ package clases;
 
 import org.junit.jupiter.api.Test;
 
+//En versiones anteriores de Junit se usaba esta libreria
+//import junit.framework.TestCase;
+
 class NumerosFelicesTest {
 	
 	int rango = 1500000;

@@ -13,8 +13,11 @@ public class SnakeGame extends JPanel implements ActionListener {
 	//Esto se agrego para verificar la version de la clase serializable
 	private static final long serialVersionUID = 1L;
 
+	//Tamaño de la ventana principal del juego
     private final int WIDTH = 300;
     private final int HEIGHT = 300;
+    
+    
     private final int DOT_SIZE = 10;
     private final int ALL_DOTS = 900;
     private final int RAND_POS = 29;
@@ -42,6 +45,7 @@ public class SnakeGame extends JPanel implements ActionListener {
     }
 
     private void initBoard() {
+    	//define la clase del adaptador del teclado, a la clase que lo ejecutara
         addKeyListener(new TAdapter());
         setBackground(Color.black);
         setFocusable(true);
@@ -168,6 +172,8 @@ public class SnakeGame extends JPanel implements ActionListener {
         appleY = ((r * DOT_SIZE));
     }
 
+    
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (inGame) {
@@ -175,7 +181,6 @@ public class SnakeGame extends JPanel implements ActionListener {
             checkCollision();
             move();
         }
-
         repaint();
     }
 
