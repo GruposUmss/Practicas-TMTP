@@ -1,4 +1,5 @@
-package clases;
+package Drivers;
+
 import javax.swing.*;
 
 public class MainSnakeGame {

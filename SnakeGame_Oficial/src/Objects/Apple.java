@@ -1,8 +1,9 @@
-package clases;
+package Objects;
+
 import java.util.Random;
 import java.awt.*;
 
-class Apple {
+public class Apple {
 
 	private final int APPLE_SIZE = 20;
     private int apple_x;

@@ -1,7 +1,8 @@
-package clases;
+package Objects;
+
 import java.awt.*;
 
-class Snake {
+public class Snake {
 
     private final int DOT_SIZE = 20;
     private final int[] x;
