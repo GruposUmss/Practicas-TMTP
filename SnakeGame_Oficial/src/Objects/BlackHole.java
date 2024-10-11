@@ -32,7 +32,7 @@ public class BlackHole {
     }
 
     public void draw(Graphics g) {
-        g.setColor(Color.BLACK); 
+        g.setColor(Color.cyan); 
         g.fillOval(blackHole_x, blackHole_y, BLACK_HOLE_SIZE, BLACK_HOLE_SIZE); 
     }
 }

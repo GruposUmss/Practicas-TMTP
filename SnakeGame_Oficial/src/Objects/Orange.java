@@ -4,7 +4,7 @@ import java.util.Random;
 import java.awt.*;
 import javax.swing.*;
 
-public class orange {
+public class Orange {
     private final int ORANGE_SIZE = 20;
     private int orange_x;
     private int orange_y;
@@ -12,13 +12,25 @@ public class orange {
     private boolean visible;
     private Timer timer;
 
-    public orange(int width, int height) {
+    public Orange(int width, int height) {
         random = new Random();
         visible = true;
         locationOrange(width, height, 0, 0, 0, 0, height, height); 
 
         timer = new Timer(4000, e -> toggleVisibility(width, height, 0, 0, 0, 0, height, height));
         timer.start(); 
+    }
+    
+    public int getX() {
+        return orange_x;
+    }
+
+    public int getY() {
+        return orange_y;
+    }
+
+    public boolean isVisible() {
+        return visible; 
     }
 
     private void toggleVisibility(int width, int height, int blackHoleX, int blackHoleY, int blackHoleSize, int appleX, int appleY, int appleSize) {
@@ -46,18 +58,6 @@ public class orange {
         int distanceY = y1 - y2;
         double distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
         return (int) (distance - (size1 + size2) / 2);
-    }
-
-    public int getX() {
-        return orange_x;
-    }
-
-    public int getY() {
-        return orange_y;
-    }
-
-    public boolean isVisible() {
-        return visible; 
     }
 
     public void draw(Graphics g) {

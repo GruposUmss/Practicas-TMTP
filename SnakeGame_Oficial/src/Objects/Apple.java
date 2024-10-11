@@ -15,8 +15,8 @@ public class Apple {
     }
 
     private void locationApple(int width, int height) {
-        apple_x = random.nextInt(width - APPLE_SIZE);
-        apple_y = random.nextInt(height - APPLE_SIZE);
+        apple_x = random.nextInt((width / APPLE_SIZE) * APPLE_SIZE);
+        apple_y = random.nextInt((height / APPLE_SIZE) * APPLE_SIZE);
     }
 
     public int getX() {
