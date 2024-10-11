@@ -4,8 +4,7 @@ import java.util.Random;
 import java.awt.*;
 
 public class Apple {
-
-	private final int APPLE_SIZE = 20;
+    private final int APPLE_SIZE = 20;
     private int apple_x;
     private int apple_y;
     private Random random;
@@ -28,8 +27,12 @@ public class Apple {
         return apple_y;
     }
 
+    public int getSize() {
+        return APPLE_SIZE;
+    }
+
     public void draw(Graphics g) {
-        g.setColor(Color.red);
+        g.setColor(Color.RED);
         g.fillRect(apple_x, apple_y, APPLE_SIZE, APPLE_SIZE);
     }
 }
