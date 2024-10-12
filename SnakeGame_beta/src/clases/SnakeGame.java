@@ -145,6 +145,7 @@ public class SnakeGame extends JPanel implements ActionListener {
 
         if (y[0] >= HEIGHT) {
             inGame = false;
+           
         }
 
         if (y[0] < 0) {
