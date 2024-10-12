@@ -1,8 +1,10 @@
 package Tests;
 
-import Drivers.SnakeGame;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+
+import Interfaces.SnakeGame;
+
 import org.junit.jupiter.api.BeforeEach;
 import java.awt.*;
 import javax.swing.*;

@@ -42,8 +42,8 @@ public class Orange {
 
     public void locationOrange(int width, int height, int blackHoleX, int blackHoleY, int blackHoleSize, int appleX, int appleY, int appleSize) {
         do {
-            orange_x = random.nextInt(width - ORANGE_SIZE);
-            orange_y = random.nextInt(height - ORANGE_SIZE);
+            orange_x = random.nextInt((width / ORANGE_SIZE) - 1) * ORANGE_SIZE;
+            orange_y = random.nextInt((height / ORANGE_SIZE) - 1) * ORANGE_SIZE;
         } while (isOverlapping(blackHoleX, blackHoleY, blackHoleSize, appleX, appleY, appleSize));
     }
 

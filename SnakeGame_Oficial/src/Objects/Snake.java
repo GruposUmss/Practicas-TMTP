@@ -1,32 +1,32 @@
 package Objects;
 
-import Drivers.MotionSnake;
 import java.awt.*;
 
 public class Snake {
 
+	private Directions direction;
     private final int DOT_SIZE = 20;
     private final int[] pos_x;
     private final int[] pos_y;
     private int dots; 
-    public MotionSnake ms; 
+    
 
     public Snake(int initialSize) {
-    	ms = new MotionSnake();
+    	this.direction = Directions.RIGTH;
         pos_x = new int[900];  
         pos_y = new int[900];
         dots = initialSize;
         initSnake();
     }
     
-    public int getSize() {
-        return dots;
+    public void setDirection(Directions direction) {
+    	this.direction = direction; 
     }
 
     private void initSnake() {
         for (int i = 0; i < dots; i++) {
-            pos_x[i] = 50 - i * 10;
-            pos_y[i] = 50;
+            pos_x[i] = 60 - i * 10;
+            pos_y[i] = 60;
         }
     }
 
@@ -47,20 +47,37 @@ public class Snake {
     		pos_y[i] = pos_y[i - 1];
     	}
     	
-    	if(ms.getRightDirection()) {
+    	if(direction == Directions.RIGTH) {
     		pos_x[0] += DOT_SIZE;
     	}
     	
-    	if(ms.getLeftDirection()) {
+    	if(direction == Directions.LEFT) {
     		pos_x[0] -= DOT_SIZE;
     	}
     	
-    	if(ms.getDownDirection()) {
+    	if(direction == Directions.DOWN) {
     		pos_y[0] += DOT_SIZE;
     	}
     	
-    	if(ms.getUpDirection()) {
+    	if(direction == Directions.UP) {
     		pos_y[0] -= DOT_SIZE;
     	}
     }
+    
+    public boolean movingRigth() {
+    	return direction == Directions.RIGTH;
+    }
+    
+    public boolean movingLeft() {
+    	return direction == Directions.LEFT;
+    }
+    
+    public boolean movingUp() {
+    	return direction == Directions.UP;
+    }
+    
+    public boolean movingDown() {
+    	return direction == Directions.DOWN;
+    }
+    
 }

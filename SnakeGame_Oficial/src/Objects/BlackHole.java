@@ -4,7 +4,7 @@ import java.util.Random;
 import java.awt.*;
 
 public class BlackHole {
-    private final int BLACK_HOLE_SIZE = 30;
+    private final int BLACK_HOLE_SIZE = 60;
     private int blackHole_x;
     private int blackHole_y;
     private Random random;
@@ -15,8 +15,8 @@ public class BlackHole {
     }
 
     private void locationBlackHole(int width, int height) {
-        blackHole_x = random.nextInt(width - BLACK_HOLE_SIZE);
-        blackHole_y = random.nextInt(height - BLACK_HOLE_SIZE);
+        blackHole_x = random.nextInt((width / BLACK_HOLE_SIZE) - 1) * BLACK_HOLE_SIZE;
+        blackHole_y = random.nextInt((height / BLACK_HOLE_SIZE) - 1) * BLACK_HOLE_SIZE;
     }
 
     public int getX() {

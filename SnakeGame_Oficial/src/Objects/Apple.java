@@ -13,12 +13,6 @@ public class Apple {
         random = new Random();
         locationApple(width, height);
     }
-
-    private void locationApple(int width, int height) {
-        apple_x = random.nextInt((width / APPLE_SIZE) * APPLE_SIZE);
-        apple_y = random.nextInt((height / APPLE_SIZE) * APPLE_SIZE);
-    }
-
     public int getX() {
         return apple_x;
     }
@@ -31,6 +25,11 @@ public class Apple {
         return APPLE_SIZE;
     }
 
+    private void locationApple(int width, int height) {
+        apple_x = random.nextInt((width / APPLE_SIZE) - 1) * APPLE_SIZE;
+        apple_y = random.nextInt((height / APPLE_SIZE) - 1) * APPLE_SIZE;
+    }
+    
     public void draw(Graphics g) {
         g.setColor(Color.RED);
         g.fillRect(apple_x, apple_y, APPLE_SIZE, APPLE_SIZE);

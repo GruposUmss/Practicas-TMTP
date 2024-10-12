@@ -1,6 +1,8 @@
-package Drivers;
+package Tests;
 
 import javax.swing.JFrame;
+
+import Interfaces.SnakeGame;
 
 public class MainGame {
 	public static void main(String [] args) {
@@ -11,6 +13,5 @@ public class MainGame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-		
 	}
 }
