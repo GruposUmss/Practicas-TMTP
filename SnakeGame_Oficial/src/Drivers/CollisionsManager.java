@@ -2,7 +2,6 @@ package Drivers;
 
 import Objects.*;
 import Interfaces.SnakeGame;
-import Drivers.PositionManager;
 
 public class CollisionsManager {
 	private Snake snake;

@@ -18,21 +18,52 @@ public class GameEngine implements ActionListener {
 	
 	private Timer timer;
 	
+	
 	private final int DELAY = 90;
 	private boolean inGame = true;
 	
-	public GameEngine(Snake snake, Apple apple, Orange orange, BlackHole blackHole,PositionManager positionManager, SnakeGame snakeGame) {
-		this.snake = snake;
-		this.apple = apple;
-		this.orange = orange;
-		this.blackHole = blackHole;
+	public GameEngine(SnakeGame snakeGame) {
+		this.positionManager = new PositionManager();
 		this.snakeGame = snakeGame;
-		this.positionManager = positionManager;
+        this.snake = new Snake(5); 
+        this.apple = new Apple(snakeGame.getWidth(), snakeGame.getHeight(), positionManager); 
+        this.blackHole = new BlackHole(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
+        this.orange = new Orange(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
+        orange.loadOrange();
+        
 		this.collision = new CollisionsManager(snake, apple, orange, blackHole, snakeGame, positionManager, this);
 	}
 	
 	public void setInGame(boolean inGame) {
 		this.inGame = inGame;
+	}
+	
+	public PositionManager getPositionManager() {
+		return this.positionManager;
+	}
+	
+	public CollisionsManager getCollisionsManager() {
+		return this.collision;
+	}
+	
+	public boolean getInGame() {
+		return this.inGame;
+	}
+	
+	public Snake getSnake() {
+		return this.snake;
+	}
+	
+	public Apple getApple() {
+		return this.apple;
+	}
+	
+	public Orange getOrange() {
+		return this.orange;
+	}
+	
+	public BlackHole getBlackHole() {
+		return this.blackHole;
 	}
 	
 	public void starGame() {
@@ -49,7 +80,7 @@ public class GameEngine implements ActionListener {
 		positionManager.clearPositions();
 		positionManager.addPosition(apple.getX(), apple.getY(), apple.getSize());
 		positionManager.addPosition(orange.getX(), orange.getY(), orange.getSize());
-		positionManager.addPosition(blackHole.getX(), blackHole.getY(), orange.getSize());
+		positionManager.addPosition(blackHole.getX(), blackHole.getY(), blackHole.getSize());
 	}
 	
 	@Override

@@ -1,6 +1,5 @@
 package Interfaces;
 
-import Objects.*;
 import Drivers.*;
 import javax.swing.*;
 import java.awt.*;
@@ -15,20 +14,14 @@ public class SnakeGame extends JPanel{
     private final int WIDTH = 1360; 
     private final int HEIGHT = 700;
     
-    //Instancias de los objetos del juego
-    private Snake snake;
-    private Apple apple;
-    private Orange orange;
-    private BlackHole blackHole;
     private GameEngine gameEngine;
-    private PositionManager positionManager;
 
     public SnakeGame() {
         initBoard();
     }
     
-    public PositionManager posMan() {
-    	return positionManager;
+    public GameEngine getGameEngine() {
+    	return this.gameEngine;
     }
     
     public int getWidth() {
@@ -45,17 +38,10 @@ public class SnakeGame extends JPanel{
         requestFocusInWindow();
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         
-        this.positionManager = new PositionManager();
-        snake = new Snake(5); 
-        apple = new Apple(WIDTH, HEIGHT, positionManager); 
-        orange = new Orange(WIDTH, HEIGHT, positionManager); 
-        blackHole = new BlackHole(WIDTH, HEIGHT, positionManager);
-        orange.loadOrange();
-    
-        gameEngine = new GameEngine(snake, apple, orange, blackHole,positionManager, this);
+        this.gameEngine = new GameEngine(this);
         gameEngine.starGame();
         
-        addKeyListener(new MotionSnake (snake)); //Define el listado de llaves para el taclado
+        addKeyListener(new MotionSnake(gameEngine.getSnake())); //Define el listado de llaves para el taclado
     }
     
     @Override
@@ -65,9 +51,9 @@ public class SnakeGame extends JPanel{
     }
 
     private void drawObjects(Graphics g) {
-        apple.draw(g); //Dibuja la manzana
-        snake.draw(g); //Dibuja la serpiente
-        orange.draw(g); //Dibuja naranja
-        blackHole.draw(g); //Dibuja agujero negro
+        gameEngine.getSnake().draw(g); //Dibuja la manzana
+        gameEngine.getApple().draw(g); //Dibuja la serpiente
+        gameEngine.getOrange().draw(g); //Dibuja naranja
+        gameEngine.getBlackHole().draw(g); //Dibuja agujero negro
     }
 }

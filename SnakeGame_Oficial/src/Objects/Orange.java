@@ -65,8 +65,8 @@ public class Orange implements ActionListener {
     
     public void draw(Graphics g) {
     	if(visible) {
-    		g.setColor(Color.ORANGE);
-            g.fillOval(orange_x, orange_y, ORANGE_SIZE, ORANGE_SIZE);
+    		g.setColor(Color.orange);
+    		g.fillOval(orange_x, orange_y, ORANGE_SIZE, ORANGE_SIZE);
     	}
     }
 }
