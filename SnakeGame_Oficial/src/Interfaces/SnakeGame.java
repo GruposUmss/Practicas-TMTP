@@ -11,9 +11,7 @@ public class SnakeGame extends JPanel{
 
     private final int WIDTH = 1360; 
     private final int HEIGHT = 700;
-    
     private GameEngine gameEngine;
-
     public SnakeGame() {
         initBoard();
     }
@@ -21,7 +19,7 @@ public class SnakeGame extends JPanel{
     public GameEngine getGameEngine() {
     	return this.gameEngine;
     }
-    
+     
     public int getWidth() {
     	return WIDTH;
     }
