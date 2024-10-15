@@ -4,13 +4,11 @@ import Drivers.*;
 import javax.swing.*;
 import java.awt.*;
 
-// Clase principal que representa el juego Snake
 public class SnakeGame extends JPanel{
 	
 	//Esto se agrego para verificar la version de la clase serializable
     private static final long serialVersionUID = 1L;
 
-    //Dimension de la ventana en X y Y
     private final int WIDTH = 1360; 
     private final int HEIGHT = 700;
     
@@ -51,9 +49,9 @@ public class SnakeGame extends JPanel{
     }
 
     private void drawObjects(Graphics g) {
-        gameEngine.getSnake().draw(g); //Dibuja la manzana
-        gameEngine.getApple().draw(g); //Dibuja la serpiente
-        gameEngine.getOrange().draw(g); //Dibuja naranja
-        gameEngine.getBlackHole().draw(g); //Dibuja agujero negro
+        gameEngine.getSnake().draw(g); 
+        gameEngine.getApple().draw(g); 
+        gameEngine.getOrange().draw(g); 
+        gameEngine.getBlackHole().draw(g);
     }
 }

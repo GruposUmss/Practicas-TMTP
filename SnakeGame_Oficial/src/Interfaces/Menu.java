@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 
 public class Menu extends JFrame {
     
-    private JToggleButton easyButton; // Botón para el modo fácil
-    private JToggleButton hardButton; // Botón para el modo difícil
+    private JToggleButton easyButton;
+    private JToggleButton hardButton; 
 
     public Menu() {
         initMenu();
@@ -24,7 +24,7 @@ public class Menu extends JFrame {
         // Panel para el título
         JPanel titlePanel = new JPanel();
         JLabel titleLabel = new JLabel("SNAKE GAME", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 36)); // Aumentar el tamaño de la fuente
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 36)); 
         titlePanel.add(titleLabel);
         
         add(titlePanel, BorderLayout.NORTH);
@@ -37,49 +37,48 @@ public class Menu extends JFrame {
         gbc.gridy = GridBagConstraints.RELATIVE;
         gbc.insets = new Insets(10, 0, 10, 0); 
 
-        // Crear botones de dificultad
+        //creacion de los botones de dificultad 
         easyButton = new JToggleButton("Easy");
         hardButton = new JToggleButton("Hard");
         
-        // Acción del botón Easy
+      
         easyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (easyButton.isSelected()) {
-                    hardButton.setSelected(false); // Desactiva el botón Hard
+                    hardButton.setSelected(false);
                 }
             }
         });
 
-        // Acción del botón Hard
         hardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (hardButton.isSelected()) {
-                    easyButton.setSelected(false); // Desactiva el botón Easy
+                    easyButton.setSelected(false);
                 }
             }
         });
 
-        gbc.gridy = 0;  // Fila 0
+        gbc.gridy = 0;  
         buttonPanel.add(easyButton, gbc);
 
-        // Añadir el botón "Hard" en la segunda fila
-        gbc.gridy = 1;  // Fila 1
+       
+        gbc.gridy = 1; 
         buttonPanel.add(hardButton, gbc);
 
-        // Botón Play en una fila debajo de los botones de dificultad
-        gbc.gridy = 2;  // Fila 2
+    
+        gbc.gridy = 2;  
        
-        // Botón Play
+        
         JButton playButton = new JButton("Play");
         playButton.setFont(new Font("Arial", Font.BOLD, 20));
-        playButton.setBackground(Color.BLUE); // Fondo azul
-        playButton.setForeground(Color.WHITE); // Texto blanco
+        playButton.setBackground(Color.BLUE); 
+        playButton.setForeground(Color.WHITE); 
         playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                startGame(); // Aquí podrías pasar la dificultad seleccionada si lo deseas
+                startGame(); // 
             }
         });
 
