@@ -1,7 +1,7 @@
 package Drivers;
 
 import Objects.*;
-import Interfaces.SnakeGame;
+import Interfaces.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.*;
@@ -83,6 +83,21 @@ public class GameEngine implements ActionListener {
 		positionManager.addPosition(blackHole.getX(), blackHole.getY(), blackHole.getSize());
 	}
 	
+	
+	
+	
+	private void endGame() {
+        timer.stop();
+        SwingUtilities.getWindowAncestor(snakeGame).dispose(); 
+
+        Menu menu = new Menu();
+        menu.setVisible(true);
+    }
+	
+	
+	
+	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(inGame) {
@@ -93,7 +108,7 @@ public class GameEngine implements ActionListener {
 			collision.checkCollisionOrange();
 			collision.checkCollisionBlackHole();
 		}else {
-			timer.stop();
+			endGame();
 		}		
 		snakeGame.repaint();
 	}

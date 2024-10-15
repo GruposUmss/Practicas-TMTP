@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_GT7LQIngEe-f9KBtxfO_3Q">
+  <modelElement href="SnakeGame_beta.uml#_GrVlsIngEe-f9KBtxfO_3Q"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_G1PvoIngEe-f9KBtxfO_3Q" source="_G1Sy8IngEe-f9KBtxfO_3Q">
+    <modelElement href="SnakeGame_beta.uml#_GvWjAIngEe-f9KBtxfO_3Q"/>
+    <stereotypes xmi:id="_G1PvoYngEe-f9KBtxfO_3Q" name="Reference">
+      <modelElement href="SnakeGame_beta.uml#_GvXKEIngEe-f9KBtxfO_3Q"/>
+    </stereotypes>
+    <nameVisual xmi:id="_G1PvoongEe-f9KBtxfO_3Q" text=""/>
+    <sourceRole xmi:id="_G1Pvo4ngEe-f9KBtxfO_3Q" aggregationKind="NONE" name="">
+      <modelElement href="SnakeGame_beta.uml#_GvWjAYngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1PvpIngEe-f9KBtxfO_3Q" label="+"/>
+      <cardinality xmi:id="_G1PvpYngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_G1PvpongEe-f9KBtxfO_3Q" aggregationKind="NONE" name="timer" navigable="true">
+      <modelElement href="SnakeGame_beta.uml#_GvGEUYngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1Pvp4ngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1QWsIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_G1Rk0IngEe-f9KBtxfO_3Q" source="_G1Sy8IngEe-f9KBtxfO_3Q">
+    <modelElement href="SnakeGame_beta.uml#_GvXKEYngEe-f9KBtxfO_3Q"/>
+    <stereotypes xmi:id="_G1Rk0YngEe-f9KBtxfO_3Q" name="Reference">
+      <modelElement href="SnakeGame_beta.uml#_GvYYMIngEe-f9KBtxfO_3Q"/>
+    </stereotypes>
+    <nameVisual xmi:id="_G1Rk0ongEe-f9KBtxfO_3Q" text=""/>
+    <sourceRole xmi:id="_G1Rk04ngEe-f9KBtxfO_3Q" aggregationKind="NONE" name="">
+      <modelElement href="SnakeGame_beta.uml#_GvXKEongEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1SL4IngEe-f9KBtxfO_3Q" label="+"/>
+      <cardinality xmi:id="_G1SL4YngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_G1SL4ongEe-f9KBtxfO_3Q" aggregationKind="NONE" name="random" navigable="true">
+      <modelElement href="SnakeGame_beta.uml#_GvGrYYngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1SL44ngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1SL5IngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_G3ADIIngEe-f9KBtxfO_3Q" name="TAdapter">
+    <modelElement href="SnakeGame_beta.uml#_Gr7bkIngEe-f9KBtxfO_3Q"/>
+    <visualProperties xmi:id="_G3ADIYngEe-f9KBtxfO_3Q" position="-269.0,607.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_G3ADIongEe-f9KBtxfO_3Q" label="-"/>
+    <operations xmi:id="_G3ADI4ngEe-f9KBtxfO_3Q" name="keyPressed">
+      <modelElement href="SnakeGame_beta.uml#_GuluAIngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G3ADJIngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_Gum8IIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <stereotypes xmi:id="_G3ADJYngEe-f9KBtxfO_3Q" name="Annotations">
+        <modelElement href="SnakeGame_beta.uml#_GunjMIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G3ADJongEe-f9KBtxfO_3Q" label="+"/>
+      <cardinality xmi:id="_G3ADJ4ngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <parameters xmi:id="_G3ADKIngEe-f9KBtxfO_3Q" name="e">
+        <modelElement href="SnakeGame_beta.uml#_GuluAYngEe-f9KBtxfO_3Q"/>
+        <cardinality xmi:id="_G3ADKYngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+        <type xmi:id="_G3ADKongEe-f9KBtxfO_3Q" name="KeyEvent">
+          <modelElement href="SnakeGame_beta.uml#_Gt9b4YngEe-f9KBtxfO_3Q"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_G1Sy8IngEe-f9KBtxfO_3Q" name="SnakeGame" associationsOut="_G1PvoIngEe-f9KBtxfO_3Q _G1Rk0IngEe-f9KBtxfO_3Q">
+    <modelElement href="SnakeGame_beta.uml#_GrvOUIngEe-f9KBtxfO_3Q"/>
+    <visualProperties xmi:id="_G1Sy8YngEe-f9KBtxfO_3Q" position="742.0,118.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_G1Sy8ongEe-f9KBtxfO_3Q" label="+"/>
+    <attributes xmi:id="_G1Sy84ngEe-f9KBtxfO_3Q" defaultValue="1L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="SnakeGame_beta.uml#_Gutp0IngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1Sy9IngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1Sy9YngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1Sy9ongEe-f9KBtxfO_3Q" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1Sy94ngEe-f9KBtxfO_3Q" defaultValue="300" name="WIDTH">
+      <modelElement href="SnakeGame_beta.uml#_GuwGEIngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1Sy-IngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GuwtIIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1Sy-YngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1Sy-ongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1Sy-4ngEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaAIngEe-f9KBtxfO_3Q" defaultValue="300" name="HEIGHT">
+      <modelElement href="SnakeGame_beta.uml#_GuxUMIngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaAYngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_Gux7QIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaAongEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaA4ngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaBIngEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaBYngEe-f9KBtxfO_3Q" defaultValue="10" name="DOT_SIZE">
+      <modelElement href="SnakeGame_beta.uml#_Gux7QYngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaBongEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GuyiUYngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaB4ngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaCIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaCYngEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaCongEe-f9KBtxfO_3Q" defaultValue="900" name="ALL_DOTS">
+      <modelElement href="SnakeGame_beta.uml#_GuyiUongEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaC4ngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GuzwcIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaDIngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaDYngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaDongEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaD4ngEe-f9KBtxfO_3Q" defaultValue="29" name="RAND_POS">
+      <modelElement href="SnakeGame_beta.uml#_GuzwcYngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaEIngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_Gu2MsIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaEYngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaEongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaE4ngEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaFIngEe-f9KBtxfO_3Q" defaultValue="140" name="DELAY">
+      <modelElement href="SnakeGame_beta.uml#_Gu2MsYngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaFYngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_Gu4B4IngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaFongEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaF4ngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaGIngEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaGYngEe-f9KBtxfO_3Q" defaultValue="new int[ALL_DOTS]" name="x">
+      <modelElement href="SnakeGame_beta.uml#_Gu4B4YngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaGongEe-f9KBtxfO_3Q" name="Array">
+        <modelElement href="SnakeGame_beta.uml#_Gu4o8IngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <stereotypes xmi:id="_G1TaG4ngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_Gu53EIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaHIngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaHYngEe-f9KBtxfO_3Q" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_G1TaHongEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaH4ngEe-f9KBtxfO_3Q" defaultValue="new int[ALL_DOTS]" name="y">
+      <modelElement href="SnakeGame_beta.uml#_Gu6eIIngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaIIngEe-f9KBtxfO_3Q" name="Array">
+        <modelElement href="SnakeGame_beta.uml#_Gu86YIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <stereotypes xmi:id="_G1TaIYngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_Gu9hcIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaIongEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaI4ngEe-f9KBtxfO_3Q" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_G1TaJIngEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaJYngEe-f9KBtxfO_3Q" name="dots">
+      <modelElement href="SnakeGame_beta.uml#_Gu-IgIngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaJongEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_Gu-vkIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaJ4ngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaKIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaKYngEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaKongEe-f9KBtxfO_3Q" name="appleX">
+      <modelElement href="SnakeGame_beta.uml#_Gu-vkYngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaK4ngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_Gu_WoIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaLIngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaLYngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaLongEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaL4ngEe-f9KBtxfO_3Q" name="appleY">
+      <modelElement href="SnakeGame_beta.uml#_Gu_9sIngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaMIngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GvBy4IngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaMYngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaMongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaM4ngEe-f9KBtxfO_3Q" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaNIngEe-f9KBtxfO_3Q" defaultValue="false" name="leftDirection">
+      <modelElement href="SnakeGame_beta.uml#_GvBy4YngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaNYngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GvCZ8IngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaNongEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaN4ngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaOIngEe-f9KBtxfO_3Q" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaOYngEe-f9KBtxfO_3Q" defaultValue="true" name="rightDirection">
+      <modelElement href="SnakeGame_beta.uml#_GvCZ8YngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaOongEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GvDBAYngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaO4ngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaPIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaPYngEe-f9KBtxfO_3Q" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaPongEe-f9KBtxfO_3Q" defaultValue="false" name="upDirection">
+      <modelElement href="SnakeGame_beta.uml#_GvDBAongEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaP4ngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GvDoEYngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaQIngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaQYngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaQongEe-f9KBtxfO_3Q" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1TaQ4ngEe-f9KBtxfO_3Q" defaultValue="false" name="downDirection">
+      <modelElement href="SnakeGame_beta.uml#_GvEPIIngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1TaRIngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GvE2MYngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1TaRYngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1TaRongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1TaR4ngEe-f9KBtxfO_3Q" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1UBEIngEe-f9KBtxfO_3Q" defaultValue="true" name="inGame">
+      <modelElement href="SnakeGame_beta.uml#_GvE2MongEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1UBEYngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GvGEUIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1UBEongEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UBE4ngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1UBFIngEe-f9KBtxfO_3Q" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1UBFYngEe-f9KBtxfO_3Q" name="timer">
+      <modelElement href="SnakeGame_beta.uml#_GvGEUYngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1UBFongEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GvGrYIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1UoIIngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoIYngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1UoIongEe-f9KBtxfO_3Q" name="Timer">
+        <modelElement href="SnakeGame_beta.uml#_GuckEIngEe-f9KBtxfO_3Q"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_G1UoI4ngEe-f9KBtxfO_3Q" name="random">
+      <modelElement href="SnakeGame_beta.uml#_GvGrYYngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1UoJIngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GvIgkIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1UoJYngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoJongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <type xmi:id="_G1UoJ4ngEe-f9KBtxfO_3Q" name="Random">
+        <modelElement href="SnakeGame_beta.uml#_Gt_4IIngEe-f9KBtxfO_3Q"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_G1UoKIngEe-f9KBtxfO_3Q" name="SnakeGame">
+      <modelElement href="SnakeGame_beta.uml#_Gr0t4IngEe-f9KBtxfO_3Q"/>
+      <keywords xmi:id="_G1UoKYngEe-f9KBtxfO_3Q" keyword="create"/>
+      <visibility xmi:id="_G1UoKongEe-f9KBtxfO_3Q" label="+"/>
+      <cardinality xmi:id="_G1UoK4ngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_G1UoLIngEe-f9KBtxfO_3Q">
+        <modelElement href="SnakeGame_beta.uml#_Gr18AYngEe-f9KBtxfO_3Q"/>
+        <type xmi:id="_G1UoLYngEe-f9KBtxfO_3Q" name="SnakeGame">
+          <modelElement href="SnakeGame_beta.uml#_GrvOUIngEe-f9KBtxfO_3Q"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_G1UoLongEe-f9KBtxfO_3Q" name="initBoard">
+      <modelElement href="SnakeGame_beta.uml#_Gr2jEIngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1UoL4ngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoMIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_G1UoMYngEe-f9KBtxfO_3Q" name="loadGame">
+      <modelElement href="SnakeGame_beta.uml#_Gr2jEYngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1UoMongEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoM4ngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_G1UoNIngEe-f9KBtxfO_3Q" name="checkApple">
+      <modelElement href="SnakeGame_beta.uml#_Gr3KIIngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1UoNYngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoNongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_G1UoN4ngEe-f9KBtxfO_3Q" name="move">
+      <modelElement href="SnakeGame_beta.uml#_Gr5mYIngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1UoOIngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoOYngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_G1UoOongEe-f9KBtxfO_3Q" name="checkCollision">
+      <modelElement href="SnakeGame_beta.uml#_Gr60gIngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1UoO4ngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoPIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_G1UoPYngEe-f9KBtxfO_3Q" name="locateApple">
+      <modelElement href="SnakeGame_beta.uml#_Gr60gYngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1UoPongEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoP4ngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_G1UoQIngEe-f9KBtxfO_3Q" name="main" staticOperation="true">
+      <modelElement href="SnakeGame_beta.uml#_Gr8psIngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1UoQYngEe-f9KBtxfO_3Q" label="+"/>
+      <cardinality xmi:id="_G1UoQongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <parameters xmi:id="_G1UoQ4ngEe-f9KBtxfO_3Q" name="args">
+        <modelElement href="SnakeGame_beta.uml#_Gr8psYngEe-f9KBtxfO_3Q"/>
+        <cardinality xmi:id="_G1UoRIngEe-f9KBtxfO_3Q" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_G1UoRYngEe-f9KBtxfO_3Q" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_G1UoRongEe-f9KBtxfO_3Q" name="paintComponent">
+      <modelElement href="SnakeGame_beta.uml#_GufAUIngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1UoR4ngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_GufnYIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <stereotypes xmi:id="_G1UoSIngEe-f9KBtxfO_3Q" name="Annotations">
+        <modelElement href="SnakeGame_beta.uml#_GugOcIngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1UoSYngEe-f9KBtxfO_3Q" label="+"/>
+      <cardinality xmi:id="_G1UoSongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <parameters xmi:id="_G1UoS4ngEe-f9KBtxfO_3Q" name="g">
+        <modelElement href="SnakeGame_beta.uml#_GufAUYngEe-f9KBtxfO_3Q"/>
+        <cardinality xmi:id="_G1UoTIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+        <type xmi:id="_G1UoTYngEe-f9KBtxfO_3Q" name="Graphics">
+          <modelElement href="SnakeGame_beta.uml#_GudyMIngEe-f9KBtxfO_3Q"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_G1UoTongEe-f9KBtxfO_3Q" name="drawObjects">
+      <modelElement href="SnakeGame_beta.uml#_Gug1gIngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1UoT4ngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoUIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <parameters xmi:id="_G1UoUYngEe-f9KBtxfO_3Q" name="g">
+        <modelElement href="SnakeGame_beta.uml#_GuhckIngEe-f9KBtxfO_3Q"/>
+        <cardinality xmi:id="_G1UoUongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+        <type xmi:id="_G1UoU4ngEe-f9KBtxfO_3Q" name="Graphics">
+          <modelElement href="SnakeGame_beta.uml#_GudyMIngEe-f9KBtxfO_3Q"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_G1UoVIngEe-f9KBtxfO_3Q" name="gameOver">
+      <modelElement href="SnakeGame_beta.uml#_GuiqsIngEe-f9KBtxfO_3Q"/>
+      <visibility xmi:id="_G1UoVYngEe-f9KBtxfO_3Q" label="-"/>
+      <cardinality xmi:id="_G1UoVongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <parameters xmi:id="_G1UoV4ngEe-f9KBtxfO_3Q" name="g">
+        <modelElement href="SnakeGame_beta.uml#_GujRwIngEe-f9KBtxfO_3Q"/>
+        <cardinality xmi:id="_G1UoWIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+        <type xmi:id="_G1UoWYngEe-f9KBtxfO_3Q" name="Graphics">
+          <modelElement href="SnakeGame_beta.uml#_GudyMIngEe-f9KBtxfO_3Q"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_G1UoWongEe-f9KBtxfO_3Q" name="actionPerformed">
+      <modelElement href="SnakeGame_beta.uml#_Guj40IngEe-f9KBtxfO_3Q"/>
+      <stereotypes xmi:id="_G1UoW4ngEe-f9KBtxfO_3Q" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_beta.uml#_Gukf4IngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <stereotypes xmi:id="_G1UoXIngEe-f9KBtxfO_3Q" name="Annotations">
+        <modelElement href="SnakeGame_beta.uml#_Gukf4YngEe-f9KBtxfO_3Q"/>
+      </stereotypes>
+      <visibility xmi:id="_G1UoXYngEe-f9KBtxfO_3Q" label="+"/>
+      <cardinality xmi:id="_G1UoXongEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+      <parameters xmi:id="_G1UoX4ngEe-f9KBtxfO_3Q" name="e">
+        <modelElement href="SnakeGame_beta.uml#_Guj40YngEe-f9KBtxfO_3Q"/>
+        <cardinality xmi:id="_G1UoYIngEe-f9KBtxfO_3Q" label="1" max="1" min="1"/>
+        <type xmi:id="_G1UoYYngEe-f9KBtxfO_3Q" name="ActionEvent">
+          <modelElement href="SnakeGame_beta.uml#_Gt2uMIngEe-f9KBtxfO_3Q"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
