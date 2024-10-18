@@ -22,6 +22,7 @@ public class CollisionsManager {
 		this.posMan = posMan;
 	}
 	
+	
 	public void checkCollisionLimits() {
 		if(snake.getSnakePosX(0) >= snakeGame.getWidth() || snake.getSnakePosX(0) < 0 || 
 		   snake.getSnakePosY(0) >= snakeGame.getHeight() || snake.getSnakePosY(0) < 0) {
@@ -38,7 +39,11 @@ public class CollisionsManager {
 	}
 	
 	public void checkCollisionApple() {
-		if(snake.getSnakePosX(0) == apple.getX() && snake.getSnakePosY(0) == apple.getY()) {
+		if(snake.getSnakePosX(0) >= apple.getX() && 
+			snake.getSnakePosY(0) >= apple.getY() && 
+			snake.getSnakePosX(0) < apple.getX() + orange.getSize() &&
+			snake.getSnakePosY(0) < apple.getY() + orange.getSize()) {
+			
 			snake.setSnakeSize(snake.getSnakeSize() + 1);
 			posMan.removePosition(apple.getX(), apple.getY(), apple.getSize());
 			apple.locationApple(snakeGame.getWidth(), snakeGame.getHeight());
@@ -47,14 +52,18 @@ public class CollisionsManager {
 	}
 	
 	public void checkCollisionOrange() {
-		if(snake.getSnakePosX(0) == orange.getX() && snake.getSnakePosY(0) == orange.getY()) {
+		if(snake.getSnakePosX(0) >= orange.getX() && 
+			snake.getSnakePosY(0) >= orange.getY() &&
+			snake.getSnakePosX(0) < orange.getX() + orange.getSize() &&
+			snake.getSnakePosY(0) < orange.getY() + orange.getSize()) {
+			
 			snake.setSnakeSize(snake.getSnakeSize() + 4);
 			posMan.removePosition(orange.getX(), orange.getY(), orange.getSize());
 			orange.resetLocation();
 			gameEngine.addPositionActuals();
 		}
 	}
-	
+
 	public void checkCollisionBlackHole() {
 		if(snake.getSnakePosX(0) >= blackHole.getX() && 
 			snake.getSnakePosY(0) >= blackHole.getY() &&

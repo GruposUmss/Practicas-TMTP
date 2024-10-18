@@ -1,20 +1,19 @@
 package Objects;
 
 import Drivers.PositionManager;
-import java.util.Random;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionListener;
+import java.util.concurrent.ThreadLocalRandom;
 import java.awt.event.ActionEvent;
 
 public class Orange implements ActionListener {
-    private final int ORANGE_SIZE = 20;
+    private final int ORANGE_SIZE = 40;
     private int width;
     private int height;
     private int orange_x;
     private int orange_y;
     private PositionManager posMan;
-    private Random random;
     private Timer timer;
     private boolean visible;
 
@@ -22,7 +21,6 @@ public class Orange implements ActionListener {
     	this.posMan = posMan;
     	this.width = width;
     	this.height = height;
-        this.random = new Random();
         this.visible = true;
         locationOrange();
        
@@ -50,8 +48,8 @@ public class Orange implements ActionListener {
     }
 
     public void locationOrange() {
-        orange_x = random.nextInt((width / ORANGE_SIZE) - 1) * ORANGE_SIZE;
-        orange_y = random.nextInt((height / ORANGE_SIZE) - 1) * ORANGE_SIZE;
+        orange_x = ThreadLocalRandom.current().nextInt((width / ORANGE_SIZE) - 1) * ORANGE_SIZE;
+        orange_y = ThreadLocalRandom.current().nextInt((height / ORANGE_SIZE) - 1) * ORANGE_SIZE;
         if(posMan.overlay(orange_x, orange_y, ORANGE_SIZE)) {
         	locationOrange();
         }
@@ -65,8 +63,7 @@ public class Orange implements ActionListener {
     
     public void draw(Graphics g) {
     	if(visible) {
-    		g.setColor(Color.orange);
-    		g.fillOval(orange_x, orange_y, ORANGE_SIZE, ORANGE_SIZE);
+    		g.drawImage(Images.ALIEN_2, orange_x, orange_y, ORANGE_SIZE, ORANGE_SIZE, null);
     	}
     }
 }

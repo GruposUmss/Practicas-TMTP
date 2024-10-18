@@ -40,7 +40,6 @@ public class PositionManager {
         return (int) (distance - (size1 + size2) / 2);
 	}
 	
-	// Método para limpiar posiciones cuando se reinicia el juego
     public void clearPositions() {
         occupiedPositions.clear();
     }

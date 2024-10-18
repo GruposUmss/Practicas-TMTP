@@ -18,7 +18,6 @@ public class GameEngine implements ActionListener {
 	
 	private Timer timer;
 	
-	
 	private final int DELAY = 90;
 	private boolean inGame = true;
 	
@@ -30,7 +29,7 @@ public class GameEngine implements ActionListener {
         this.blackHole = new BlackHole(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
         this.orange = new Orange(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
         orange.loadOrange();
-        
+       
 		this.collision = new CollisionsManager(snake, apple, orange, blackHole, snakeGame, positionManager, this);
 	}
 	
@@ -72,6 +71,14 @@ public class GameEngine implements ActionListener {
 		timer.start();
 	}
 	
+	private void endGame() {
+	    timer.stop();
+	    if (SwingUtilities.getWindowAncestor(snakeGame) != null) {
+	        SwingUtilities.getWindowAncestor(snakeGame).dispose();
+	    }
+	    new Menu().setVisible(true);
+	}
+	
 	public void removePositionActual(int x, int y, int size) {
 		positionManager.removePosition(x, y, size);
 	}
@@ -82,21 +89,6 @@ public class GameEngine implements ActionListener {
 		positionManager.addPosition(orange.getX(), orange.getY(), orange.getSize());
 		positionManager.addPosition(blackHole.getX(), blackHole.getY(), blackHole.getSize());
 	}
-	
-	
-	
-	
-	private void endGame() {
-        timer.stop();
-        SwingUtilities.getWindowAncestor(snakeGame).dispose(); 
-
-        Menu menu = new Menu();
-        menu.setVisible(true);
-    }
-	
-	
-	
-	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {

@@ -4,12 +4,9 @@ import Drivers.*;
 import javax.swing.*;
 import java.awt.*;
 
-// Clase principal que representa el juego Snake
+//Clase principal que representa el juego Snake
 public class SnakeGame extends JPanel{
 	
-	//Esto se agrego para verificar la version de la clase serializable
-    private static final long serialVersionUID = 1L;
-
     //Dimension de la ventana en X y Y
     private final int WIDTH = 1360; 
     private final int HEIGHT = 700;

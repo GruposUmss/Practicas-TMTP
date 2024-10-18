@@ -4,17 +4,19 @@ import java.awt.*;
 
 public class Snake {
 
-	private Directions direction;
+	private final Directions[] registerDirection;
     private final int RECT_SIZE = 20;
     private final int[] pos_x;
     private final int[] pos_y; 
     private int snakeSize; 
+    private Directions direction;
     
     public Snake(int snakeSize) {
+    	this.registerDirection = new Directions[900];
     	this.direction = Directions.RIGTH;
     	this.snakeSize = snakeSize;
-        pos_x = new int[900];  
-        pos_y = new int[900];
+        this.pos_x = new int[900];  
+        this.pos_y = new int[900];
         initSnake();
     }
     
@@ -35,7 +37,9 @@ public class Snake {
     }
     
     public void setDirection(Directions direction) {
-    	this.direction = direction; 
+    	if (direction != null) {  //Evita que la dirección sea null y se genera un IllegalException
+            this.direction = direction;
+        } 
     }
 
     private void initSnake() {
@@ -48,11 +52,32 @@ public class Snake {
     public void draw(Graphics g) {
         for (int i = 0; i < snakeSize; i++) {
             if (i == 0) {
-                g.setColor(Color.green);
+                g.drawImage(getHeadImage(registerDirection[i]), pos_x[i], pos_y[i], RECT_SIZE, RECT_SIZE, null);
             } else {
-                g.setColor(Color.green);
+            	g.drawImage(getBodyImage(registerDirection[i]), pos_x[i], pos_y[i], RECT_SIZE, RECT_SIZE, null);
             }
-            g.fillRect(pos_x[i], pos_y[i], RECT_SIZE, RECT_SIZE);
+        }
+    }
+    
+    private Image getBodyImage(Directions dir) {
+    	if (dir == null) dir = Directions.RIGTH;//Evita que se den direcciones nulas, debido a las actualizaciones
+        switch (dir) {
+            case LEFT: return Images.SNAKE_BODY_LEFT;
+            case UP: return Images.SNAKE_BODY_UP;
+            case DOWN: return Images.SNAKE_BODY_DOWN;
+            case RIGTH: return Images.SNAKE_BODY_RIGTH;
+            default: return Images.SNAKE_BODY_RIGTH;
+        }
+    }
+    
+    private Image getHeadImage(Directions dir) {
+    	if (dir == null) dir = Directions.RIGTH; //Evita que se den direcciones nulas, debido a las actualizaciones
+        switch (dir) {
+            case LEFT: return Images.SNAKE_HEAD_LEFT;
+            case UP: return Images.SNAKE_HEAD_UP;
+            case DOWN: return Images.SNAKE_HEAD_DOWN;
+            case RIGTH: return Images.SNAKE_HEAD_RIGTH;
+            default: return Images.SNAKE_HEAD_RIGTH;
         }
     }
     
@@ -60,22 +85,15 @@ public class Snake {
     	for(int i = snakeSize; i > 0; i--) {
     		pos_x[i] = pos_x[i - 1];
     		pos_y[i] = pos_y[i - 1];
+    		registerDirection[i] = registerDirection[i - 1]; //Asignar direccion de siguiente al anterior
     	}
+    	registerDirection[0] = direction; //Guardar la dirección de la cabeza en registerDirection[0]
     	
-    	if(direction == Directions.RIGTH) {
-    		pos_x[0] += RECT_SIZE;
-    	}
-    	
-    	if(direction == Directions.LEFT) {
-    		pos_x[0] -= RECT_SIZE;
-    	}
-    	
-    	if(direction == Directions.DOWN) {
-    		pos_y[0] += RECT_SIZE;
-    	}
-    	
-    	if(direction == Directions.UP) {
-    		pos_y[0] -= RECT_SIZE;
+    	switch (direction) {
+	        case RIGTH -> pos_x[0] += RECT_SIZE;
+	        case LEFT  -> pos_x[0] -= RECT_SIZE;
+	        case DOWN  -> pos_y[0] += RECT_SIZE;
+	        case UP    -> pos_y[0] -= RECT_SIZE;
     	}
     }
     

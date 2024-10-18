@@ -18,22 +18,11 @@ public class MotionSnake extends KeyAdapter {
 		
 		int button = e.getKeyCode();
 		
-		if((button == KeyEvent.VK_RIGHT) && (!snake.movingLeft())) {
-			snake.setDirection(Directions.RIGTH);
-			System.out.println(button);
-		}
-		
-		if((button == KeyEvent.VK_LEFT) && (!snake.movingRigth())) {
-			snake.setDirection(Directions.LEFT);
-			System.out.println(button);
-		}
-		if((button == KeyEvent.VK_UP) && (!snake.movingDown())) {
-			snake.setDirection(Directions.UP);
-			System.out.println(button);
-		}
-		if((button == KeyEvent.VK_DOWN) && (!snake.movingUp())) {
-			snake.setDirection(Directions.DOWN);
-			System.out.println(button);
-		}
+		switch (button) {
+	        case KeyEvent.VK_RIGHT -> { if (!snake.movingLeft()) snake.setDirection(Directions.RIGTH); }
+	        case KeyEvent.VK_LEFT -> { if (!snake.movingRigth()) snake.setDirection(Directions.LEFT); }
+	        case KeyEvent.VK_UP -> { if (!snake.movingDown()) snake.setDirection(Directions.UP); }
+	        case KeyEvent.VK_DOWN -> { if (!snake.movingUp()) snake.setDirection(Directions.DOWN); }
+	    }
 	}
 }
