@@ -8,8 +8,8 @@ import Drivers.GameEngine;
 
 class SGTestObjects {
 	
-	private SnakeGame game = new SnakeGame();
-	private GameEngine gameEngine = new GameEngine(game);
+	private SnakeGame game                     ;
+	private GameEngine gameEngine                ;
 	private Apple apple = new Apple(game.getWidth(), game.getHeight(), gameEngine.getPositionManager());
 	private Snake snake = new Snake(5);
 	private Orange orange = new Orange(game.getWidth(), game.getHeight(), gameEngine.getPositionManager());

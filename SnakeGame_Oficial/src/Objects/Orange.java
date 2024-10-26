@@ -11,11 +11,11 @@ public class Orange implements ActionListener {
     private final int ORANGE_SIZE = 40;
     private int width;
     private int height;
-    private int orange_x;
-    private int orange_y;
+    private boolean visible;
+    private Integer orange_x;
+    private Integer orange_y;
     private PositionManager posMan;
     private Timer timer;
-    private boolean visible;
 
     public Orange(int width, int height, PositionManager posMan) {
     	this.posMan = posMan;
@@ -23,18 +23,23 @@ public class Orange implements ActionListener {
     	this.height = height;
         this.visible = true;
         locationOrange();
+        loadOrange();
        
     }
     public int getX() {
-        return orange_x;
+    	return this.orange_x;
     }
 
     public int getY() {
-        return orange_y;
+    	return this.orange_y;
     }
 
     public int getSize() {
         return ORANGE_SIZE;
+    }
+    
+    public void setVisible(boolean visible) {
+    	this.visible = visible;
     }
     
     public void loadOrange() {
@@ -43,7 +48,7 @@ public class Orange implements ActionListener {
     } 
     
     public void resetLocation() {
-    	visible = false;
+    	locationOrange();
     	timer.restart();
     }
 
@@ -58,7 +63,13 @@ public class Orange implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
     	visible = !visible;
-    	locationOrange();
+    	if (visible) {
+            locationOrange();  
+        } else {
+        	//Restablece los valores de coordenadas para no mantenerla aun asi cuadno visible sea FALSE
+        	orange_x = -this.ORANGE_SIZE;
+        	orange_y = -this.ORANGE_SIZE;
+        }
     }
     
     public void draw(Graphics g) {

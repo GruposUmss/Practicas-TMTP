@@ -11,10 +11,12 @@ public class SnakeGame extends JPanel{
     private final int WIDTH = 1360; 
     private final int HEIGHT = 700;
     
+    private LifeDisplay lifeDisplay;
+    private ScoreDisplay scoreDisplay;
     private GameEngine gameEngine;
 
-    public SnakeGame() {
-        initBoard();
+    public SnakeGame(ScoreManager sm) {
+        initBoard(sm);
     }
     
     public GameEngine getGameEngine() {
@@ -22,20 +24,21 @@ public class SnakeGame extends JPanel{
     }
     
     public int getWidth() {
-    	return WIDTH;
+    	return this.WIDTH;
     }
     
     public int getHeight() {
-    	return HEIGHT;
+    	return this.HEIGHT;
     }
     
-    private void initBoard() {
+    private void initBoard(ScoreManager scoreManager) {
         setBackground(Color.black);
         setFocusable(true);
         requestFocusInWindow();
-        setPreferredSize(new Dimension(WIDTH, HEIGHT));
         
-        this.gameEngine = new GameEngine(this);
+        this.gameEngine = new GameEngine(this, scoreManager);
+        this.scoreDisplay = new ScoreDisplay(scoreManager);
+        this.lifeDisplay = new LifeDisplay(gameEngine.getLifeManager());
         gameEngine.starGame();
         
         addKeyListener(new MotionSnake(gameEngine.getSnake())); //Define el listado de llaves para el taclado
@@ -52,5 +55,7 @@ public class SnakeGame extends JPanel{
         gameEngine.getApple().draw(g); //Dibuja la serpiente
         gameEngine.getOrange().draw(g); //Dibuja naranja
         gameEngine.getBlackHole().draw(g); //Dibuja agujero negro
+        scoreDisplay.draw(g); //Dibuja el score
+        lifeDisplay.draw(g); //Dibuja las vidas
     }
 }

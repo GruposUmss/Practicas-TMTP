@@ -16,6 +16,8 @@ public class Images {
 	public static final Image SNAKE_BODY_LEFT = loadImage("C:/Users/Adrian/workspace/Imagenes/SNAKE BODY LEFT.png");
 	public static final Image SNAKE_BODY_UP = loadImage("C:/Users/Adrian/workspace/Imagenes/SNAKE BODY UP.png");
 	public static final Image SNAKE_BODY_DOWN = loadImage("C:/Users/Adrian/workspace/Imagenes/SNAKE BODY DOWN.png");
+	public static final Image HEART = loadImage("C:/Users/Adrian/workspace/Imagenes/HEART.png"); 
+	public static final Image FONDO = loadImage("C:/Users/Adrian/workspace/Imagenes/FONDO.png"); 
 	
 	private static Image loadImage(String path) {
 		return new ImageIcon(path).getImage();

@@ -160,6 +160,9 @@
     <targetRole xmi:id="_zoUlFosOEe-PucmXeh2hAg" aggregationKind="NONE" name="snakeGame" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_ucyUUIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0iOokIsOEe-PucmXeh2hAg" position="79.42307692307702,-22.5"/>
+      <stereotypes xmi:id="_Wjkq0JIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_ucy7YIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zoUlF4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zoUlGIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -181,6 +184,9 @@
     <targetRole xmi:id="_zoVzNosOEe-PucmXeh2hAg" aggregationKind="NONE" name="collision" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_ucy7YYsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0iQdwIsOEe-PucmXeh2hAg" position="2.0,-75.0"/>
+      <stereotypes xmi:id="_Wjl48JIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_uczicIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zoVzN4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zoVzOIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -219,6 +225,9 @@
     </sourceRole>
     <targetRole xmi:id="_zoXoZosOEe-PucmXeh2hAg" aggregationKind="NONE" name="timer" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_uc0JgIsOEe-PucmXeh2hAg"/>
+      <stereotypes xmi:id="_WjnHEJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_uc0JgYsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zoXoZ4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zoXoaIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -242,6 +251,9 @@
       <visualProperties xmi:id="_0iWkYIsOEe-PucmXeh2hAg" position="-47.0,-75.0"/>
       <stereotypes xmi:id="_qZsK8IsREe-PucmXeh2hAg" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_qZtZEIsREe-PucmXeh2hAg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WjoVMJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_uc5pEIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zp1A8YsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zp1A8IsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -290,6 +302,9 @@
     <targetRole xmi:id="_zsR4AosOEe-PucmXeh2hAg" aggregationKind="NONE" name="game" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_uduvgIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0idSEIsOEe-PucmXeh2hAg" position="-82.07142857142858,2.0"/>
+      <stereotypes xmi:id="_WjrYgJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_udvWkIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zsZMwYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsZMwIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -312,6 +327,9 @@
     <targetRole xmi:id="_zsSfE4sOEe-PucmXeh2hAg" aggregationKind="NONE" name="gameEngine" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_udv9oIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0ioRMYsOEe-PucmXeh2hAg" position="-168.0,-47.0"/>
+      <stereotypes xmi:id="_WjsmoJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_udv9oosOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zsbB8YsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsbB8IsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -334,6 +352,9 @@
     <targetRole xmi:id="_zsbpA4sOEe-PucmXeh2hAg" aggregationKind="NONE" name="apple" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_udwksIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0ir7kYsOEe-PucmXeh2hAg" position="-46.00000000000006,-89.0"/>
+      <stereotypes xmi:id="_Wjt0wJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_udxLwYsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zsghgYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsghgIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -361,6 +382,9 @@
       <visualProperties xmi:id="_0iu-4IsOEe-PucmXeh2hAg" position="-46.00000000000023,97.0"/>
       <stereotypes xmi:id="_qZ0t0IsREe-PucmXeh2hAg" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_qZ178IsREe-PucmXeh2hAg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WjvC4JIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_udxy0YsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zsiWsYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsiWsIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -386,6 +410,9 @@
     <targetRole xmi:id="_zsdeMYsOEe-PucmXeh2hAg" aggregationKind="NONE" name="orange" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_udxy0osOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0iypQIsOEe-PucmXeh2hAg" position="-53.0,46.0"/>
+      <stereotypes xmi:id="_WjxfIJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_ud0PEIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zskL4YsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zskL4IsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -408,6 +435,9 @@
     <targetRole xmi:id="_zseFQIsOEe-PucmXeh2hAg" aggregationKind="NONE" name="blackHole" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_ud2EQIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0i1FgIsOEe-PucmXeh2hAg" position="1.9999999999999716,-88.0"/>
+      <stereotypes xmi:id="_WjyGMJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_ud6VsIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zsky84sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsky8osOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -430,6 +460,9 @@
     <targetRole xmi:id="_ztoi4YsOEe-PucmXeh2hAg" aggregationKind="NONE" name="game" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_udrsMIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0i7zMIsOEe-PucmXeh2hAg" position="-86.78571428571433,-47.00000000000006"/>
+      <stereotypes xmi:id="_Wjz7YJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_udsTQIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_ztupgIsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zttbYosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -456,6 +489,9 @@
       <visualProperties xmi:id="_0i-2gIsOEe-PucmXeh2hAg" position="-16.000000000000455,33.0"/>
       <stereotypes xmi:id="_qZvOQIsREe-PucmXeh2hAg" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_qZxDcIsREe-PucmXeh2hAg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wj1JgJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_uduIcIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_ztwes4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_ztwesosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -473,6 +509,9 @@
     </sourceRole>
     <targetRole xmi:id="_ztyT5osOEe-PucmXeh2hAg" aggregationKind="NONE" name="frame" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_uds6UIsOEe-PucmXeh2hAg"/>
+      <stereotypes xmi:id="_Wj2-sJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_uds6UYsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_ztyT54sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_ztyT6IsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -520,25 +559,11 @@
     <targetRole xmi:id="_zuEAtIsOEe-PucmXeh2hAg" aggregationKind="NONE" name="posMan" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_uddCsIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0jBSwIsOEe-PucmXeh2hAg" position="-60.000000000000114,43.0"/>
+      <stereotypes xmi:id="_Wj5a8JIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_uddCsYsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zuFO14sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zuFO1osOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-    </targetRole>
-  </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_zuHEAIsOEe-PucmXeh2hAg" source="_zuHECYsOEe-PucmXeh2hAg">
-    <modelElement href="SnakeGame_Oficial.uml#_ugDDsIsOEe-PucmXeh2hAg"/>
-    <stereotypes xmi:id="_zuHEAYsOEe-PucmXeh2hAg" name="Reference">
-      <modelElement href="SnakeGame_Oficial.uml#_ugHVIIsOEe-PucmXeh2hAg"/>
-    </stereotypes>
-    <nameVisual xmi:id="_zuHEAosOEe-PucmXeh2hAg" text=""/>
-    <sourceRole xmi:id="_zuHEA4sOEe-PucmXeh2hAg" aggregationKind="NONE" name="">
-      <modelElement href="SnakeGame_Oficial.uml#_ugDDsYsOEe-PucmXeh2hAg"/>
-      <visibility xmi:id="_zuHEBIsOEe-PucmXeh2hAg" label="+"/>
-      <cardinality xmi:id="_zuHEBYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-    </sourceRole>
-    <targetRole xmi:id="_zuHEBosOEe-PucmXeh2hAg" aggregationKind="NONE" name="random" navigable="true">
-      <modelElement href="SnakeGame_Oficial.uml#_uddpwIsOEe-PucmXeh2hAg"/>
-      <visibility xmi:id="_zuHEB4sOEe-PucmXeh2hAg" label="-"/>
-      <cardinality xmi:id="_zuHECIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_zuSqMIsOEe-PucmXeh2hAg" sourceAnchor="1115.0,299.0" targetAnchor="227.0,0.0" target="_zwwIUIsOEe-PucmXeh2hAg" source="_zu01sIsOEe-PucmXeh2hAg">
@@ -560,6 +585,9 @@
       <visualProperties xmi:id="_0jMR4IsOEe-PucmXeh2hAg" position="-47.0,-84.0"/>
       <stereotypes xmi:id="_qZogkIsREe-PucmXeh2hAg" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_qZqVwIsREe-PucmXeh2hAg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wj7QIJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_ucicsIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zupPgIsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zuoocosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -581,6 +609,9 @@
     <targetRole xmi:id="_zumzQIsOEe-PucmXeh2hAg" aggregationKind="NONE" name="apple" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_ucicsYsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0jOHEYsOEe-PucmXeh2hAg" position="2.0,-86.0"/>
+      <stereotypes xmi:id="_Wj8eQJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_ucjDwIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zuqdoIsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zup2kYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -602,6 +633,9 @@
     <targetRole xmi:id="_zumzRIsOEe-PucmXeh2hAg" aggregationKind="NONE" name="orange" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_ucjq0IsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0jP8QYsOEe-PucmXeh2hAg" position="-54.0,-82.0"/>
+      <stereotypes xmi:id="_Wj9sYJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_uckR4IsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zurrwYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zurrwIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -623,6 +657,9 @@
     <targetRole xmi:id="_zunaU4sOEe-PucmXeh2hAg" aggregationKind="NONE" name="posMan" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_ucmuIYsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0jSYgIsOEe-PucmXeh2hAg" position="-60.0,34.0"/>
+      <stereotypes xmi:id="_Wj-TcJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_ucnVMIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zusS1IsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zusS04sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -646,25 +683,11 @@
     <targetRole xmi:id="_zvjOcIsOEe-PucmXeh2hAg" aggregationKind="NONE" name="posMan" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_udhUIYsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_0jU0wIsOEe-PucmXeh2hAg" position="1.0,41.0"/>
+      <stereotypes xmi:id="_Wj_hkJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_udh7MIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zvouAYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zvouAIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-    </targetRole>
-  </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_zvXoQYsOEe-PucmXeh2hAg" source="_zvwCwIsOEe-PucmXeh2hAg">
-    <modelElement href="SnakeGame_Oficial.uml#_ugIjQYsOEe-PucmXeh2hAg"/>
-    <stereotypes xmi:id="_zvj1gosOEe-PucmXeh2hAg" name="Reference">
-      <modelElement href="SnakeGame_Oficial.uml#_ugJKUIsOEe-PucmXeh2hAg"/>
-    </stereotypes>
-    <nameVisual xmi:id="_zvjOcosOEe-PucmXeh2hAg" text=""/>
-    <sourceRole xmi:id="_zvj1gIsOEe-PucmXeh2hAg" aggregationKind="NONE" name="">
-      <modelElement href="SnakeGame_Oficial.uml#_ugIjQosOEe-PucmXeh2hAg"/>
-      <visibility xmi:id="_zvpVEosOEe-PucmXeh2hAg" label="+"/>
-      <cardinality xmi:id="_zvpVEYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-    </sourceRole>
-    <targetRole xmi:id="_zvj1gYsOEe-PucmXeh2hAg" aggregationKind="NONE" name="random" navigable="true">
-      <modelElement href="SnakeGame_Oficial.uml#_udh7MYsOEe-PucmXeh2hAg"/>
-      <visibility xmi:id="_zvrxUIsOEe-PucmXeh2hAg" label="-"/>
-      <cardinality xmi:id="_zvrKQIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_zvYPUIsOEe-PucmXeh2hAg" source="_zvwCwIsOEe-PucmXeh2hAg">
@@ -680,6 +703,9 @@
     </sourceRole>
     <targetRole xmi:id="_zvj1hYsOEe-PucmXeh2hAg" aggregationKind="NONE" name="timer" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_udiiQYsOEe-PucmXeh2hAg"/>
+      <stereotypes xmi:id="_WkDzAJIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_udiiQosOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zvs_c4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zvs_cosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
@@ -833,32 +859,57 @@
     </sourceRole>
     <targetRole xmi:id="_zyUOlosOEe-PucmXeh2hAg" aggregationKind="NONE" name="occupiedPositions" navigable="true">
       <modelElement href="SnakeGame_Oficial.uml#_uc6QIIsOEe-PucmXeh2hAg"/>
+      <stereotypes xmi:id="_WkLHwJIREe-hDq1WJ5SjeA" name="Generics">
+        <modelElement href="SnakeGame_Oficial.uml#_uc7eQIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_WkLHwZIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_uc8FUIsOEe-PucmXeh2hAg"/>
+      </stereotypes>
       <visibility xmi:id="_zyUOl4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zyUOmIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_zynwkIsOEe-PucmXeh2hAg" source="_zysCAIsOEe-PucmXeh2hAg">
-    <modelElement href="SnakeGame_Oficial.uml#_uf-LMYsOEe-PucmXeh2hAg"/>
-    <stereotypes xmi:id="_zyqM0IsOEe-PucmXeh2hAg" name="Reference">
-      <modelElement href="SnakeGame_Oficial.uml#_uf_ZUIsOEe-PucmXeh2hAg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_fxfy8JIREe-hDq1WJ5SjeA" source="_zwfCkIsOEe-PucmXeh2hAg">
+    <modelElement href="SnakeGame_Oficial.uml#_fpg7oJIREe-hDq1WJ5SjeA"/>
+    <stereotypes xmi:id="_fxfy8ZIREe-hDq1WJ5SjeA" name="Reference">
+      <modelElement href="SnakeGame_Oficial.uml#_fpjX4JIREe-hDq1WJ5SjeA"/>
     </stereotypes>
-    <nameVisual xmi:id="_zyplwIsOEe-PucmXeh2hAg" text=""/>
-    <sourceRole xmi:id="_zyplwYsOEe-PucmXeh2hAg" aggregationKind="NONE" name="">
-      <modelElement href="SnakeGame_Oficial.uml#_uf-LMosOEe-PucmXeh2hAg"/>
-      <visibility xmi:id="_zyqz4YsOEe-PucmXeh2hAg" label="+"/>
-      <cardinality xmi:id="_zyqz4IsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
+    <nameVisual xmi:id="_fxfy8pIREe-hDq1WJ5SjeA" text=""/>
+    <sourceRole xmi:id="_fxfy85IREe-hDq1WJ5SjeA" aggregationKind="NONE" name="">
+      <modelElement href="SnakeGame_Oficial.uml#_fpg7oZIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fxfy9JIREe-hDq1WJ5SjeA" label="+"/>
+      <cardinality xmi:id="_fxfy9ZIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
     </sourceRole>
-    <targetRole xmi:id="_zyplwosOEe-PucmXeh2hAg" aggregationKind="NONE" name="random" navigable="true">
-      <modelElement href="SnakeGame_Oficial.uml#_udNLEYsOEe-PucmXeh2hAg"/>
-      <visibility xmi:id="_zyqz44sOEe-PucmXeh2hAg" label="-"/>
-      <cardinality xmi:id="_zyqz4osOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
+    <targetRole xmi:id="_fxfy9pIREe-hDq1WJ5SjeA" aggregationKind="NONE" name="easyButton" navigable="true">
+      <modelElement href="SnakeGame_Oficial.uml#_fo20UJIREe-hDq1WJ5SjeA"/>
+      <stereotypes xmi:id="_fyOLsJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <visibility xmi:id="_fxfy95IREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fxfy-JIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zuHECYsOEe-PucmXeh2hAg" name="BlackHole" associationsIn="_zoSv4IsOEe-PucmXeh2hAg _zsTGIosOEe-PucmXeh2hAg _zuA9YIsOEe-PucmXeh2hAg" associationsOut="_zuBkcIsOEe-PucmXeh2hAg _zuHEAIsOEe-PucmXeh2hAg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_fx2YQJIREe-hDq1WJ5SjeA" source="_zwfCkIsOEe-PucmXeh2hAg">
+    <modelElement href="SnakeGame_Oficial.uml#_fpj-8JIREe-hDq1WJ5SjeA"/>
+    <stereotypes xmi:id="_fx2YQZIREe-hDq1WJ5SjeA" name="Reference">
+      <modelElement href="SnakeGame_Oficial.uml#_fpl0IJIREe-hDq1WJ5SjeA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_fx2YQpIREe-hDq1WJ5SjeA" text=""/>
+    <sourceRole xmi:id="_fx2YQ5IREe-hDq1WJ5SjeA" aggregationKind="NONE" name="">
+      <modelElement href="SnakeGame_Oficial.uml#_fpj-8ZIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fx2YRJIREe-hDq1WJ5SjeA" label="+"/>
+      <cardinality xmi:id="_fx2YRZIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_fx2YRpIREe-hDq1WJ5SjeA" aggregationKind="NONE" name="hardButton" navigable="true">
+      <modelElement href="SnakeGame_Oficial.uml#_fo4pgJIREe-hDq1WJ5SjeA"/>
+      <stereotypes xmi:id="_fyQn8JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <visibility xmi:id="_fx2YR5IREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fx2YSJIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zuHECYsOEe-PucmXeh2hAg" name="BlackHole" associationsIn="_zoSv4IsOEe-PucmXeh2hAg _zsTGIosOEe-PucmXeh2hAg _zuA9YIsOEe-PucmXeh2hAg" associationsOut="_zuBkcIsOEe-PucmXeh2hAg">
     <modelElement href="SnakeGame_Oficial.uml#_uIv-AIsOEe-PucmXeh2hAg"/>
     <visualProperties xmi:id="_zuHECosOEe-PucmXeh2hAg" fontSize="20" position="-628.0,2187.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_zuHEC4sOEe-PucmXeh2hAg" label="+"/>
-    <attributes xmi:id="_zuHEDIsOEe-PucmXeh2hAg" defaultValue="60" name="BLACK_HOLE_SIZE">
+    <attributes xmi:id="_zuHEDIsOEe-PucmXeh2hAg" defaultValue="80" name="BLACK_HOLE_SIZE">
       <modelElement href="SnakeGame_Oficial.uml#_udPnUIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_dxkXYosSEe-PucmXeh2hAg" fontSize="20"/>
       <stereotypes xmi:id="_zuHEDYsOEe-PucmXeh2hAg" name="LegacyStyledElement">
@@ -896,25 +947,13 @@
     </attributes>
     <attributes xmi:id="_zuHEG4sOEe-PucmXeh2hAg" name="posMan">
       <modelElement href="SnakeGame_Oficial.uml#_uddCsIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zuHEHIsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_uddCsYsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_Wnm2QJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WnoEYJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WoRkoJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zuHEHYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zuHEHosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zuHEH4sOEe-PucmXeh2hAg" name="PositionManager">
         <modelElement href="SnakeGame_Oficial.uml#_uHh2AIsOEe-PucmXeh2hAg"/>
-      </type>
-    </attributes>
-    <attributes xmi:id="_zuHEIIsOEe-PucmXeh2hAg" name="random">
-      <modelElement href="SnakeGame_Oficial.uml#_uddpwIsOEe-PucmXeh2hAg"/>
-      <visualProperties xmi:id="_dxkXZYsSEe-PucmXeh2hAg" fontSize="20"/>
-      <stereotypes xmi:id="_zuHEIYsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_uddpwYsOEe-PucmXeh2hAg"/>
-      </stereotypes>
-      <visibility xmi:id="_zuHEIosOEe-PucmXeh2hAg" label="-"/>
-      <cardinality xmi:id="_zuHEI4sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-      <type xmi:id="_zuHEJIsOEe-PucmXeh2hAg" name="Random">
-        <modelElement href="SnakeGame_Oficial.uml#_uZ4KQIsOEe-PucmXeh2hAg"/>
       </type>
     </attributes>
     <operations xmi:id="_zuHEJYsOEe-PucmXeh2hAg" name="getX">
@@ -1084,11 +1123,11 @@
       <visualProperties xmi:id="_D9_EkosSEe-PucmXeh2hAg" fontSize="20"/>
     </literals>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zysCAIsOEe-PucmXeh2hAg" name="Apple" associationsIn="_zuTRQIsOEe-PucmXeh2hAg _zoRhwIsOEe-PucmXeh2hAg _zsSfFYsOEe-PucmXeh2hAg" associationsOut="_zyOvAIsOEe-PucmXeh2hAg _zynwkIsOEe-PucmXeh2hAg">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zysCAIsOEe-PucmXeh2hAg" name="Apple" associationsIn="_zuTRQIsOEe-PucmXeh2hAg _zoRhwIsOEe-PucmXeh2hAg _zsSfFYsOEe-PucmXeh2hAg" associationsOut="_zyOvAIsOEe-PucmXeh2hAg">
     <modelElement href="SnakeGame_Oficial.uml#_uIhUgIsOEe-PucmXeh2hAg"/>
     <visualProperties xmi:id="_zysCAYsOEe-PucmXeh2hAg" fontSize="20" position="332.0,2162.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_zysCAosOEe-PucmXeh2hAg" label="+"/>
-    <attributes xmi:id="_zysCA4sOEe-PucmXeh2hAg" defaultValue="20" name="APPLE_SIZE">
+    <attributes xmi:id="_zysCA4sOEe-PucmXeh2hAg" defaultValue="40" name="APPLE_SIZE">
       <modelElement href="SnakeGame_Oficial.uml#_udKu0IsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_25bCEIsREe-PucmXeh2hAg" fontSize="20"/>
       <stereotypes xmi:id="_zysCBIsOEe-PucmXeh2hAg" name="LegacyStyledElement">
@@ -1124,20 +1163,11 @@
         <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </type>
     </attributes>
-    <attributes xmi:id="_zysCEosOEe-PucmXeh2hAg" name="random">
-      <modelElement href="SnakeGame_Oficial.uml#_udNLEYsOEe-PucmXeh2hAg"/>
-      <visualProperties xmi:id="_25cQMIsREe-PucmXeh2hAg" fontSize="20"/>
-      <stereotypes xmi:id="_zysCE4sOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_udNyIIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
-      <visibility xmi:id="_zysCFIsOEe-PucmXeh2hAg" label="-"/>
-      <cardinality xmi:id="_zysCFYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-      <type xmi:id="_zysCFosOEe-PucmXeh2hAg" name="Random">
-        <modelElement href="SnakeGame_Oficial.uml#_uZ4KQIsOEe-PucmXeh2hAg"/>
-      </type>
-    </attributes>
     <attributes xmi:id="_zysCF4sOEe-PucmXeh2hAg" name="posMan">
       <modelElement href="SnakeGame_Oficial.uml#_udNyIYsOEe-PucmXeh2hAg"/>
+      <stereotypes xmi:id="_WoHzoJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WoJBwJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WoYSUJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zysCGIsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zysCGYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zysCGosOEe-PucmXeh2hAg" name="PositionManager">
@@ -1351,6 +1381,20 @@
         <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </type>
     </attributes>
+    <attributes xmi:id="_fyDMkJIREe-hDq1WJ5SjeA" name="registerDirection">
+      <modelElement href="SnakeGame_Oficial.uml#_fo7s0JIREe-hDq1WJ5SjeA"/>
+      <stereotypes xmi:id="_fyDMkZIREe-hDq1WJ5SjeA" name="Array">
+        <modelElement href="SnakeGame_Oficial.uml#_fo8T4JIREe-hDq1WJ5SjeA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_fyDMkpIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_fo9iAJIREe-hDq1WJ5SjeA"/>
+      </stereotypes>
+      <visibility xmi:id="_fyDMk5IREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fyDMlJIREe-hDq1WJ5SjeA" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_fyDMlZIREe-hDq1WJ5SjeA" name="Directions">
+        <modelElement href="SnakeGame_Oficial.uml#_uJPtQIsOEe-PucmXeh2hAg"/>
+      </type>
+    </attributes>
     <operations xmi:id="_zwwIbYsOEe-PucmXeh2hAg" name="Snake">
       <modelElement href="SnakeGame_Oficial.uml#_uJxRsIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_X7O9gIsPEe-PucmXeh2hAg" fontSize="20"/>
@@ -1553,12 +1597,48 @@
         </type>
       </parameters>
     </operations>
+    <operations xmi:id="_fx9F8JIREe-hDq1WJ5SjeA" name="getBodyImage">
+      <modelElement href="SnakeGame_Oficial.uml#_fk9y0JIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fx9F8ZIREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fx9F8pIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_fx9F85IREe-hDq1WJ5SjeA">
+        <modelElement href="SnakeGame_Oficial.uml#_folHgZIREe-hDq1WJ5SjeA"/>
+        <type xmi:id="_fx9F9JIREe-hDq1WJ5SjeA" name="Image">
+          <modelElement href="SnakeGame_Oficial.uml#_foj5YJIREe-hDq1WJ5SjeA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_fx9F9ZIREe-hDq1WJ5SjeA" name="dir">
+        <modelElement href="SnakeGame_Oficial.uml#_fk9y0ZIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_fx9F9pIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_fx9F95IREe-hDq1WJ5SjeA" name="Directions">
+          <modelElement href="SnakeGame_Oficial.uml#_uJPtQIsOEe-PucmXeh2hAg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_fx_iMJIREe-hDq1WJ5SjeA" name="getHeadImage">
+      <modelElement href="SnakeGame_Oficial.uml#_fk-Z4JIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fx_iMZIREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fx_iMpIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_fx_iM5IREe-hDq1WJ5SjeA">
+        <modelElement href="SnakeGame_Oficial.uml#_fowtsJIREe-hDq1WJ5SjeA"/>
+        <type xmi:id="_fx_iNJIREe-hDq1WJ5SjeA" name="Image">
+          <modelElement href="SnakeGame_Oficial.uml#_foj5YJIREe-hDq1WJ5SjeA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_fx_iNZIREe-hDq1WJ5SjeA" name="dir">
+        <modelElement href="SnakeGame_Oficial.uml#_fk-Z4ZIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_fx_iNpIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_fx_iN5IREe-hDq1WJ5SjeA" name="Directions">
+          <modelElement href="SnakeGame_Oficial.uml#_uJPtQIsOEe-PucmXeh2hAg"/>
+        </type>
+      </parameters>
+    </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zvwCwIsOEe-PucmXeh2hAg" name="Orange" associationsIn="_zuTRQYsOEe-PucmXeh2hAg _zoSI0IsOEe-PucmXeh2hAg _zsTGIYsOEe-PucmXeh2hAg" associationsOut="_zvXoQIsOEe-PucmXeh2hAg _zvXoQYsOEe-PucmXeh2hAg _zvYPUIsOEe-PucmXeh2hAg">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zvwCwIsOEe-PucmXeh2hAg" name="Orange" associationsIn="_zuTRQYsOEe-PucmXeh2hAg _zoSI0IsOEe-PucmXeh2hAg _zsTGIYsOEe-PucmXeh2hAg" associationsOut="_zvXoQIsOEe-PucmXeh2hAg _zvYPUIsOEe-PucmXeh2hAg">
     <modelElement href="SnakeGame_Oficial.uml#_uJasYIsOEe-PucmXeh2hAg"/>
     <visualProperties xmi:id="_zvwCwYsOEe-PucmXeh2hAg" fontSize="20" position="1776.0,2009.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_zvwCwosOEe-PucmXeh2hAg" label="+"/>
-    <attributes xmi:id="_zvwCw4sOEe-PucmXeh2hAg" defaultValue="20" name="ORANGE_SIZE">
+    <attributes xmi:id="_zvwCw4sOEe-PucmXeh2hAg" defaultValue="40" name="ORANGE_SIZE">
       <modelElement href="SnakeGame_Oficial.uml#_udeQ0IsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_dxmzpIsSEe-PucmXeh2hAg" fontSize="20"/>
       <stereotypes xmi:id="_zvwCxIsOEe-PucmXeh2hAg" name="LegacyStyledElement">
@@ -1620,33 +1700,21 @@
     </attributes>
     <attributes xmi:id="_zvwC3IsOEe-PucmXeh2hAg" name="posMan">
       <modelElement href="SnakeGame_Oficial.uml#_udhUIYsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zvwC3YsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_udh7MIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_Wn2t4JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wn3U8JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WodK0JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zvwC3osOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zvwC34sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zvwC4IsOEe-PucmXeh2hAg" name="PositionManager">
         <modelElement href="SnakeGame_Oficial.uml#_uHh2AIsOEe-PucmXeh2hAg"/>
       </type>
     </attributes>
-    <attributes xmi:id="_zvwC4YsOEe-PucmXeh2hAg" name="random">
-      <modelElement href="SnakeGame_Oficial.uml#_udh7MYsOEe-PucmXeh2hAg"/>
-      <visualProperties xmi:id="_dxnasosSEe-PucmXeh2hAg" fontSize="20"/>
-      <stereotypes xmi:id="_zvwC4osOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_udiiQIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
-      <visibility xmi:id="_zvwC44sOEe-PucmXeh2hAg" label="-"/>
-      <cardinality xmi:id="_zvwC5IsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-      <type xmi:id="_zvwC5YsOEe-PucmXeh2hAg" name="Random">
-        <modelElement href="SnakeGame_Oficial.uml#_uZ4KQIsOEe-PucmXeh2hAg"/>
-      </type>
-    </attributes>
     <attributes xmi:id="_zvwC5osOEe-PucmXeh2hAg" name="timer">
       <modelElement href="SnakeGame_Oficial.uml#_udiiQYsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_dxoBwosSEe-PucmXeh2hAg" fontSize="20"/>
-      <stereotypes xmi:id="_zvwC54sOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_udiiQosOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_Wn_QwJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WoAe4JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WohcQJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zvwC6IsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zvwC6YsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zvwp0IsOEe-PucmXeh2hAg" name="Timer">
@@ -1977,35 +2045,15 @@
     <visibility xmi:id="_zp2PEosOEe-PucmXeh2hAg" label="+"/>
     <attributes xmi:id="_zp2PE4sOEe-PucmXeh2hAg" name="snake">
       <modelElement href="SnakeGame_Oficial.uml#_uc5CAIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zp2PFIsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_uc5pEIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_Wmn-0JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WmqbEJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WokfkJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zp2PFYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zp2PFosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zp2PF4sOEe-PucmXeh2hAg" name="Snake">
         <modelElement href="SnakeGame_Oficial.uml#_uJu1cIsOEe-PucmXeh2hAg"/>
       </type>
     </attributes>
-    <operations xmi:id="_zp2PGIsOEe-PucmXeh2hAg" name="MotionSnake">
-      <modelElement href="SnakeGame_Oficial.uml#_uZqH0IsOEe-PucmXeh2hAg"/>
-      <visualProperties xmi:id="_OVnmwIsSEe-PucmXeh2hAg" fontSize="20"/>
-      <keywords xmi:id="_zp2PGYsOEe-PucmXeh2hAg" keyword="create">
-        <visualProperties xmi:id="_OVnmwYsSEe-PucmXeh2hAg" fontSize="20"/>
-      </keywords>
-      <visibility xmi:id="_zp2PGosOEe-PucmXeh2hAg" label="+">
-        <visualProperties xmi:id="_OVnmwosSEe-PucmXeh2hAg" fontSize="20"/>
-      </visibility>
-      <cardinality xmi:id="_zp2PG4sOEe-PucmXeh2hAg" label="1" max="1" min="1">
-        <visualProperties xmi:id="_OVnmw4sSEe-PucmXeh2hAg" fontSize="20"/>
-      </cardinality>
-      <outParameters xmi:id="_zp2PHIsOEe-PucmXeh2hAg">
-        <modelElement href="SnakeGame_Oficial.uml#_uZrV8osOEe-PucmXeh2hAg"/>
-        <visualProperties xmi:id="_OVnmxIsSEe-PucmXeh2hAg" fontSize="20"/>
-        <type xmi:id="_zp2PHYsOEe-PucmXeh2hAg" name="MotionSnake">
-          <modelElement href="SnakeGame_Oficial.uml#_uHZ6MIsOEe-PucmXeh2hAg"/>
-        </type>
-      </outParameters>
-    </operations>
     <operations xmi:id="_zp2PIYsOEe-PucmXeh2hAg" name="keyPressed">
       <modelElement href="SnakeGame_Oficial.uml#_ubTtoIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_OVnmxYsSEe-PucmXeh2hAg" fontSize="20"/>
@@ -2032,6 +2080,25 @@
         </type>
       </parameters>
     </operations>
+    <operations xmi:id="_fvDi8JIREe-hDq1WJ5SjeA" name="MotionSnake">
+      <modelElement href="SnakeGame_Oficial.uml#_fjlSwJIREe-hDq1WJ5SjeA"/>
+      <keywords xmi:id="_fvDi8ZIREe-hDq1WJ5SjeA" keyword="create"/>
+      <visibility xmi:id="_fvDi8pIREe-hDq1WJ5SjeA" label="+"/>
+      <cardinality xmi:id="_fvDi85IREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_fvDi9JIREe-hDq1WJ5SjeA">
+        <modelElement href="SnakeGame_Oficial.uml#_fjl50JIREe-hDq1WJ5SjeA"/>
+        <type xmi:id="_fvDi9ZIREe-hDq1WJ5SjeA" name="MotionSnake">
+          <modelElement href="SnakeGame_Oficial.uml#_uHZ6MIsOEe-PucmXeh2hAg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_fvDi9pIREe-hDq1WJ5SjeA" name="snake">
+        <modelElement href="SnakeGame_Oficial.uml#_fjlSwZIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_fvDi95IREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_fvDi-JIREe-hDq1WJ5SjeA" name="Snake">
+          <modelElement href="SnakeGame_Oficial.uml#_uJu1cIsOEe-PucmXeh2hAg"/>
+        </type>
+      </parameters>
+    </operations>
   </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zu01sIsOEe-PucmXeh2hAg" name="CollisionsManager" associationsIn="_zoVzMIsOEe-PucmXeh2hAg _zxJw8IsOEe-PucmXeh2hAg" associationsOut="_zuA9YIsOEe-PucmXeh2hAg _zqDqcIsOEe-PucmXeh2hAg _zoN3YIsOEe-PucmXeh2hAg _zuSqMIsOEe-PucmXeh2hAg _zuTRQIsOEe-PucmXeh2hAg _zuTRQYsOEe-PucmXeh2hAg _zudpUIsOEe-PucmXeh2hAg">
     <modelElement href="SnakeGame_Oficial.uml#_uBnbQIsOEe-PucmXeh2hAg"/>
@@ -2039,9 +2106,9 @@
     <visibility xmi:id="_zu01sosOEe-PucmXeh2hAg" label="+"/>
     <attributes xmi:id="_zu01s4sOEe-PucmXeh2hAg" name="snake">
       <modelElement href="SnakeGame_Oficial.uml#_uchOkIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zu01tIsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_ucicsIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WnuyEJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WnwAMJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WomUwJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zu01tYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zu01tosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zu01t4sOEe-PucmXeh2hAg" name="Snake">
@@ -2050,9 +2117,9 @@
     </attributes>
     <attributes xmi:id="_zu01uIsOEe-PucmXeh2hAg" name="apple">
       <modelElement href="SnakeGame_Oficial.uml#_ucicsYsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zu01uYsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_ucjDwIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WnxOUJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wnx1YJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WooJ8JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zu01uosOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zu01u4sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zu01vIsOEe-PucmXeh2hAg" name="Apple">
@@ -2061,9 +2128,9 @@
     </attributes>
     <attributes xmi:id="_zu01vYsOEe-PucmXeh2hAg" name="orange">
       <modelElement href="SnakeGame_Oficial.uml#_ucjq0IsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zu01vosOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_uckR4IsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WnzDgJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WnzqkJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WopYEJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zu01v4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zu01wIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zu01wYsOEe-PucmXeh2hAg" name="Orange">
@@ -2072,6 +2139,9 @@
     </attributes>
     <attributes xmi:id="_zu01wosOEe-PucmXeh2hAg" name="blackHole">
       <modelElement href="SnakeGame_Oficial.uml#_uck48IsOEe-PucmXeh2hAg"/>
+      <stereotypes xmi:id="_WnhWsJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WnlBEJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WorNQJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zu01w4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zu01xIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zu01xYsOEe-PucmXeh2hAg" name="BlackHole">
@@ -2080,6 +2150,9 @@
     </attributes>
     <attributes xmi:id="_zu01xosOEe-PucmXeh2hAg" name="snakeGame">
       <modelElement href="SnakeGame_Oficial.uml#_uclgAIsOEe-PucmXeh2hAg"/>
+      <stereotypes xmi:id="_WmteYJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WmxIwJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wor0UJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zu01x4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zu01yIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zu01yYsOEe-PucmXeh2hAg" name="SnakeGame">
@@ -2088,6 +2161,9 @@
     </attributes>
     <attributes xmi:id="_zu01yosOEe-PucmXeh2hAg" name="gameEngine">
       <modelElement href="SnakeGame_Oficial.uml#_ucmHEIsOEe-PucmXeh2hAg"/>
+      <stereotypes xmi:id="_WmFzUJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WmKr0JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WovesJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zu01y4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zu01zIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zu01zYsOEe-PucmXeh2hAg" name="GameEngine">
@@ -2096,9 +2172,9 @@
     </attributes>
     <attributes xmi:id="_zu01zosOEe-PucmXeh2hAg" name="posMan">
       <modelElement href="SnakeGame_Oficial.uml#_ucmuIYsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zu01z4sOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_ucnVMIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_Wn04sJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wn1fwJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wows0JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zu010IsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zu010YsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zu010osOEe-PucmXeh2hAg" name="PositionManager">
@@ -2239,12 +2315,12 @@
     <attributes xmi:id="_zyU1o4sOEe-PucmXeh2hAg" name="occupiedPositions">
       <modelElement href="SnakeGame_Oficial.uml#_uc6QIIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_dxgtAIsSEe-PucmXeh2hAg" fontSize="20"/>
-      <stereotypes xmi:id="_zyU1pIsOEe-PucmXeh2hAg" name="Generics">
-        <modelElement href="SnakeGame_Oficial.uml#_uc7eQIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
-      <stereotypes xmi:id="_zyU1pYsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_uc8FUIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WoKP4JIREe-hDq1WJ5SjeA" name="Generics"/>
+      <stereotypes xmi:id="_WoK28JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WoMFEJIREe-hDq1WJ5SjeA" name="Generics"/>
+      <stereotypes xmi:id="_WoMsIJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wox68JIREe-hDq1WJ5SjeA" name="Generics"/>
+      <stereotypes xmi:id="_WoyiAJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zyU1posOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zyU1p4sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zyU1qIsOEe-PucmXeh2hAg" name="List">
@@ -2301,32 +2377,6 @@
         <visualProperties xmi:id="_dxh7JIsSEe-PucmXeh2hAg" fontSize="20"/>
         <cardinality xmi:id="_zyU1uYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
         <type xmi:id="_zyU1uosOEe-PucmXeh2hAg" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="_zyU1u4sOEe-PucmXeh2hAg" name="removePosition">
-      <modelElement href="SnakeGame_Oficial.uml#_uHn8oIsOEe-PucmXeh2hAg"/>
-      <visualProperties xmi:id="_dxh7JYsSEe-PucmXeh2hAg" fontSize="20"/>
-      <visibility xmi:id="_zyU1vIsOEe-PucmXeh2hAg" label="+">
-        <visualProperties xmi:id="_dxh7JosSEe-PucmXeh2hAg" fontSize="20"/>
-      </visibility>
-      <cardinality xmi:id="_zyU1vYsOEe-PucmXeh2hAg" label="1" max="1" min="1">
-        <visualProperties xmi:id="_dxiiMIsSEe-PucmXeh2hAg" fontSize="20"/>
-      </cardinality>
-      <parameters xmi:id="_zyU1vosOEe-PucmXeh2hAg" name="x">
-        <modelElement href="SnakeGame_Oficial.uml#_uHn8oYsOEe-PucmXeh2hAg"/>
-        <visualProperties xmi:id="_dxiiMYsSEe-PucmXeh2hAg" fontSize="20"/>
-        <cardinality xmi:id="_zyU1v4sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-        <type xmi:id="_zyU1wIsOEe-PucmXeh2hAg" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
-      <parameters xmi:id="_zyU1wYsOEe-PucmXeh2hAg" name="y">
-        <modelElement href="SnakeGame_Oficial.uml#_uHn8oosOEe-PucmXeh2hAg"/>
-        <visualProperties xmi:id="_dxiiMosSEe-PucmXeh2hAg" fontSize="20"/>
-        <cardinality xmi:id="_zyU1wosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-        <type xmi:id="_zyU1w4sOEe-PucmXeh2hAg" name="int">
           <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </type>
       </parameters>
@@ -2447,6 +2497,32 @@
         <visualProperties xmi:id="_dxkXYYsSEe-PucmXeh2hAg" fontSize="20"/>
       </cardinality>
     </operations>
+    <operations xmi:id="_fvXsAJIREe-hDq1WJ5SjeA" name="removePosition">
+      <modelElement href="SnakeGame_Oficial.uml#_flbF0JIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fvXsAZIREe-hDq1WJ5SjeA" label="+"/>
+      <cardinality xmi:id="_fvXsApIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_fvXsA5IREe-hDq1WJ5SjeA" name="x">
+        <modelElement href="SnakeGame_Oficial.uml#_flbF0ZIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_fvXsBJIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_fvXsBZIREe-hDq1WJ5SjeA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_fvXsBpIREe-hDq1WJ5SjeA" name="y">
+        <modelElement href="SnakeGame_Oficial.uml#_flbF0pIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_fvXsB5IREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_fvXsCJIREe-hDq1WJ5SjeA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_fvXsCZIREe-hDq1WJ5SjeA" name="size">
+        <modelElement href="SnakeGame_Oficial.uml#_flbF05IREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_fvXsCpIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_fvXsC5IREe-hDq1WJ5SjeA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
   </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zoXoaYsOEe-PucmXeh2hAg" name="GameEngine" associationsIn="_zoN3YIsOEe-PucmXeh2hAg _zoPskIsOEe-PucmXeh2hAg _zr9H4IsOEe-PucmXeh2hAg _zxS64IsOEe-PucmXeh2hAg" associationsOut="_zoQToIsOEe-PucmXeh2hAg _zoRhwIsOEe-PucmXeh2hAg _zoSI0IsOEe-PucmXeh2hAg _zoSv4IsOEe-PucmXeh2hAg _zoUlEIsOEe-PucmXeh2hAg _zoVzMIsOEe-PucmXeh2hAg _zoWaQIsOEe-PucmXeh2hAg _zoXoYIsOEe-PucmXeh2hAg">
     <modelElement href="SnakeGame_Oficial.uml#_uGf7QIsOEe-PucmXeh2hAg"/>
@@ -2486,9 +2562,9 @@
     </attributes>
     <attributes xmi:id="_zoXofIsOEe-PucmXeh2hAg" name="snakeGame">
       <modelElement href="SnakeGame_Oficial.uml#_ucyUUIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zoXofYsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_ucy7YIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WmajcJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wmc_sJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wo1lUJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zoXofosOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zoXof4sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zoXogIsOEe-PucmXeh2hAg" name="SnakeGame">
@@ -2497,9 +2573,9 @@
     </attributes>
     <attributes xmi:id="_zoXogYsOEe-PucmXeh2hAg" name="collision">
       <modelElement href="SnakeGame_Oficial.uml#_ucy7YYsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zoXogosOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_uczicIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WmeN0JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WmgDAJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wo2zcJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zoXog4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zoXohIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zoXohYsOEe-PucmXeh2hAg" name="CollisionsManager">
@@ -2517,9 +2593,9 @@
     <attributes xmi:id="_zoXoiosOEe-PucmXeh2hAg" name="timer">
       <modelElement href="SnakeGame_Oficial.uml#_uc0JgIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_D9_Ek4sSEe-PucmXeh2hAg" fontSize="20"/>
-      <stereotypes xmi:id="_zoXoi4sOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_uc0JgYsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WmkUcJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WmmJoJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wo7E4JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zoXojIsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zoXojYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zoXojosOEe-PucmXeh2hAg" name="Timer">
@@ -2576,32 +2652,6 @@
       <cardinality xmi:id="_zoYPdosOEe-PucmXeh2hAg" label="1" max="1" min="1">
         <visualProperties xmi:id="_D-AStIsSEe-PucmXeh2hAg" fontSize="20"/>
       </cardinality>
-    </operations>
-    <operations xmi:id="_zoYPd4sOEe-PucmXeh2hAg" name="removePositionActual">
-      <modelElement href="SnakeGame_Oficial.uml#_uGmo8IsOEe-PucmXeh2hAg"/>
-      <visualProperties xmi:id="_D-AStYsSEe-PucmXeh2hAg" fontSize="20"/>
-      <visibility xmi:id="_zoYPeIsOEe-PucmXeh2hAg" label="+">
-        <visualProperties xmi:id="_D-AStosSEe-PucmXeh2hAg" fontSize="20"/>
-      </visibility>
-      <cardinality xmi:id="_zoYPeYsOEe-PucmXeh2hAg" label="1" max="1" min="1">
-        <visualProperties xmi:id="_D-ASt4sSEe-PucmXeh2hAg" fontSize="20"/>
-      </cardinality>
-      <parameters xmi:id="_zoYPeosOEe-PucmXeh2hAg" name="x">
-        <modelElement href="SnakeGame_Oficial.uml#_uGmo8YsOEe-PucmXeh2hAg"/>
-        <visualProperties xmi:id="_D-ASuIsSEe-PucmXeh2hAg" fontSize="20"/>
-        <cardinality xmi:id="_zoYPe4sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-        <type xmi:id="_zoYPfIsOEe-PucmXeh2hAg" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
-      <parameters xmi:id="_zoYPgIsOEe-PucmXeh2hAg" name="size">
-        <modelElement href="SnakeGame_Oficial.uml#_uGnQAIsOEe-PucmXeh2hAg"/>
-        <visualProperties xmi:id="_D-A5wYsSEe-PucmXeh2hAg" fontSize="20"/>
-        <cardinality xmi:id="_zoYPgYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-        <type xmi:id="_zoYPgosOEe-PucmXeh2hAg" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
     </operations>
     <operations xmi:id="_zoYPg4sOEe-PucmXeh2hAg" name="addPositionActuals">
       <modelElement href="SnakeGame_Oficial.uml#_uGqTUIsOEe-PucmXeh2hAg"/>
@@ -2677,20 +2727,37 @@
         </type>
       </parameters>
     </operations>
+    <operations xmi:id="_ftKFgJIREe-hDq1WJ5SjeA" name="removePositionActual">
+      <modelElement href="SnakeGame_Oficial.uml#_flYCgJIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_ftKFgZIREe-hDq1WJ5SjeA" label="+"/>
+      <cardinality xmi:id="_ftKFgpIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_ftKFg5IREe-hDq1WJ5SjeA" name="x">
+        <modelElement href="SnakeGame_Oficial.uml#_flYpkJIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_ftKFhJIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_ftKFhZIREe-hDq1WJ5SjeA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ftKFhpIREe-hDq1WJ5SjeA" name="y">
+        <modelElement href="SnakeGame_Oficial.uml#_flYpkZIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_ftKFh5IREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_ftKFiJIREe-hDq1WJ5SjeA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_ftKFiZIREe-hDq1WJ5SjeA" name="size">
+        <modelElement href="SnakeGame_Oficial.uml#_flYpkpIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_ftKFipIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_ftKFi5IREe-hDq1WJ5SjeA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
   </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zqJxEIsOEe-PucmXeh2hAg" name="SnakeGame" associationsIn="_zoUlEIsOEe-PucmXeh2hAg _zqDqcIsOEe-PucmXeh2hAg _zr8g0IsOEe-PucmXeh2hAg _ztjqYIsOEe-PucmXeh2hAg _zxHUsIsOEe-PucmXeh2hAg" associationsOut="_zoPskIsOEe-PucmXeh2hAg">
     <modelElement href="SnakeGame_Oficial.uml#_uIEokIsOEe-PucmXeh2hAg"/>
     <visualProperties xmi:id="_zqJxEYsOEe-PucmXeh2hAg" fontSize="20" position="11.0,226.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_zqJxEosOEe-PucmXeh2hAg" label="+"/>
-    <attributes xmi:id="_zqJxE4sOEe-PucmXeh2hAg" defaultValue="1L" name="serialVersionUID" staticAttribute="true">
-      <modelElement href="SnakeGame_Oficial.uml#_udDaEIsOEe-PucmXeh2hAg"/>
-      <visualProperties xmi:id="_D96MEIsSEe-PucmXeh2hAg" fontSize="20"/>
-      <visibility xmi:id="_zqJxFIsOEe-PucmXeh2hAg" label="-"/>
-      <cardinality xmi:id="_zqJxFYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
-      <type xmi:id="_zqJxFosOEe-PucmXeh2hAg" name="long">
-        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
-      </type>
-    </attributes>
     <attributes xmi:id="_zqJxF4sOEe-PucmXeh2hAg" defaultValue="1360" name="WIDTH">
       <modelElement href="SnakeGame_Oficial.uml#_udEoMIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_D96zIIsSEe-PucmXeh2hAg" fontSize="20"/>
@@ -2832,10 +2899,32 @@
       </parameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zwfCkIsOEe-PucmXeh2hAg" name="Menu" generalizations="_zwdNYIsOEe-PucmXeh2hAg">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zwfCkIsOEe-PucmXeh2hAg" name="Menu" associationsOut="_fxfy8JIREe-hDq1WJ5SjeA _fx2YQJIREe-hDq1WJ5SjeA" generalizations="_zwdNYIsOEe-PucmXeh2hAg">
     <modelElement href="SnakeGame_Oficial.uml#_uH1_EIsOEe-PucmXeh2hAg"/>
     <visualProperties xmi:id="_zwfCkYsOEe-PucmXeh2hAg" fontSize="20" position="530.0,212.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_zwfCkosOEe-PucmXeh2hAg" label="+"/>
+    <attributes xmi:id="_fwpeYJIREe-hDq1WJ5SjeA" name="easyButton">
+      <modelElement href="SnakeGame_Oficial.uml#_fo20UJIREe-hDq1WJ5SjeA"/>
+      <stereotypes xmi:id="_fwpeYZIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_fo4CcJIREe-hDq1WJ5SjeA"/>
+      </stereotypes>
+      <visibility xmi:id="_fwpeYpIREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fwpeY5IREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <type xmi:id="_fwpeZJIREe-hDq1WJ5SjeA" name="JToggleButton">
+        <modelElement href="SnakeGame_Oficial.uml#_fockoJIREe-hDq1WJ5SjeA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_fwpeZZIREe-hDq1WJ5SjeA" name="hardButton">
+      <modelElement href="SnakeGame_Oficial.uml#_fo4pgJIREe-hDq1WJ5SjeA"/>
+      <stereotypes xmi:id="_fwpeZpIREe-hDq1WJ5SjeA" name="LegacyStyledElement">
+        <modelElement href="SnakeGame_Oficial.uml#_fo5QkJIREe-hDq1WJ5SjeA"/>
+      </stereotypes>
+      <visibility xmi:id="_fwpeZ5IREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fwpeaJIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <type xmi:id="_fwpeaZIREe-hDq1WJ5SjeA" name="JToggleButton">
+        <modelElement href="SnakeGame_Oficial.uml#_fockoJIREe-hDq1WJ5SjeA"/>
+      </type>
+    </attributes>
     <operations xmi:id="_zwfCk4sOEe-PucmXeh2hAg" name="Menu">
       <modelElement href="SnakeGame_Oficial.uml#_uH8swIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_OVo044sSEe-PucmXeh2hAg" fontSize="20"/>
@@ -2876,6 +2965,69 @@
         <visualProperties xmi:id="_OVpb9YsSEe-PucmXeh2hAg" fontSize="20"/>
       </cardinality>
     </operations>
+    <operations xmi:id="_fvqm8JIREe-hDq1WJ5SjeA" name="createPlayButton">
+      <modelElement href="SnakeGame_Oficial.uml#_fjxgAJIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fvqm8ZIREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fvqm8pIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_fvqm85IREe-hDq1WJ5SjeA">
+        <modelElement href="SnakeGame_Oficial.uml#_fog2EJIREe-hDq1WJ5SjeA"/>
+        <type xmi:id="_fvqm9JIREe-hDq1WJ5SjeA" name="JButton">
+          <modelElement href="SnakeGame_Oficial.uml#_fofA4JIREe-hDq1WJ5SjeA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_fvtDMJIREe-hDq1WJ5SjeA" name="createButtonPanel">
+      <modelElement href="SnakeGame_Oficial.uml#_fjyHEJIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fvtDMZIREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fvtDMpIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_fvtDM5IREe-hDq1WJ5SjeA">
+        <modelElement href="SnakeGame_Oficial.uml#_fjyuIJIREe-hDq1WJ5SjeA"/>
+        <type xmi:id="_fvtDNJIREe-hDq1WJ5SjeA" name="JPanel">
+          <modelElement href="SnakeGame_Oficial.uml#_ubWw8YsOEe-PucmXeh2hAg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_fwcqEJIREe-hDq1WJ5SjeA" name="createTitlePanel">
+      <modelElement href="SnakeGame_Oficial.uml#_fjyuIZIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fwcqEZIREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fwcqEpIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_fwcqE5IREe-hDq1WJ5SjeA">
+        <modelElement href="SnakeGame_Oficial.uml#_fjyuIpIREe-hDq1WJ5SjeA"/>
+        <type xmi:id="_fwcqFJIREe-hDq1WJ5SjeA" name="JPanel">
+          <modelElement href="SnakeGame_Oficial.uml#_ubWw8YsOEe-PucmXeh2hAg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_fwgUcJIREe-hDq1WJ5SjeA" name="toggleDifficulty">
+      <modelElement href="SnakeGame_Oficial.uml#_fjzVMJIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fwgUcZIREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fwgUcpIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_fwgUc5IREe-hDq1WJ5SjeA" name="e">
+        <modelElement href="SnakeGame_Oficial.uml#_fjzVMZIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_fwgUdJIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_fwgUdZIREe-hDq1WJ5SjeA" name="ActionEvent">
+          <modelElement href="SnakeGame_Oficial.uml#_uZGHIYsOEe-PucmXeh2hAg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_fwj-0JIREe-hDq1WJ5SjeA" name="loadPixelFont">
+      <modelElement href="SnakeGame_Oficial.uml#_fleJIJIREe-hDq1WJ5SjeA"/>
+      <visibility xmi:id="_fwj-0ZIREe-hDq1WJ5SjeA" label="-"/>
+      <cardinality xmi:id="_fwj-0pIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_fwj-05IREe-hDq1WJ5SjeA">
+        <modelElement href="SnakeGame_Oficial.uml#_foiEMZIREe-hDq1WJ5SjeA"/>
+        <type xmi:id="_fwj-1JIREe-hDq1WJ5SjeA" name="Font">
+          <modelElement href="SnakeGame_Oficial.uml#_fog2EZIREe-hDq1WJ5SjeA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_fwj-1ZIREe-hDq1WJ5SjeA" name="size">
+        <modelElement href="SnakeGame_Oficial.uml#_flewMJIREe-hDq1WJ5SjeA"/>
+        <cardinality xmi:id="_fwj-1pIREe-hDq1WJ5SjeA" label="1" max="1" min="1"/>
+        <type xmi:id="_fwj-15IREe-hDq1WJ5SjeA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
   </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_zr5dgIsOEe-PucmXeh2hAg" name="MainGame">
     <modelElement href="SnakeGame_Oficial.uml#_uKEMoIsOEe-PucmXeh2hAg"/>
@@ -2906,9 +3058,9 @@
     <visibility xmi:id="_zsq5kYsOEe-PucmXeh2hAg" label="~"/>
     <attributes xmi:id="_zsq5kosOEe-PucmXeh2hAg" defaultValue="new SnakeGame()" name="game">
       <modelElement href="SnakeGame_Oficial.uml#_uduvgIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zsq5k4sOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_udvWkIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WmyW4JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WmzlAJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wo_9YJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zsq5lIsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsq5lYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zsq5losOEe-PucmXeh2hAg" name="SnakeGame">
@@ -2917,9 +3069,9 @@
     </attributes>
     <attributes xmi:id="_zsq5l4sOEe-PucmXeh2hAg" defaultValue="new GameEngine(game)" name="gameEngine">
       <modelElement href="SnakeGame_Oficial.uml#_udv9oIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zsq5mIsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_udv9oosOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_Wm0zIJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wm3PYJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WpBLgJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zsq5mYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsq5mosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zsq5m4sOEe-PucmXeh2hAg" name="GameEngine">
@@ -2928,9 +3080,9 @@
     </attributes>
     <attributes xmi:id="_zsq5nIsOEe-PucmXeh2hAg" defaultValue="new Apple(game.getWidth(), game.getHeight(), gameEngine.getPositionManager())" name="apple">
       <modelElement href="SnakeGame_Oficial.uml#_udwksIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zsq5nYsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_udxLwYsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_Wm4dgJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wm5EkJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WpCZoJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zsq5nosOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsq5n4sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zsq5oIsOEe-PucmXeh2hAg" name="Apple">
@@ -2939,9 +3091,9 @@
     </attributes>
     <attributes xmi:id="_zsq5oYsOEe-PucmXeh2hAg" defaultValue="new Snake(5)" name="snake">
       <modelElement href="SnakeGame_Oficial.uml#_udxLwosOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zsq5oosOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_udxy0YsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_Wm65wJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wm8H4JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WpDnwJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zsq5o4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsq5pIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zsq5pYsOEe-PucmXeh2hAg" name="Snake">
@@ -2950,9 +3102,9 @@
     </attributes>
     <attributes xmi:id="_zsq5posOEe-PucmXeh2hAg" defaultValue="new Orange(game.getWidth(), game.getHeight(), gameEngine.getPositionManager())" name="orange">
       <modelElement href="SnakeGame_Oficial.uml#_udxy0osOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zsq5p4sOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_ud0PEIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_Wm9WAJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Wm99EJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WpE14JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zsq5qIsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsq5qYsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zsq5qosOEe-PucmXeh2hAg" name="Orange">
@@ -2961,9 +3113,9 @@
     </attributes>
     <attributes xmi:id="_zsq5q4sOEe-PucmXeh2hAg" defaultValue="new BlackHole(game.getWidth(), game.getHeight(), gameEngine.getPositionManager())" name="blackHole">
       <modelElement href="SnakeGame_Oficial.uml#_ud2EQIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_zsq5rIsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_ud6VsIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WnAZUJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WnCOgJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WpGEAJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_zsq5rYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_zsq5rosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_zsq5r4sOEe-PucmXeh2hAg" name="BlackHole">
@@ -3157,9 +3309,9 @@
     <visibility xmi:id="_ztziAosOEe-PucmXeh2hAg" label="~"/>
     <attributes xmi:id="_ztziA4sOEe-PucmXeh2hAg" name="game">
       <modelElement href="SnakeGame_Oficial.uml#_udrsMIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_ztziBIsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_udsTQIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WnC1kJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WnEDsJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WpIgQJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_ztziBYsOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_ztziBosOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_ztziB4sOEe-PucmXeh2hAg" name="SnakeGame">
@@ -3169,9 +3321,9 @@
     <attributes xmi:id="_ztziCIsOEe-PucmXeh2hAg" name="frame">
       <modelElement href="SnakeGame_Oficial.uml#_uds6UIsOEe-PucmXeh2hAg"/>
       <visualProperties xmi:id="_trHKUIsPEe-PucmXeh2hAg" fontSize="20"/>
-      <stereotypes xmi:id="_ztziCYsOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_uds6UYsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WnHuEJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WnceMJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WpKVcJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_ztziCosOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_ztziC4sOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_ztziDIsOEe-PucmXeh2hAg" name="JFrame">
@@ -3180,9 +3332,9 @@
     </attributes>
     <attributes xmi:id="_ztziDYsOEe-PucmXeh2hAg" name="snake">
       <modelElement href="SnakeGame_Oficial.uml#_udthYIsOEe-PucmXeh2hAg"/>
-      <stereotypes xmi:id="_ztziDosOEe-PucmXeh2hAg" name="LegacyStyledElement">
-        <modelElement href="SnakeGame_Oficial.uml#_uduIcIsOEe-PucmXeh2hAg"/>
-      </stereotypes>
+      <stereotypes xmi:id="_WnFR0JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WnF44JIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_WpMKoJIREe-hDq1WJ5SjeA" name="LegacyStyledElement"/>
       <visibility xmi:id="_ztziD4sOEe-PucmXeh2hAg" label="-"/>
       <cardinality xmi:id="_ztziEIsOEe-PucmXeh2hAg" label="1" max="1" min="1"/>
       <type xmi:id="_ztziEYsOEe-PucmXeh2hAg" name="Snake">

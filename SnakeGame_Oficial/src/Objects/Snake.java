@@ -5,9 +5,11 @@ import java.awt.*;
 public class Snake {
 
 	private final Directions[] registerDirection;
-    private final int RECT_SIZE = 20;
-    private final int[] pos_x;
-    private final int[] pos_y; 
+    private final int SNAKE_RECT_SIZE = 20;
+    private final int[] posX;
+    private final int[] posY; 
+    private boolean visible;
+    private boolean inmunity;
     private int snakeSize; 
     private Directions direction;
     
@@ -15,25 +17,61 @@ public class Snake {
     	this.registerDirection = new Directions[900];
     	this.direction = Directions.RIGTH;
     	this.snakeSize = snakeSize;
-        this.pos_x = new int[900];  
-        this.pos_y = new int[900];
+        this.posX = new int[900];  
+        this.posY = new int[900];
+        this.inmunity = false;
+        this.visible = true;
+        
         initSnake();
     }
     
-    public void setSnakeSize(int n) {
-    	this.snakeSize = n;
+    public void setSnakeSize(int sizeNew) {
+        for (int i = snakeSize; i < sizeNew; i++) {
+        	posX[i] = posX[snakeSize - 1];
+            posY[i] = posY[snakeSize - 1];
+            registerDirection[i] = registerDirection[snakeSize - 1];
+        }
+        this.snakeSize = sizeNew;
     }
     
-    public int getSnakeSize() {
-    	return snakeSize;
+    public void setInmunity (boolean valid) {
+    	this.inmunity = valid;
     }
     
-    public int getSnakePosX(int x) {
-    	return pos_x[x];
+    public boolean getInmunity () {
+    	return this.inmunity;
+    }
+   
+    public void setVisible(boolean vs) {
+    	this.visible = vs;
     }
     
-    public int getSnakePosY(int y) {
-    	return pos_y[y];
+    public boolean getVisible () {
+    	return this.visible;
+    }
+    
+    public void setSnakePosX (int n) {
+    	this.posX[0] = n;
+    }
+    
+    public void setSnakePosY (int n) {
+    	this.posY[0] = n;
+    }
+    
+    public int getSnakeRectSize () {
+    	return this.SNAKE_RECT_SIZE;
+    }
+    
+    public int getSnakeSize () {
+    	return this.snakeSize;
+    }
+    
+    public int getSnakePosX (int x) {
+    	return this.posX[x];
+    }
+    
+    public int getSnakePosY (int y) {
+    	return this.posY[y];
     }
     
     public void setDirection(Directions direction) {
@@ -41,26 +79,33 @@ public class Snake {
             this.direction = direction;
         } 
     }
-
+    
+    public boolean inmunity (boolean valid) {
+    	if(valid) return true;
+    	return false;
+    }
+    
     private void initSnake() {
         for (int i = 0; i < snakeSize; i++) {
-            pos_x[i] = 60 - i * 10;
-            pos_y[i] = 60;
+            posX[i] = 60 - i * 10;
+            posY[i] = 60;
         }
     }
 
     public void draw(Graphics g) {
-        for (int i = 0; i < snakeSize; i++) {
-            if (i == 0) {
-                g.drawImage(getHeadImage(registerDirection[i]), pos_x[i], pos_y[i], RECT_SIZE, RECT_SIZE, null);
-            } else {
-            	g.drawImage(getBodyImage(registerDirection[i]), pos_x[i], pos_y[i], RECT_SIZE, RECT_SIZE, null);
+    	if (visible) {
+    		for (int i = 0; i < snakeSize; i++) {
+                if (i == 0) {
+                    g.drawImage(getHeadImage(registerDirection[i]), posX[i], posY[i], SNAKE_RECT_SIZE, SNAKE_RECT_SIZE, null);
+                } else {
+                	g.drawImage(getBodyImage(registerDirection[i]), posX[i], posY[i], SNAKE_RECT_SIZE, SNAKE_RECT_SIZE, null);
+                }
             }
-        }
+    	} 
     }
     
     private Image getBodyImage(Directions dir) {
-    	if (dir == null) dir = Directions.RIGTH;//Evita que se den direcciones nulas, debido a las actualizaciones
+    	if (dir == null) dir = Directions.RIGTH; //Evita que se den direcciones nulas, debido a las actualizaciones
         switch (dir) {
             case LEFT: return Images.SNAKE_BODY_LEFT;
             case UP: return Images.SNAKE_BODY_UP;
@@ -83,17 +128,18 @@ public class Snake {
     
     public void move() {
     	for(int i = snakeSize; i > 0; i--) {
-    		pos_x[i] = pos_x[i - 1];
-    		pos_y[i] = pos_y[i - 1];
-    		registerDirection[i] = registerDirection[i - 1]; //Asignar direccion de siguiente al anterior
-    	}
+    		posX[i] = posX[i - 1];
+    		posY[i] = posY[i - 1];
+    		registerDirection[i] = registerDirection[i - 1]; //Asignar direccion del siguiente al anterior
+    	} 
+    	
     	registerDirection[0] = direction; //Guardar la dirección de la cabeza en registerDirection[0]
     	
     	switch (direction) {
-	        case RIGTH -> pos_x[0] += RECT_SIZE;
-	        case LEFT  -> pos_x[0] -= RECT_SIZE;
-	        case DOWN  -> pos_y[0] += RECT_SIZE;
-	        case UP    -> pos_y[0] -= RECT_SIZE;
+	        case RIGTH -> posX[0] += SNAKE_RECT_SIZE;
+	        case LEFT  -> posX[0] -= SNAKE_RECT_SIZE;
+	        case DOWN  -> posY[0] += SNAKE_RECT_SIZE;
+	        case UP    -> posY[0] -= SNAKE_RECT_SIZE;
     	}
     }
     

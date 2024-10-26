@@ -20,7 +20,7 @@ class SGTestDrivers {
     public void setUp() throws InterruptedException{
     	
     	frame = new JFrame();
-		game = new SnakeGame();
+		//game = new SnakeGame();
 		frame.add(game);
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

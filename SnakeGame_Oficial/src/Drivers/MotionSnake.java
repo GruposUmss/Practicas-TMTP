@@ -15,7 +15,6 @@ public class MotionSnake extends KeyAdapter {
 	
 	@Override
 	public void keyPressed (KeyEvent e) {
-		
 		int button = e.getKeyCode();
 		
 		switch (button) {

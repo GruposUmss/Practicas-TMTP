@@ -13,36 +13,46 @@ public class GameEngine implements ActionListener {
 	private Orange orange;
 	private BlackHole blackHole;
 	private SnakeGame snakeGame;
-	private CollisionsManager collision;
+	private CollisionsManager collisionManager;
 	private PositionManager positionManager;
+	private ScoreManager scoreManager; //Agregado para el puntaje
+	private LifeManager lifeManager;
 	
 	private Timer timer;
 	
 	private final int DELAY = 90;
 	private boolean inGame = true;
 	
-	public GameEngine(SnakeGame snakeGame) {
+	public GameEngine(SnakeGame snakeGame, ScoreManager scoreManager) {
+		this.scoreManager = scoreManager;
+		this.lifeManager = new LifeManager();
 		this.positionManager = new PositionManager();
 		this.snakeGame = snakeGame;
         this.snake = new Snake(5); 
         this.apple = new Apple(snakeGame.getWidth(), snakeGame.getHeight(), positionManager); 
         this.blackHole = new BlackHole(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
         this.orange = new Orange(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
-        orange.loadOrange();
-       
-		this.collision = new CollisionsManager(snake, apple, orange, blackHole, snakeGame, positionManager, this);
+		this.collisionManager = new CollisionsManager(snake, apple, orange, blackHole, snakeGame, positionManager, scoreManager, lifeManager, this);
 	}
 	
 	public void setInGame(boolean inGame) {
 		this.inGame = inGame;
 	}
 	
+	public LifeManager getLifeManager () {
+		return this.lifeManager;
+	}
+	
+	public ScoreManager getScoreManager () { 
+        return this.scoreManager;
+    }
+	
 	public PositionManager getPositionManager() {
 		return this.positionManager;
 	}
 	
 	public CollisionsManager getCollisionsManager() {
-		return this.collision;
+		return this.collisionManager;
 	}
 	
 	public boolean getInGame() {
@@ -71,12 +81,34 @@ public class GameEngine implements ActionListener {
 		timer.start();
 	}
 	
+	public void blinkSnake () {
+		Timer blinkTimer = new Timer(150, new ActionListener() {
+	        private int blinkCount = 0;
+
+	        @Override
+	        public void actionPerformed(ActionEvent e) {
+	            snake.setVisible(!snake.getVisible());  // Alterna visibilidad
+	            snakeGame.repaint();  // Re-pinta el juego para reflejar los cambios
+	            snake.setInmunity(true);   
+
+	            blinkCount++;
+	            if (blinkCount >= 30) {  // Detener después de 5 parpadeos
+	                ((Timer) e.getSource()).stop();  // Detiene el temporizador
+	                snake.setVisible(true);  // Asegura que la serpiente quede visible al final
+	                snakeGame.repaint();  // Re-pinta por última vez
+	                snake.setInmunity(false);
+	            }
+	        }
+	    });
+	    blinkTimer.start();  // Inicia el temporizador para el parpadeo
+	}
+	
 	private void endGame() {
 	    timer.stop();
 	    if (SwingUtilities.getWindowAncestor(snakeGame) != null) {
 	        SwingUtilities.getWindowAncestor(snakeGame).dispose();
 	    }
-	    new Menu().setVisible(true);
+	    new Menu(this.scoreManager).setVisible(true);
 	}
 	
 	public void removePositionActual(int x, int y, int size) {
@@ -94,11 +126,11 @@ public class GameEngine implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if(inGame) {
 			snake.move();
-			collision.checkCollisionLimits();
-			collision.checkCollisionBody(); 
-			collision.checkCollisionApple();
-			collision.checkCollisionOrange();
-			collision.checkCollisionBlackHole();
+			collisionManager.checkCollisionLimits();
+			collisionManager.checkCollisionBody(); 
+			collisionManager.checkCollisionApple();
+			collisionManager.checkCollisionOrange();
+			collisionManager.checkCollisionBlackHole();
 		}else {
 			endGame();
 		}		
