@@ -32,7 +32,7 @@ public class GameEngine implements ActionListener {
         this.apple = new Apple(snakeGame.getWidth(), snakeGame.getHeight(), positionManager); 
         this.blackHole = new BlackHole(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
         this.orange = new Orange(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
-		this.collisionManager = new CollisionsManager(snake, apple, orange, blackHole, snakeGame, positionManager, scoreManager, lifeManager, this);
+		this.collisionManager = new CollisionsManager(snakeGame, this);
 	}
 	
 	public void setInGame(boolean inGame) {
@@ -75,22 +75,22 @@ public class GameEngine implements ActionListener {
 		return this.blackHole;
 	}
 	
-	public void starGame() {
+	public void startGame() {
 		addPositionActuals();
 		timer = new Timer(DELAY, this);
 		timer.start();
 	}
 	
 	public void blinkSnake () {
+		snake.setInmunity(true);
 		Timer blinkTimer = new Timer(150, new ActionListener() {
 	        private int blinkCount = 0;
-
+	        
 	        @Override
 	        public void actionPerformed(ActionEvent e) {
 	            snake.setVisible(!snake.getVisible());  // Alterna visibilidad
 	            snakeGame.repaint();  // Re-pinta el juego para reflejar los cambios
-	            snake.setInmunity(true);   
-
+	             
 	            blinkCount++;
 	            if (blinkCount >= 30) {  // Detener después de 5 parpadeos
 	                ((Timer) e.getSource()).stop();  // Detiene el temporizador
@@ -126,6 +126,7 @@ public class GameEngine implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if(inGame) {
 			snake.move();
+			addPositionActuals();
 			collisionManager.checkCollisionLimits();
 			collisionManager.checkCollisionBody(); 
 			collisionManager.checkCollisionApple();

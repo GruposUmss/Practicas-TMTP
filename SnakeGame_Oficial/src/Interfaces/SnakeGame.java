@@ -1,6 +1,7 @@
 package Interfaces;
 
 import Drivers.*;
+import Objects.GameSettings;
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,9 +15,9 @@ public class SnakeGame extends JPanel{
     private LifeDisplay lifeDisplay;
     private ScoreDisplay scoreDisplay;
     private GameEngine gameEngine;
-
-    public SnakeGame(ScoreManager sm) {
-        initBoard(sm);
+    
+    public SnakeGame(ScoreManager sm, GameSettings.Dificulty dificulty) {
+    	initBoard(sm,  dificulty);
     }
     
     public GameEngine getGameEngine() {
@@ -31,15 +32,19 @@ public class SnakeGame extends JPanel{
     	return this.HEIGHT;
     }
     
-    private void initBoard(ScoreManager scoreManager) {
+    private void initBoard(ScoreManager scoreManager, GameSettings.Dificulty dificulty) {
         setBackground(Color.black);
         setFocusable(true);
         requestFocusInWindow();
         
         this.gameEngine = new GameEngine(this, scoreManager);
+        
         this.scoreDisplay = new ScoreDisplay(scoreManager);
         this.lifeDisplay = new LifeDisplay(gameEngine.getLifeManager());
-        gameEngine.starGame();
+        if (dificulty != GameSettings.Dificulty.EASY) {
+        	this.lifeDisplay.setVisible(false);
+        }
+        gameEngine.startGame();
         
         addKeyListener(new MotionSnake(gameEngine.getSnake())); //Define el listado de llaves para el taclado
     }

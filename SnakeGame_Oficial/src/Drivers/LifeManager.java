@@ -2,13 +2,22 @@ package Drivers;
 
 public class LifeManager {
     private int lives;
+    private boolean visible;
 
     public LifeManager() {
-        this.lives = 3; //Número inicial de vidas
+    	this.visible = true;
+        this.lives = 3;
     }
     
     public int getLives() {
+    	if (!this.visible) {
+    		this.lives = 0;
+    	}
         return lives;
+    }
+    
+    public void setVisible (boolean visible) {
+    	this.visible = visible;
     }
 
     public void loseLife() {
@@ -21,7 +30,5 @@ public class LifeManager {
         return lives > 0;
     }
 
-    public void resetLives() {
-        lives = 3; //Reinicia las vidas si es necesario
-    }
+   
 }

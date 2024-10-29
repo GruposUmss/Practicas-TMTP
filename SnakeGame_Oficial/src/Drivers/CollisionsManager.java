@@ -1,120 +1,87 @@
 package Drivers;
 
-import Objects.*;
 import Interfaces.SnakeGame;
 
 public class CollisionsManager {
-	private Snake snake;
-	private Apple apple;
-	private Orange orange;
-	private BlackHole blackHole;
+	
 	private SnakeGame snakeGame;
 	private GameEngine gameEngine;
-	private PositionManager posMan;
-	private ScoreManager scoreManager;
-	private LifeManager lifeManager; 
 	
-	public CollisionsManager(Snake s, Apple a, Orange o, BlackHole bh, SnakeGame sg, PositionManager pm, ScoreManager sm, LifeManager lm, GameEngine ge) {
-		this.snake = s;
-		this.apple = a;
-		this.orange = o;
-		this.blackHole = bh;
+	public CollisionsManager( SnakeGame sg, GameEngine ge) {
 		this.snakeGame = sg;
 		this.gameEngine = ge;
-		this.posMan = pm;
-		this.scoreManager = sm;
-		this.lifeManager = lm;
 	}
 	
-	public void checkCollisionLimits() {
-		if (snake.getSnakePosX(0) >= snakeGame.getWidth()) {
-			snake.setSnakePosX(0);
-		} else if (snake.getSnakePosX(0) < 0) {
-			snake.setSnakePosX(snakeGame.getWidth() - snake.getSnakeRectSize());
+	public void checkCollisionLimits () {
+		if (gameEngine.getSnake().getSnakePosX(0) >= snakeGame.getWidth()) {
+			gameEngine.getSnake().setSnakePosX(0);
+		} else if (gameEngine.getSnake().getSnakePosX(0) < 0) {
+			gameEngine.getSnake().setSnakePosX(snakeGame.getWidth() - gameEngine.getSnake().getSnakeRectSize());
 		}
 		
-		if (snake.getSnakePosY(0) >= snakeGame.getHeight()) {
-			snake.setSnakePosY(0);
-		} else if (snake.getSnakePosY(0) < 0) {
-			snake.setSnakePosY(snakeGame.getHeight() - snake.getSnakeRectSize());
+		if (gameEngine.getSnake().getSnakePosY(0) >= snakeGame.getHeight()) {
+			gameEngine.getSnake().setSnakePosY(0);
+		} else if (gameEngine.getSnake().getSnakePosY(0) < 0) {
+			gameEngine.getSnake().setSnakePosY(snakeGame.getHeight() - gameEngine.getSnake().getSnakeRectSize());
 		}
 	}
 
-	public void checkCollisionBody() {
-		/*
-		int cont = snake.getSnakeSize();
-		while (cont > 0) {
-			if (!snake.getInmunity()) {
-				if((snake.getSnakePosX(0) == snake.getSnakePosX(cont)) && 
-					(snake.getSnakePosY(0) == snake.getSnakePosY(cont))) {
-					if (lifeManager.getLives() <= 0) {
+	public void checkCollisionBody () {
+		if(gameEngine.getSnake().getInmunity()) return;
+		for (int i = gameEngine.getSnake().getSnakeSize(); i > 0; i--) {
+				if((gameEngine.getSnake().getSnakePosX(0) == gameEngine.getSnake().getSnakePosX(i)) && 
+					(gameEngine.getSnake().getSnakePosY(0) == gameEngine.getSnake().getSnakePosY(i))) {
+					if (gameEngine.getLifeManager().getLives() <= 0) {
 						gameEngine.setInGame(false);
 					}
-					lifeManager.loseLife();
-					gameEngine.blinkSnake();
-					break;
-				}
-			} 
-			cont--;
-		}
-		*/
-		if(snake.getInmunity()) return;
-		for (int i = snake.getSnakeSize(); i > 0; i--) {
-				if((snake.getSnakePosX(0) == snake.getSnakePosX(i)) && 
-					(snake.getSnakePosY(0) == snake.getSnakePosY(i))) {
-					if (lifeManager.getLives() <= 0) {
-						gameEngine.setInGame(false);
-					}
-					lifeManager.loseLife();
+					gameEngine.getLifeManager().loseLife();
 					gameEngine.blinkSnake();	
 				}
 		}
 		
 	}
 	
-	public void checkCollisionApple() {
-		if(snake.getSnakePosX(0) >= apple.getX() && 
-			snake.getSnakePosY(0) >= apple.getY() && 
-			snake.getSnakePosX(0) < apple.getX() + apple.getSize() &&
-			snake.getSnakePosY(0) < apple.getY() + apple.getSize()) {
+	public void checkCollisionApple () {
+		if(gameEngine.getSnake().getSnakePosX(0) >= gameEngine.getApple().getX() && 
+			gameEngine.getSnake().getSnakePosY(0) >= gameEngine.getApple().getY() && 
+			gameEngine.getSnake().getSnakePosX(0) < gameEngine.getApple().getX() + gameEngine.getApple().getSize() &&
+			gameEngine.getSnake().getSnakePosY(0) < gameEngine.getApple().getY() + gameEngine.getApple().getSize()) {
 			
-			apple.locationApple(snakeGame.getWidth(), snakeGame.getHeight());
-			posMan.removePosition(apple.getX(), apple.getY(), apple.getSize());
-			snake.setSnakeSize(snake.getSnakeSize() + 1);
-			scoreManager.increaseScore(10);
-			gameEngine.addPositionActuals();
+			gameEngine.getApple().locationApple(snakeGame.getWidth(), snakeGame.getHeight());
+			gameEngine.getSnake().setSnakeSize(gameEngine.getSnake().getSnakeSize() + 1);
+			gameEngine.getScoreManager().increaseScore(10);
+			//gameEngine.addPositionActuals();
 		}
 	}
 	
 	public void checkCollisionOrange() {
-		if(snake.getSnakePosX(0) >= orange.getX() && 
-			snake.getSnakePosY(0) >= orange.getY() &&
-			snake.getSnakePosX(0) < orange.getX() + orange.getSize() &&
-			snake.getSnakePosY(0) < orange.getY() + orange.getSize()) {
+		if(gameEngine.getSnake().getSnakePosX(0) >= gameEngine.getOrange().getX() && 
+			gameEngine.getSnake().getSnakePosY(0) >= gameEngine.getOrange().getY() &&
+			gameEngine.getSnake().getSnakePosX(0) < gameEngine.getOrange().getX() + gameEngine.getOrange().getSize() &&
+			gameEngine.getSnake().getSnakePosY(0) < gameEngine.getOrange().getY() + gameEngine.getOrange().getSize()) {
 			
-			orange.setVisible(false);
-			orange.resetLocation();
-			posMan.removePosition(orange.getX(), orange.getY(), orange.getSize());
-			snake.setSnakeSize(snake.getSnakeSize() + 4);
-			scoreManager.increaseScore(50);
-			gameEngine.addPositionActuals();
+			gameEngine.getOrange().setVisible(false);
+			gameEngine.getOrange().resetLocation();
+			gameEngine.getSnake().setSnakeSize(gameEngine.getSnake().getSnakeSize() + 4);
+			gameEngine.getScoreManager().increaseScore(50);
+			//gameEngine.addPositionActuals();
 		}
 	}
 
-	public void checkCollisionBlackHole() {
-		if (!snake.getInmunity()) {
-			if(snake.getSnakePosX(0) >= blackHole.getX() && 
-				snake.getSnakePosY(0) >= blackHole.getY() &&
-				snake.getSnakePosX(0) < blackHole.getX() + blackHole.getSize() && 
-				snake.getSnakePosY(0) < blackHole.getY() + blackHole.getSize()) {
+	public void checkCollisionBlackHole () {
+		if (!gameEngine.getSnake().getInmunity()) {
+			if(gameEngine.getSnake().getSnakePosX(0) >= gameEngine.getBlackHole().getX() && 
+				gameEngine.getSnake().getSnakePosY(0) >= gameEngine.getBlackHole().getY() &&
+				gameEngine.getSnake().getSnakePosX(0) < gameEngine.getBlackHole().getX() + gameEngine.getBlackHole().getSize() && 
+				gameEngine.getSnake().getSnakePosY(0) < gameEngine.getBlackHole().getY() + gameEngine.getBlackHole().getSize()) {
 					
-				if (lifeManager.getLives() <= 0) {
+				if (gameEngine.getLifeManager().getLives() <= 0) {
 					gameEngine.setInGame(false);
 				}
 					
-				blackHole.setVisible(false);
+				gameEngine.getBlackHole().setVisible(false);
 				gameEngine.blinkSnake();
-				lifeManager.loseLife();
+				gameEngine.getLifeManager().loseLife();
 			}
 			
 		}

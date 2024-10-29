@@ -22,37 +22,37 @@ class SGTestObjects {
 	
 	@Test
 	public void testSnakeValidateSides() {
-	    snake.setDirection(Directions.RIGTH);
+	    snake.setDirection(GameSettings.Directions.RIGHT);
 	    snake.move();
 	    assertEquals(80, snake.getSnakePosX(0));
 	}
 	
 	@Test
 	public void testSnakeValidateUpDown() {
-	    snake.setDirection(Directions.DOWN);
+	    snake.setDirection(GameSettings.Directions.DOWN);
 	    snake.move();
 	    assertEquals(80, snake.getSnakePosY(0));
 	}
 	
 	@Test
 	public void testSnakeSegmentFollowHead() {
-		snake.setDirection(Directions.RIGTH);
+		snake.setDirection(GameSettings.Directions.RIGHT);
 		snake.move();
 		assertEquals(60, snake.getSnakePosX(1));
 	}
 	
 	@Test
 	public void testMovingAllDirections() {
-		snake.setDirection(Directions.RIGTH);
-		assertTrue(snake.movingRigth());
+		snake.setDirection(GameSettings.Directions.RIGHT);
+		assertTrue(snake.movingRight());
 		
-		snake.setDirection(Directions.LEFT);
+		snake.setDirection(GameSettings.Directions.LEFT);
 		assertTrue(snake.movingLeft());
 		
-		snake.setDirection(Directions.UP);
+		snake.setDirection(GameSettings.Directions.UP);
 		assertTrue(snake.movingUp());
 		
-		snake.setDirection(Directions.DOWN);
+		snake.setDirection(GameSettings.Directions.DOWN);
 		assertTrue(snake.movingDown());
 	}
 	

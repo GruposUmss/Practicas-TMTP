@@ -4,18 +4,18 @@ import java.awt.*;
 
 public class Snake {
 
-	private final Directions[] registerDirection;
+	private final GameSettings.Directions[] registerDirection;
     private final int SNAKE_RECT_SIZE = 20;
     private final int[] posX;
     private final int[] posY; 
     private boolean visible;
     private boolean inmunity;
     private int snakeSize; 
-    private Directions direction;
+    private GameSettings.Directions direction;
     
     public Snake(int snakeSize) {
-    	this.registerDirection = new Directions[900];
-    	this.direction = Directions.RIGTH;
+    	this.registerDirection = new GameSettings.Directions[900];
+    	this.direction = GameSettings.Directions.RIGHT;
     	this.snakeSize = snakeSize;
         this.posX = new int[900];  
         this.posY = new int[900];
@@ -74,7 +74,7 @@ public class Snake {
     	return this.posY[y];
     }
     
-    public void setDirection(Directions direction) {
+    public void setDirection(GameSettings.Directions direction) {
     	if (direction != null) {  //Evita que la dirección sea null y se genera un IllegalException
             this.direction = direction;
         } 
@@ -104,25 +104,25 @@ public class Snake {
     	} 
     }
     
-    private Image getBodyImage(Directions dir) {
-    	if (dir == null) dir = Directions.RIGTH; //Evita que se den direcciones nulas, debido a las actualizaciones
+    private Image getBodyImage(GameSettings.Directions dir) {
+    	if (dir == null) dir = GameSettings.Directions.RIGHT; //Evita que se den direcciones nulas, debido a las actualizaciones
         switch (dir) {
             case LEFT: return Images.SNAKE_BODY_LEFT;
             case UP: return Images.SNAKE_BODY_UP;
             case DOWN: return Images.SNAKE_BODY_DOWN;
-            case RIGTH: return Images.SNAKE_BODY_RIGTH;
-            default: return Images.SNAKE_BODY_RIGTH;
+            case RIGHT: return Images.SNAKE_BODY_RIGHT;
+            default: return Images.SNAKE_BODY_RIGHT;
         }
     }
     
-    private Image getHeadImage(Directions dir) {
-    	if (dir == null) dir = Directions.RIGTH; //Evita que se den direcciones nulas, debido a las actualizaciones
+    private Image getHeadImage(GameSettings.Directions dir) {
+    	if (dir == null) dir = GameSettings.Directions.RIGHT; //Evita que se den direcciones nulas, debido a las actualizaciones
         switch (dir) {
             case LEFT: return Images.SNAKE_HEAD_LEFT;
             case UP: return Images.SNAKE_HEAD_UP;
             case DOWN: return Images.SNAKE_HEAD_DOWN;
-            case RIGTH: return Images.SNAKE_HEAD_RIGTH;
-            default: return Images.SNAKE_HEAD_RIGTH;
+            case RIGHT: return Images.SNAKE_HEAD_RIGHT;
+            default: return Images.SNAKE_HEAD_RIGHT;
         }
     }
     
@@ -136,27 +136,27 @@ public class Snake {
     	registerDirection[0] = direction; //Guardar la dirección de la cabeza en registerDirection[0]
     	
     	switch (direction) {
-	        case RIGTH -> posX[0] += SNAKE_RECT_SIZE;
+	        case RIGHT -> posX[0] += SNAKE_RECT_SIZE;
 	        case LEFT  -> posX[0] -= SNAKE_RECT_SIZE;
 	        case DOWN  -> posY[0] += SNAKE_RECT_SIZE;
 	        case UP    -> posY[0] -= SNAKE_RECT_SIZE;
     	}
     }
     
-    public boolean movingRigth() {
-    	return direction == Directions.RIGTH;
+    public boolean movingRight() {
+    	return direction == GameSettings.Directions.RIGHT;
     }
     
     public boolean movingLeft() {
-    	return direction == Directions.LEFT;
+    	return direction == GameSettings.Directions.LEFT;
     }
     
     public boolean movingUp() {
-    	return direction == Directions.UP;
+    	return direction == GameSettings.Directions.UP;
     }
     
     public boolean movingDown() {
-    	return direction == Directions.DOWN;
+    	return direction == GameSettings.Directions.DOWN;
     }
     
 }

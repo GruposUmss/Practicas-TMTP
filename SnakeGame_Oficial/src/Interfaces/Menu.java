@@ -1,5 +1,6 @@
 package Interfaces;
 
+import Objects.GameSettings;
 import Objects.Images;
 import Drivers.ScoreManager;
 import javax.swing.*;
@@ -12,15 +13,19 @@ import java.io.IOException;
 
 public class Menu extends JFrame {
 
+	//private int widthFrame;
+	//private int heightFrame;
     private JToggleButton easyButton;
     private JToggleButton hardButton;
     private CardLayout cardLayout;
     private JPanel mainPanel;
     private JLabel highScoreLabel; // Añadido para mostrar el puntaje más alto
     private ScoreManager scoreManager;
+    private GameSettings.Dificulty dificulty;
 
     //se creo dos constructores para poder dividri la responsabilidad de creacion e instancias de Menu
     public Menu () {
+    	this.dificulty = GameSettings.Dificulty.EASY;
     	this.scoreManager = new ScoreManager();
     	initMenu();
     }
@@ -32,7 +37,6 @@ public class Menu extends JFrame {
 
     private void initMenu() {
         setTitle("Snake Game - Menu");
-        setSize(1700, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setExtendedState(JFrame.MAXIMIZED_BOTH); //Maximiza la ventana
         setLocationRelativeTo(null);
@@ -44,9 +48,19 @@ public class Menu extends JFrame {
         mainPanel.add(createButtonPanel(), "Menu");
 
         add(mainPanel);
-
-        //Mostrar la pantalla de inicio al iniciar
+       
         showStartScreen();
+        
+        
+        /*
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            @Override
+            public void componentResized(java.awt.event.ComponentEvent e) {
+                widthFrame = getWidth();
+                heightFrame = getHeight();
+            }
+        });
+        */
     }
 
     private void showStartScreen() {
@@ -169,8 +183,11 @@ public class Menu extends JFrame {
         JToggleButton source = (JToggleButton) e.getSource();
         if (source == easyButton) {
             hardButton.setSelected(!easyButton.isSelected());
+            this.dificulty = GameSettings.Dificulty.EASY;
+           
         } else {
             easyButton.setSelected(!hardButton.isSelected());
+            this.dificulty = GameSettings.Dificulty.HARD;
         }
     }
 
@@ -193,15 +210,18 @@ public class Menu extends JFrame {
     private void startGame() {
         dispose();
         JFrame gameFrame = new JFrame("Snake Game");
-        SnakeGame game = new SnakeGame(this.scoreManager);
-        gameFrame.add(game);
+        SnakeGame snakeGame = new SnakeGame(this.scoreManager, this.dificulty);
+        gameFrame.add(snakeGame);
         gameFrame.pack();
         gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximiza la ventan
         gameFrame.setLocationRelativeTo(null);
         gameFrame.setVisible(true);
+        
+        System.out.println(snakeGame.getWidth() + snakeGame.getHeight());
     }
-
+    
+    
     private Font loadPixelFont(int size) {
         try {
             File fontFile = new File("C:/Users/Adrian/workspace/Fuente Pixel/PressStart2P-Regular.ttf");
