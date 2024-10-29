@@ -8,8 +8,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class Menu extends JFrame {
 
@@ -224,8 +224,8 @@ public class Menu extends JFrame {
     
     private Font loadPixelFont(int size) {
         try {
-            File fontFile = new File("C:/Users/Adrian/workspace/Fuente Pixel/PressStart2P-Regular.ttf");
-            Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
+        	InputStream fontStream = getClass().getResourceAsStream("/PressStart2P-Regular.ttf");
+            Font font = Font.createFont(Font.TRUETYPE_FONT, fontStream);
             return font.deriveFont(Font.BOLD, size);  // Ajustar el tamaño y estilo
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();

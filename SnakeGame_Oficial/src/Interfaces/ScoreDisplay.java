@@ -2,8 +2,8 @@ package Interfaces;
 
 import Drivers.ScoreManager;
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class ScoreDisplay {
     private ScoreManager scoreManager;
@@ -17,8 +17,8 @@ public class ScoreDisplay {
 
     private Font loadPixelFont(int size) {
         try {
-            File fontFile = new File("C:/Users/Adrian/workspace/Fuente Pixel/PressStart2P-Regular.ttf");
-            Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
+        	InputStream fontStream = getClass().getResourceAsStream("/PressStart2P-Regular.ttf");
+            Font font = Font.createFont(Font.TRUETYPE_FONT, fontStream);
             return font.deriveFont(Font.BOLD, size);  
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();
