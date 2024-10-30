@@ -5,38 +5,46 @@ import Interfaces.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GameEngine implements ActionListener {
 
+	private List<Entity> entityList;
 	private Snake snake;
-	private Apple apple;
-	private Orange orange;
-	private BlackHole blackHole;
 	private SnakeGame snakeGame;
 	private CollisionsManager collisionManager;
 	private PositionManager positionManager;
-	private ScoreManager scoreManager; //Agregado para el puntaje
+	private ScoreManager scoreManager; 
 	private LifeManager lifeManager;
-	
+	private LevelManager levelManager;
+
 	private Timer timer;
 	
 	private final int DELAY = 90;
 	private boolean inGame = true;
 	
 	public GameEngine(SnakeGame snakeGame, ScoreManager scoreManager) {
+		this.snakeGame = snakeGame;
 		this.scoreManager = scoreManager;
 		this.lifeManager = new LifeManager();
 		this.positionManager = new PositionManager();
-		this.snakeGame = snakeGame;
-        this.snake = new Snake(5); 
-        this.apple = new Apple(snakeGame.getWidth(), snakeGame.getHeight(), positionManager); 
-        this.blackHole = new BlackHole(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
-        this.orange = new Orange(snakeGame.getWidth(), snakeGame.getHeight(), positionManager);
 		this.collisionManager = new CollisionsManager(snakeGame, this);
+		this.levelManager = new LevelManager(scoreManager, this);
+		this.snake = new Snake(5);
+		this.entityList = new ArrayList<Entity>();
 	}
 	
 	public void setInGame(boolean inGame) {
 		this.inGame = inGame;
+	}
+	
+	public boolean getInGame() {
+		return this.inGame;
+	}
+	
+	public Snake getSnake() {
+		return this.snake;
 	}
 	
 	public LifeManager getLifeManager () {
@@ -55,24 +63,20 @@ public class GameEngine implements ActionListener {
 		return this.collisionManager;
 	}
 	
-	public boolean getInGame() {
-		return this.inGame;
+	public void addEntityApple () {
+		this.entityList.add(new Apple(snakeGame.getWidth(), snakeGame.getHeight(), this.positionManager));
 	}
 	
-	public Snake getSnake() {
-		return this.snake;
+	public void addEntityOrange () {
+		this.entityList.add(new Orange(snakeGame.getWidth(), snakeGame.getHeight(), this.positionManager));
 	}
 	
-	public Apple getApple() {
-		return this.apple;
+	public void addEntityBlackHole () {
+		this.entityList.add(new BlackHole(snakeGame.getWidth(), snakeGame.getHeight(), this.positionManager));
 	}
 	
-	public Orange getOrange() {
-		return this.orange;
-	}
-	
-	public BlackHole getBlackHole() {
-		return this.blackHole;
+	public List<Entity> getEntityList () {
+		return this.entityList;
 	}
 	
 	public void startGame() {
@@ -88,12 +92,12 @@ public class GameEngine implements ActionListener {
 	        
 	        @Override
 	        public void actionPerformed(ActionEvent e) {
-	            snake.setVisible(!snake.getVisible());  // Alterna visibilidad
-	            snakeGame.repaint();  // Re-pinta el juego para reflejar los cambios
+	            snake.setVisible(!snake.getVisible());  //Alterna visibilidad
+	            snakeGame.repaint();  //Re-pinta el juego para reflejar los cambios
 	             
 	            blinkCount++;
-	            if (blinkCount >= 30) {  // Detener después de 5 parpadeos
-	                ((Timer) e.getSource()).stop();  // Detiene el temporizador
+	            if (blinkCount >= 30) {  //Detener después de 5 parpadeos
+	                ((Timer) e.getSource()).stop();  //Detiene el temporizador
 	                snake.setVisible(true);  // Asegura que la serpiente quede visible al final
 	                snakeGame.repaint();  // Re-pinta por última vez
 	                snake.setInmunity(false);
@@ -117,21 +121,22 @@ public class GameEngine implements ActionListener {
 	
 	public void addPositionActuals() {
 		positionManager.clearPositions();
-		positionManager.addPosition(apple.getX(), apple.getY(), apple.getSize());
-		positionManager.addPosition(orange.getX(), orange.getY(), orange.getSize());
-		positionManager.addPosition(blackHole.getX(), blackHole.getY(), blackHole.getSize());
+		
+		for (Entity entity: this.entityList) {
+			positionManager.addPosition(entity.getX(), entity.getY(), entity.getSize());
+		}
 	}
+	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(inGame) {
 			snake.move();
 			addPositionActuals();
+			levelManager.reviewLevels();
 			collisionManager.checkCollisionLimits();
 			collisionManager.checkCollisionBody(); 
-			collisionManager.checkCollisionApple();
-			collisionManager.checkCollisionOrange();
-			collisionManager.checkCollisionBlackHole();
+			collisionManager.checkCollisionEntity();
 		}else {
 			endGame();
 		}		

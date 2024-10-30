@@ -7,39 +7,17 @@ import java.awt.event.ActionListener;
 import java.util.concurrent.ThreadLocalRandom;
 import java.awt.event.ActionEvent;
 
-public class Orange implements ActionListener {
-    private final int ORANGE_SIZE = 40;
+public class Orange extends Entity implements ActionListener {
     private int width;
     private int height;
-    private boolean visible;
-    private Integer orange_x;
-    private Integer orange_y;
-    private PositionManager posMan;
     private Timer timer;
-
+    
     public Orange(int width, int height, PositionManager posMan) {
-    	this.posMan = posMan;
+    	super(width, height, posMan);
     	this.width = width;
     	this.height = height;
-        this.visible = true;
         locationOrange();
         loadOrange();
-       
-    }
-    public int getX() {
-    	return this.orange_x;
-    }
-
-    public int getY() {
-    	return this.orange_y;
-    }
-
-    public int getSize() {
-        return ORANGE_SIZE;
-    }
-    
-    public void setVisible(boolean visible) {
-    	this.visible = visible;
     }
     
     public void loadOrange() {
@@ -48,14 +26,14 @@ public class Orange implements ActionListener {
     } 
     
     public void resetLocation() {
-    	locationOrange();
+    	//locationOrange();
     	timer.restart();
     }
 
     public void locationOrange() {
-        orange_x = ThreadLocalRandom.current().nextInt((width / ORANGE_SIZE) - 1) * ORANGE_SIZE;
-        orange_y = ThreadLocalRandom.current().nextInt((height / ORANGE_SIZE) - 1) * ORANGE_SIZE;
-        if(posMan.overlay(orange_x, orange_y, ORANGE_SIZE)) {
+        posX = ThreadLocalRandom.current().nextInt((width / ENTITY_SIZE) - 1) * ENTITY_SIZE;
+        posY = ThreadLocalRandom.current().nextInt((height / ENTITY_SIZE) - 1) * ENTITY_SIZE;
+        if(posMan.overlay(posX, posY, ENTITY_SIZE)) {
         	locationOrange();
         }
     }
@@ -67,14 +45,15 @@ public class Orange implements ActionListener {
             locationOrange();  
         } else {
         	//Restablece los valores de coordenadas para no mantenerla aun asi cuadno visible sea FALSE
-        	orange_x = -this.ORANGE_SIZE;
-        	orange_y = -this.ORANGE_SIZE;
+        	posX = -this.ENTITY_SIZE;
+        	posY = -this.ENTITY_SIZE;
         }
     }
     
+    @Override
     public void draw(Graphics g) {
     	if(visible) {
-    		g.drawImage(Images.ALIEN_2, orange_x, orange_y, ORANGE_SIZE, ORANGE_SIZE, null);
+    		g.drawImage(Images.ALIEN_2, posX, posY, this.ENTITY_SIZE, this.ENTITY_SIZE, null);
     	}
     }
 }

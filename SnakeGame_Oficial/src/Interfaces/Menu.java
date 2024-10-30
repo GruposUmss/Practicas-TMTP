@@ -13,13 +13,11 @@ import java.io.InputStream;
 
 public class Menu extends JFrame {
 
-	//private int widthFrame;
-	//private int heightFrame;
     private JToggleButton easyButton;
     private JToggleButton hardButton;
     private CardLayout cardLayout;
     private JPanel mainPanel;
-    private JLabel highScoreLabel; // Añadido para mostrar el puntaje más alto
+    private JLabel highScoreLabel; 
     private ScoreManager scoreManager;
     private GameSettings.Dificulty dificulty;
 
@@ -38,7 +36,7 @@ public class Menu extends JFrame {
     private void initMenu() {
         setTitle("Snake Game - Menu");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setExtendedState(JFrame.MAXIMIZED_BOTH); //Maximiza la ventana
+        setSize(1360, 740);
         setLocationRelativeTo(null);
 
         cardLayout = new CardLayout();
@@ -214,11 +212,8 @@ public class Menu extends JFrame {
         gameFrame.add(snakeGame);
         gameFrame.pack();
         gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gameFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximiza la ventan
-        gameFrame.setLocationRelativeTo(null);
         gameFrame.setVisible(true);
-        
-        System.out.println(snakeGame.getWidth() + snakeGame.getHeight());
+        gameFrame.setLocationRelativeTo(null);
     }
     
     

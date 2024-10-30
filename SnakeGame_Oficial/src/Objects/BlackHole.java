@@ -1,53 +1,63 @@
 package Objects;
 
 import Drivers.PositionManager;
-import java.util.concurrent.ThreadLocalRandom;
 import java.awt.geom.AffineTransform;
+import java.util.concurrent.ThreadLocalRandom;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.*;
+import javax.swing.Timer;
 
-public class BlackHole {
-    private final int BLACK_HOLE_SIZE = 80;
-    private int blackHole_x;
-    private int blackHole_y;
+public class BlackHole extends Entity implements ActionListener{
+	private int width;
+    private int height;
+    private Timer timer;
     private double angle = 0; 
-    private boolean visible;
-    private PositionManager posMan;
-    
 
     public BlackHole(int width, int height, PositionManager posMan) {
-    	this.visible = true;
-    	this.posMan = posMan;
-        locationBlackHole(width, height); 
+    	super(width, height, posMan);
+    	this.ENTITY_SIZE = 80; 
+    	this.width = width;
+    	this.height = height;
+        locationBlackHole();
+        loadBlackHole();
     }
     
-    public void setVisible (boolean vs) {
-    	this.visible = vs;
+    public void loadBlackHole() {
+    	timer = new Timer(generateDelay(), this);
+    	timer.start();
+    } 
+    
+    public void resetLocation() {
+    	timer.restart();
     }
     
-    public boolean getVisible () {
-    	return this.visible;
-    }
-    
-    public int getX() {
-        return this.blackHole_x;
+    private int generateDelay () {
+    	return ThreadLocalRandom.current().nextInt(2, 5) * 1000;
     }
 
-    public int getY() {
-        return this.blackHole_y;
-    }
-
-    public int getSize() {
-        return this.BLACK_HOLE_SIZE; 
-    }
-
-    public void locationBlackHole(int width, int height) {
-        blackHole_x = ThreadLocalRandom.current().nextInt((width / BLACK_HOLE_SIZE) - 1) * BLACK_HOLE_SIZE;
-        blackHole_y = ThreadLocalRandom.current().nextInt((height / BLACK_HOLE_SIZE) - 1) * BLACK_HOLE_SIZE;
-        if(posMan.overlay(blackHole_y, blackHole_x, BLACK_HOLE_SIZE)) {
-        	locationBlackHole(width, height);
+    public void locationBlackHole() {
+        posX = ThreadLocalRandom.current().nextInt((width / ENTITY_SIZE) - 1) * ENTITY_SIZE;
+        posY = ThreadLocalRandom.current().nextInt((height / ENTITY_SIZE) - 1) * ENTITY_SIZE;
+        if(posMan.overlay(posX, posY, ENTITY_SIZE)) {
+        	locationBlackHole();
         }
     }
-
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+    	timer.setDelay(generateDelay());
+    	visible = !visible;
+    	if (visible) {
+    		locationBlackHole();  
+        } else {
+        	//Restablece los valores de coordenadas para no mantenerla aun asi cuadno visible sea FALSE
+        	posX = -this.ENTITY_SIZE;
+        	posY = -this.ENTITY_SIZE;
+        }
+    }
+    
+    @Override
     public void draw(Graphics g) {
     	if (visible) {
     		angle -= Math.toRadians(2);
@@ -55,18 +65,16 @@ public class BlackHole {
             Graphics2D graphics2d = (Graphics2D) g;
             AffineTransform oldTransform = graphics2d.getTransform();
 
-            int centerX = blackHole_x + BLACK_HOLE_SIZE / 2;
-            int centerY = blackHole_y + BLACK_HOLE_SIZE / 2;
+            int centerX = this.posX + this.ENTITY_SIZE / 2;
+            int centerY = this.posY + this.ENTITY_SIZE / 2;
 
             graphics2d.rotate(angle, centerX, centerY);
-            graphics2d.drawImage(Images.BLACK_HOLE, blackHole_x, blackHole_y, BLACK_HOLE_SIZE, BLACK_HOLE_SIZE, null);
+            graphics2d.drawImage(Images.BLACK_HOLE, this.posX, this.posY, this.ENTITY_SIZE, this.ENTITY_SIZE, null);
             graphics2d.setTransform(oldTransform); 
     		
     	} else {
-    		this.blackHole_x = -this.BLACK_HOLE_SIZE;
-    		this.blackHole_y = -this.BLACK_HOLE_SIZE;
+    		this.posX = -this.ENTITY_SIZE;
+    		this.posY = -this.ENTITY_SIZE;
     	}
-    	
-    		
     }
 }
