@@ -36,7 +36,8 @@ public class CollisionsManager {
 						gameEngine.setInGame(false);
 					}
 					gameEngine.getLifeManager().loseLife();
-					gameEngine.blinkSnake();	
+					gameEngine.getSnake().blinkSnake();	
+					break;
 				}
 		}
 	}
@@ -82,7 +83,7 @@ public class CollisionsManager {
 		BlackHole blackHole = (BlackHole)entity;
 		blackHole.setVisible(false);
 		blackHole.resetLocation();
-		gameEngine.blinkSnake();
+		gameEngine.getSnake().blinkSnake();
 		gameEngine.getLifeManager().loseLife();
 	}
 }

@@ -17,6 +17,10 @@ public class LifeDisplay extends JPanel {
         setPreferredSize(new Dimension(200, 50));
     }
     
+    public boolean getVisible () {
+    	return this.visible;
+    }
+    
     public void setVisible (boolean visible) {
     	this.visible = visible;
     	if (!this.visible) {
@@ -33,4 +37,6 @@ public class LifeDisplay extends JPanel {
             }
         }
     }
+    
+    
 }

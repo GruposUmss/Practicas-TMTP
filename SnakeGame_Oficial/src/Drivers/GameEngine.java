@@ -75,6 +75,33 @@ public class GameEngine implements ActionListener {
 		this.entityList.add(new BlackHole(snakeGame.getWidth(), snakeGame.getHeight(), this.positionManager));
 	}
 	
+	public void removeEntityBlackHole () {
+		for (int i = 0; i < this.entityList.size(); i++) {
+			if (this.entityList.get(i) instanceof BlackHole) {
+				this.entityList.remove(this.entityList.get(i));
+				i = this.entityList.size();
+			}
+		}
+	}
+
+	public void removeEntityOrange () {
+		for (int i = 0; i < this.entityList.size(); i++) {
+			if (this.entityList.get(i) instanceof Orange) {
+				this.entityList.remove(this.entityList.get(i));
+				i = this.entityList.size();
+			}
+		}
+	}
+	
+	public void removeEntityApple () {
+		for (int i = 0; i < this.entityList.size(); i++) {
+			if (this.entityList.get(i) instanceof Apple) {
+				this.entityList.remove(this.entityList.get(i));
+				i = this.entityList.size();
+			}
+		}
+	}
+	
 	public List<Entity> getEntityList () {
 		return this.entityList;
 	}
@@ -85,29 +112,8 @@ public class GameEngine implements ActionListener {
 		timer.start();
 	}
 	
-	public void blinkSnake () {
-		snake.setInmunity(true);
-		Timer blinkTimer = new Timer(150, new ActionListener() {
-	        private int blinkCount = 0;
-	        
-	        @Override
-	        public void actionPerformed(ActionEvent e) {
-	            snake.setVisible(!snake.getVisible());  //Alterna visibilidad
-	            snakeGame.repaint();  //Re-pinta el juego para reflejar los cambios
-	             
-	            blinkCount++;
-	            if (blinkCount >= 30) {  //Detener después de 5 parpadeos
-	                ((Timer) e.getSource()).stop();  //Detiene el temporizador
-	                snake.setVisible(true);  // Asegura que la serpiente quede visible al final
-	                snakeGame.repaint();  // Re-pinta por última vez
-	                snake.setInmunity(false);
-	            }
-	        }
-	    });
-	    blinkTimer.start();  // Inicia el temporizador para el parpadeo
-	}
-	
-	private void endGame() {
+	public void endGame() {
+		this.inGame = false;
 	    timer.stop();
 	    if (SwingUtilities.getWindowAncestor(snakeGame) != null) {
 	        SwingUtilities.getWindowAncestor(snakeGame).dispose();
@@ -122,6 +128,8 @@ public class GameEngine implements ActionListener {
 	public void addPositionActuals() {
 		positionManager.clearPositions();
 		
+		positionManager.addPosition(this.snake.getSnakePosX(0) + 80, this.snake.getSnakePosY(0) + 80, this.snake.getSnakeRectSize());
+		positionManager.addPosition(this.snake.getSnakePosX(0) - 80, this.snake.getSnakePosY(0) - 80, this.snake.getSnakeRectSize());
 		for (Entity entity: this.entityList) {
 			positionManager.addPosition(entity.getX(), entity.getY(), entity.getSize());
 		}

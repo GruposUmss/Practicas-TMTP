@@ -1,6 +1,10 @@
 package Objects;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.Timer;
 
 public class Snake {
 
@@ -34,12 +38,16 @@ public class Snake {
         this.snakeSize = sizeNew;
     }
     
-    public void setInmunity (boolean valid) {
-    	this.inmunity = valid;
+    public GameSettings.Directions getDirection (int n) {
+    	return this.registerDirection[n];
     }
     
     public boolean getInmunity () {
     	return this.inmunity;
+    }
+    
+    public void setInmunity (boolean valid) {
+    	this.inmunity = valid;
     }
    
     public void setVisible(boolean vs) {
@@ -85,6 +93,30 @@ public class Snake {
     	return false;
     }
     
+    public void blinkSnake () {
+    	setVisible(false);
+		setInmunity(true);
+		Timer blinkTimer = new Timer(150, new ActionListener() {
+	        private int blinkCount = 0;
+	        
+	        @Override
+	        public void actionPerformed(ActionEvent e) {
+	            setVisible(!getVisible());
+	        	//setVisible(!getVisible());  //Alterna visibilidad
+	            //snakeGame.repaint();  //Re-pinta el juego para reflejar los cambios
+	             
+	            blinkCount++;
+	            if (blinkCount >= 30) {  //Detener después de 5 parpadeos
+	                ((Timer) e.getSource()).stop();  //Detiene el temporizador
+	                setVisible(true);  // Asegura que la serpiente quede visible al final
+	                //snakeGame.repaint();  // Re-pinta por última vez
+	                setInmunity(false);
+	            }
+	        }
+	    });
+	    blinkTimer.start();  // Inicia el temporizador para el parpadeo
+	}
+    
     private void initSnake() {
         for (int i = 0; i < snakeSize; i++) {
             posX[i] = 60 - i * 10;
@@ -104,7 +136,7 @@ public class Snake {
     	} 
     }
     
-    private Image getBodyImage(GameSettings.Directions dir) {
+    public Image getBodyImage(GameSettings.Directions dir) {
     	if (dir == null) dir = GameSettings.Directions.RIGHT; //Evita que se den direcciones nulas, debido a las actualizaciones
         switch (dir) {
             case LEFT: return Images.SNAKE_BODY_LEFT;
@@ -115,7 +147,7 @@ public class Snake {
         }
     }
     
-    private Image getHeadImage(GameSettings.Directions dir) {
+    public Image getHeadImage(GameSettings.Directions dir) {
     	if (dir == null) dir = GameSettings.Directions.RIGHT; //Evita que se den direcciones nulas, debido a las actualizaciones
         switch (dir) {
             case LEFT: return Images.SNAKE_HEAD_LEFT;

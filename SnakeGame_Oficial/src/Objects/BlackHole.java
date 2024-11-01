@@ -33,7 +33,7 @@ public class BlackHole extends Entity implements ActionListener{
     }
     
     private int generateDelay () {
-    	return ThreadLocalRandom.current().nextInt(2, 5) * 1000;
+    	return ThreadLocalRandom.current().nextInt(3, 6) * 1000;
     }
 
     public void locationBlackHole() {

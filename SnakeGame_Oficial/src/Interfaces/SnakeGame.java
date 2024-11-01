@@ -16,14 +16,30 @@ public class SnakeGame extends JPanel{
     private LifeDisplay lifeDisplay;
     private ScoreDisplay scoreDisplay;
     private GameEngine gameEngine;
+    private GameSettings.Dificulty dificulty;
+    private boolean visible = true;
     
     public SnakeGame(ScoreManager scoreManager, GameSettings.Dificulty dificulty) {
     	initBoard(scoreManager,  dificulty);
+    	this.dificulty = dificulty;
     }
     
     public GameEngine getGameEngine() {
     	return this.gameEngine;
     }
+    
+    public ScoreDisplay getScoreDisplay () {
+    	return this.scoreDisplay;
+    }
+    
+    public LifeDisplay getLifeDisplay () {
+    	return this.lifeDisplay;
+    }
+    
+    public GameSettings.Dificulty getDificulty () {
+    	return this.dificulty;
+    }
+    
     
     public int getWidth() {
     	return this.WIDTH;
@@ -45,9 +61,16 @@ public class SnakeGame extends JPanel{
         if (dificulty != GameSettings.Dificulty.EASY) {
         	this.lifeDisplay.setVisible(false);
         }
-        gameEngine.startGame();
         
-        addKeyListener(new MotionSnake(gameEngine.getSnake())); //Define el listado de llaves para el taclado
+        addKeyListener(new MotionSnake(gameEngine.getSnake())); 
+    }
+    
+    public void setVisible (boolean visible) {
+    	this.visible = visible;
+    }
+    
+    public void initGameValid () {
+    	if (this.visible) gameEngine.startGame(); 
     }
     
     @Override

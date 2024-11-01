@@ -14,6 +14,10 @@ public class ScoreDisplay {
         this.pixelFont = loadPixelFont(30);   
         scoreManager.resetScore();
     }
+    
+    public Font getPixelFont () {
+    	return this.pixelFont;
+    }
 
     private Font loadPixelFont(int size) {
         try {

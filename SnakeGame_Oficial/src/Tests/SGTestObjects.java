@@ -2,18 +2,17 @@ package Tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import Interfaces.SnakeGame;
 import Objects.*;
-import Drivers.GameEngine;
+import Drivers.*;
 
-class SGTestObjects {
-	
-	private SnakeGame game                     ;
-	private GameEngine gameEngine                ;
-	private Apple apple = new Apple(game.getWidth(), game.getHeight(), gameEngine.getPositionManager());
+class SGTestObjects  {
+	private final int WIDTH = 1340;
+	private final int HEIGHT = 1340;
+	private PositionManager posMan = new PositionManager();
+	private Entity apple = new Apple(this.WIDTH, this.HEIGHT, posMan);
 	private Snake snake = new Snake(5);
-	private Orange orange = new Orange(game.getWidth(), game.getHeight(), gameEngine.getPositionManager());
-	private BlackHole blackHole = new BlackHole(game.getWidth(), game.getHeight(), gameEngine.getPositionManager());
+	private Entity orange = new Orange(this.WIDTH, this.HEIGHT, posMan);
+	private Entity blackHole = new BlackHole(this.WIDTH, this.HEIGHT, posMan);
 	
 	@Test
 	public void testSnakeInitial() {
@@ -63,9 +62,35 @@ class SGTestObjects {
 	}
 	
 	@Test
+	public void testSnakeSegmentDirectionAfterMove() {
+	    snake.setDirection(GameSettings.Directions.UP);
+	    snake.move();
+	    assertEquals(GameSettings.Directions.UP, snake.getDirection(0));
+	    snake.move();
+	    assertEquals(GameSettings.Directions.UP, snake.getDirection(1));  
+	}
+	
+	
+	@Test
+	public void testHeadImage() {
+	    assertNotNull(snake.getHeadImage(GameSettings.Directions.RIGHT));
+	    assertNotNull(snake.getHeadImage(GameSettings.Directions.LEFT));
+	    assertNotNull(snake.getHeadImage(GameSettings.Directions.UP));
+	    assertNotNull(snake.getHeadImage(GameSettings.Directions.DOWN));
+	}
+
+	@Test
+	public void testBodyImage() {
+	    assertNotNull(snake.getBodyImage(GameSettings.Directions.RIGHT));
+	    assertNotNull(snake.getBodyImage(GameSettings.Directions.LEFT));
+	    assertNotNull(snake.getBodyImage(GameSettings.Directions.UP));
+	    assertNotNull(snake.getBodyImage(GameSettings.Directions.DOWN));
+	}
+	
+	@Test
 	public void testAppleLimits() {
-        assertTrue(apple.getY() > 0 && apple.getY() <= (game.getHeight()) - apple.getSize());
-        assertTrue(apple.getX() > 0 && apple.getX() <= (game.getWidth()) - apple.getSize());
+        assertTrue(apple.getY() > 0 && apple.getY() <= (this.HEIGHT) - apple.getSize());
+        assertTrue(apple.getX() > 0 && apple.getX() <= (this.WIDTH) - apple.getSize());
 	}
 	
 	@Test
@@ -76,13 +101,31 @@ class SGTestObjects {
 	
 	@Test
 	public void testOrangeLimits() {
-		assertTrue(orange.getX() > 0 && orange.getX() <= (game.getWidth() - orange.getSize()));
-		assertTrue(orange.getY() > 0 && orange.getY() <= (game.getHeight() - orange.getSize()));
+		assertTrue(orange.getX() > 0 && orange.getX() <= (this.WIDTH - orange.getSize()));
+		assertTrue(orange.getY() > 0 && orange.getY() <= (this.WIDTH - orange.getSize()));
 	}
 	
 	@Test
+    public void testAOrangectionPerformed() {
+        boolean initialVisibility =  orange.getVisible();
+        Orange orange = (Orange)this.orange;
+        orange.actionPerformed(null);  
+        assertNotEquals(initialVisibility, orange.getVisible());
+    }
+	
+	
+	@Test
 	public void testBlackHoleLimits() {
-		assertTrue(blackHole.getX() > 0 && blackHole.getX() <= (game.getWidth() - blackHole.getSize()));
-		assertTrue(blackHole.getY() > 0 && blackHole.getY() <= (game.getHeight() - blackHole.getSize()));
+		assertTrue(blackHole.getX() > 0 && blackHole.getX() <= (this.WIDTH - blackHole.getSize()));
+		assertTrue(blackHole.getY() > 0 && blackHole.getY() <= (this.WIDTH - blackHole.getSize()));
 	}
+	
+	@Test
+    public void testBlackHoleActionPerformed() {
+		boolean initialVisibility =  blackHole.getVisible();
+        BlackHole blackHole = (BlackHole)this.blackHole;
+        blackHole.actionPerformed(null);  
+        assertNotEquals(initialVisibility, blackHole.getVisible());
+    }
+
 }

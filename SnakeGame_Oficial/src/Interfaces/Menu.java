@@ -32,6 +32,14 @@ public class Menu extends JFrame {
     	this.scoreManager = scoreManager; // Inicializa ScoreManager
         initMenu();
     }
+    
+    public JToggleButton getEasyButton () {
+    	return this.easyButton;
+    }
+    
+    public JToggleButton getHardButton () {
+    	return this.hardButton;
+    }
 
     private void initMenu() {
         setTitle("Snake Game - Menu");
@@ -209,6 +217,7 @@ public class Menu extends JFrame {
         dispose();
         JFrame gameFrame = new JFrame("Snake Game");
         SnakeGame snakeGame = new SnakeGame(this.scoreManager, this.dificulty);
+        snakeGame.initGameValid();
         gameFrame.add(snakeGame);
         gameFrame.pack();
         gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

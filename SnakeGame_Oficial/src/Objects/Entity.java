@@ -33,6 +33,10 @@ public abstract class Entity {
         this.visible = visible;
     }
     
+    public boolean getVisible () {
+    	return this.visible;
+    }
+    
     public void location(int width, int height) {
         posX = ThreadLocalRandom.current().nextInt((width / ENTITY_SIZE) - 1) * ENTITY_SIZE;
         posY = ThreadLocalRandom.current().nextInt((height / ENTITY_SIZE) - 1) * ENTITY_SIZE;
