@@ -1,7 +1,6 @@
 package Tests;
 
 import Interfaces.*;
-import Interfaces.Menu;
 import Objects.GameSettings;
 import Objects.Snake;
 import Drivers.ScoreManager;
