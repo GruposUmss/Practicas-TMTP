@@ -5,6 +5,11 @@ import Objects.Images;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * La clase LifeDisplay es un componente gráfico que muestra la vida restante del jugador
+ * utilizando íconos de corazones. Esta clase es responsable de renderizar la cantidad de vidas
+ * en la pantalla.
+ */
 public class LifeDisplay extends JPanel {
 	
 	private final int HEART_SIZE = 40;
@@ -15,10 +20,6 @@ public class LifeDisplay extends JPanel {
     	this.visible = true;
         this.lifeManager = lifeManager;
         setPreferredSize(new Dimension(200, 50));
-    }
-    
-    public boolean getVisible () {
-    	return this.visible;
     }
     
     public void setVisible (boolean visible) {
@@ -38,5 +39,7 @@ public class LifeDisplay extends JPanel {
         }
     }
     
-    
+    public boolean getVisible () {
+    	return this.visible;
+    }
 }

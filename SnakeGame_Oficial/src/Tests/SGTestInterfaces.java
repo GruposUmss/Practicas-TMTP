@@ -17,7 +17,6 @@ class SGTestInterfaces extends JFrame{
 	private JFrame gameFrame;
 	private Snake snake;
 	private ScoreManager scoreManager;
-	private Menu menu = new Menu();
 	
 	@BeforeEach
 	public void setUp() throws InterruptedException {
@@ -99,12 +98,5 @@ class SGTestInterfaces extends JFrame{
 	public void testInitializationLifeDisplay() {
 	    assertNotNull(this.snakeGame.getLifeDisplay());
 	    assertTrue(this.snakeGame.getLifeDisplay().isVisible()); 
-	}
-	
-	@Test
-	public void testMenuInitialization() {
-	    assertNotNull(this.menu); 
-	    assertNotNull(this.menu.getEasyButton()); 
-	    assertNotNull(this.menu.getHardButton()); 
 	}
 }

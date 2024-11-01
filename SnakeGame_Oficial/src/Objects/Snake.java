@@ -3,9 +3,13 @@ package Objects;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.Timer;
 
+/*
+ * La clase Snake representa la serpiente en el juego, gestionando su tamaño, dirección,
+ * posición y visibilidad. Proporciona métodos para moverla, dibujarla en la pantalla y
+ * manejar su inmunidad.
+ */
 public class Snake {
 
 	private final GameSettings.Directions[] registerDirection;
@@ -25,72 +29,15 @@ public class Snake {
         this.posY = new int[900];
         this.inmunity = false;
         this.visible = true;
-        
+    
         initSnake();
     }
     
-    public void setSnakeSize(int sizeNew) {
-        for (int i = snakeSize; i < sizeNew; i++) {
-        	posX[i] = posX[snakeSize - 1];
-            posY[i] = posY[snakeSize - 1];
-            registerDirection[i] = registerDirection[snakeSize - 1];
+    private void initSnake() {
+        for (int i = 0; i < snakeSize; i++) {
+            posX[i] = 60 - i * 10;
+            posY[i] = 60;
         }
-        this.snakeSize = sizeNew;
-    }
-    
-    public GameSettings.Directions getDirection (int n) {
-    	return this.registerDirection[n];
-    }
-    
-    public boolean getInmunity () {
-    	return this.inmunity;
-    }
-    
-    public void setInmunity (boolean valid) {
-    	this.inmunity = valid;
-    }
-   
-    public void setVisible(boolean vs) {
-    	this.visible = vs;
-    }
-    
-    public boolean getVisible () {
-    	return this.visible;
-    }
-    
-    public void setSnakePosX (int n) {
-    	this.posX[0] = n;
-    }
-    
-    public void setSnakePosY (int n) {
-    	this.posY[0] = n;
-    }
-    
-    public int getSnakeRectSize () {
-    	return this.SNAKE_RECT_SIZE;
-    }
-    
-    public int getSnakeSize () {
-    	return this.snakeSize;
-    }
-    
-    public int getSnakePosX (int x) {
-    	return this.posX[x];
-    }
-    
-    public int getSnakePosY (int y) {
-    	return this.posY[y];
-    }
-    
-    public void setDirection(GameSettings.Directions direction) {
-    	if (direction != null) {  //Evita que la dirección sea null y se genera un IllegalException
-            this.direction = direction;
-        } 
-    }
-    
-    public boolean inmunity (boolean valid) {
-    	if(valid) return true;
-    	return false;
     }
     
     public void blinkSnake () {
@@ -102,27 +49,16 @@ public class Snake {
 	        @Override
 	        public void actionPerformed(ActionEvent e) {
 	            setVisible(!getVisible());
-	        	//setVisible(!getVisible());  //Alterna visibilidad
-	            //snakeGame.repaint();  //Re-pinta el juego para reflejar los cambios
-	             
 	            blinkCount++;
-	            if (blinkCount >= 30) {  //Detener después de 5 parpadeos
-	                ((Timer) e.getSource()).stop();  //Detiene el temporizador
-	                setVisible(true);  // Asegura que la serpiente quede visible al final
-	                //snakeGame.repaint();  // Re-pinta por última vez
+	            if (blinkCount >= 30) {  
+	                ((Timer) e.getSource()).stop();  
+	                setVisible(true);  
 	                setInmunity(false);
 	            }
 	        }
 	    });
-	    blinkTimer.start();  // Inicia el temporizador para el parpadeo
+	    blinkTimer.start(); 
 	}
-    
-    private void initSnake() {
-        for (int i = 0; i < snakeSize; i++) {
-            posX[i] = 60 - i * 10;
-            posY[i] = 60;
-        }
-    }
 
     public void draw(Graphics g) {
     	if (visible) {
@@ -137,7 +73,7 @@ public class Snake {
     }
     
     public Image getBodyImage(GameSettings.Directions dir) {
-    	if (dir == null) dir = GameSettings.Directions.RIGHT; //Evita que se den direcciones nulas, debido a las actualizaciones
+    	if (dir == null) dir = GameSettings.Directions.RIGHT; 
         switch (dir) {
             case LEFT: return Images.SNAKE_BODY_LEFT;
             case UP: return Images.SNAKE_BODY_UP;
@@ -148,7 +84,7 @@ public class Snake {
     }
     
     public Image getHeadImage(GameSettings.Directions dir) {
-    	if (dir == null) dir = GameSettings.Directions.RIGHT; //Evita que se den direcciones nulas, debido a las actualizaciones
+    	if (dir == null) dir = GameSettings.Directions.RIGHT; 
         switch (dir) {
             case LEFT: return Images.SNAKE_HEAD_LEFT;
             case UP: return Images.SNAKE_HEAD_UP;
@@ -162,10 +98,10 @@ public class Snake {
     	for(int i = snakeSize; i > 0; i--) {
     		posX[i] = posX[i - 1];
     		posY[i] = posY[i - 1];
-    		registerDirection[i] = registerDirection[i - 1]; //Asignar direccion del siguiente al anterior
+    		registerDirection[i] = registerDirection[i - 1]; 
     	} 
     	
-    	registerDirection[0] = direction; //Guardar la dirección de la cabeza en registerDirection[0]
+    	registerDirection[0] = direction; 
     	
     	switch (direction) {
 	        case RIGHT -> posX[0] += SNAKE_RECT_SIZE;
@@ -190,5 +126,69 @@ public class Snake {
     public boolean movingDown() {
     	return direction == GameSettings.Directions.DOWN;
     }
+   
+    public GameSettings.Directions getDirection (int n) {
+    	return this.registerDirection[n];
+    }
     
+    public boolean inmunity (boolean valid) {
+    	if(valid) return true;
+    	return false;
+    }
+    
+    //Metodos Getters y Setters de la clase--------------
+    public boolean getInmunity () {
+    	return this.inmunity;
+    }
+    
+    public boolean getVisible () {
+    	return this.visible;
+    }
+    
+    public int getSnakeRectSize () {
+    	return this.SNAKE_RECT_SIZE;
+    }
+    
+    public int getSnakeSize () {
+    	return this.snakeSize;
+    }
+    
+    public int getSnakePosX (int x) {
+    	return this.posX[x];
+    }
+    
+    public int getSnakePosY (int y) {
+    	return this.posY[y];
+    }
+    
+    public void setSnakeSize(int sizeNew) {
+        for (int i = snakeSize; i < sizeNew; i++) {
+        	posX[i] = posX[snakeSize - 1];
+            posY[i] = posY[snakeSize - 1];
+            registerDirection[i] = registerDirection[snakeSize - 1];
+        }
+        this.snakeSize = sizeNew;
+    }
+    
+    public void setDirection(GameSettings.Directions direction) {
+    	if (direction != null) {  //Evita que la dirección sea null y se genera un IllegalException
+            this.direction = direction;
+        } 
+    }
+    
+    public void setSnakePosX (int n) {
+    	this.posX[0] = n;
+    }
+    
+    public void setSnakePosY (int n) {
+    	this.posY[0] = n;
+    }
+    
+    public void setInmunity (boolean valid) {
+    	this.inmunity = valid;
+    }
+   
+    public void setVisible(boolean vs) {
+    	this.visible = vs;
+    }
 }

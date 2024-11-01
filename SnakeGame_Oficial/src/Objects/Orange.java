@@ -7,6 +7,11 @@ import java.awt.event.ActionListener;
 import java.util.concurrent.ThreadLocalRandom;
 import java.awt.event.ActionEvent;
 
+/*
+ * La clase Orange representa un ALIEN_2 en el juego que se posiciona
+ * en coordenadas aleatorias, utilizando la funcionalidad de la clase
+ * base "Entity",teniendo funcioanlidad de apareicion y retraso de 4 segundos
+ */
 public class Orange extends Entity implements ActionListener {
     private int width;
     private int height;
@@ -26,7 +31,6 @@ public class Orange extends Entity implements ActionListener {
     } 
     
     public void resetLocation() {
-    	//locationOrange();
     	timer.restart();
     }
 
@@ -44,7 +48,6 @@ public class Orange extends Entity implements ActionListener {
     	if (visible) {
             locationOrange();  
         } else {
-        	//Restablece los valores de coordenadas para no mantenerla aun asi cuadno visible sea FALSE
         	posX = -this.ENTITY_SIZE;
         	posY = -this.ENTITY_SIZE;
         }

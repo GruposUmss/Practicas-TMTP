@@ -2,6 +2,12 @@ package Drivers;
 
 import Objects.GameSettings;
 
+/**
+ * La clase LevelManager es responsable de gestionar los niveles del juego 
+ * en función de la puntuación del jugador. Realiza un seguimiento del nivel 
+ * actual y ejecuta las acciones asociadas a cada nivel cuando la puntuación 
+ * alcanza umbrales específicos.
+ */
 public class LevelManager {
 
 	private GameEngine gameEngine;

@@ -8,6 +8,11 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * La clase GameEngine es responsable de gestionar la lógica del juego, incluyendo
+ * el manejo de entidades del juego, la detección de colisiones, el puntaje y el estado general del juego.
+ * Coordina las interacciones entre la Serpiente, las entidades del juego y el entorno del juego.
+ */
 public class GameEngine implements ActionListener {
 
 	private List<Entity> entityList;
@@ -33,34 +38,6 @@ public class GameEngine implements ActionListener {
 		this.levelManager = new LevelManager(scoreManager, this);
 		this.snake = new Snake(5);
 		this.entityList = new ArrayList<Entity>();
-	}
-	
-	public void setInGame(boolean inGame) {
-		this.inGame = inGame;
-	}
-	
-	public boolean getInGame() {
-		return this.inGame;
-	}
-	
-	public Snake getSnake() {
-		return this.snake;
-	}
-	
-	public LifeManager getLifeManager () {
-		return this.lifeManager;
-	}
-	
-	public ScoreManager getScoreManager () { 
-        return this.scoreManager;
-    }
-	
-	public PositionManager getPositionManager() {
-		return this.positionManager;
-	}
-	
-	public CollisionsManager getCollisionsManager() {
-		return this.collisionManager;
 	}
 	
 	public void addEntityApple () {
@@ -135,7 +112,6 @@ public class GameEngine implements ActionListener {
 		}
 	}
 	
-	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(inGame) {
@@ -149,5 +125,34 @@ public class GameEngine implements ActionListener {
 			endGame();
 		}		
 		snakeGame.repaint();
+	}
+	
+	//Metodos Getters y Setters de la clase--------------
+	public boolean getInGame() {
+		return this.inGame;
+	}
+	
+	public Snake getSnake() {
+		return this.snake;
+	}
+	
+	public LifeManager getLifeManager () {
+		return this.lifeManager;
+	}
+	
+	public ScoreManager getScoreManager () { 
+        return this.scoreManager;
+    }
+	
+	public PositionManager getPositionManager() {
+		return this.positionManager;
+	}
+	
+	public CollisionsManager getCollisionsManager() {
+		return this.collisionManager;
+	}
+	
+	public void setInGame(boolean inGame) {
+		this.inGame = inGame;
 	}
 }

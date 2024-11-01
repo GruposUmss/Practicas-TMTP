@@ -3,6 +3,11 @@ package Drivers;
 import Interfaces.SnakeGame;
 import Objects.*;
 
+/**
+ * La clase CollisionsManager gestiona las colisiones en el juego de la serpiente,
+ * incluyendo las colisiones con los límites del área de juego, el cuerpo de la serpiente
+ * y las entidades (manzanas, naranjas y agujeros negros).
+ */
 public class CollisionsManager {
 	
 	private SnakeGame snakeGame;

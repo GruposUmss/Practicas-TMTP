@@ -3,6 +3,11 @@ package Objects;
 import java.awt.*;
 import javax.swing.*;
 
+/**
+ * La clase Images carga y almacena imágenes utilizadas en el juego. 
+ * Las imágenes son accesibles a través de constantes estáticas, 
+ * facilitando su uso en otras partes del código.
+ */
 public class Images {
 	
 	public static final Image ALIEN_1 = loadImage("/ALIEN 1.png");

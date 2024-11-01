@@ -5,6 +5,10 @@ import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * La clase ScoreDisplay es responsable de mostrar el puntaje del jugador en la interfaz gráfica.
+ * Utiliza una fuente personalizada y se encarga de cargarla y dibujar el puntaje en la pantalla.
+ */
 public class ScoreDisplay {
     private ScoreManager scoreManager;
     private Font pixelFont;
@@ -13,10 +17,6 @@ public class ScoreDisplay {
         this.scoreManager = scoreManager;
         this.pixelFont = loadPixelFont(30);   
         scoreManager.resetScore();
-    }
-    
-    public Font getPixelFont () {
-    	return this.pixelFont;
     }
 
     private Font loadPixelFont(int size) {
@@ -34,5 +34,9 @@ public class ScoreDisplay {
         g.setColor(Color.WHITE);
         g.setFont(pixelFont);
         g.drawString(String.format("Score: %07d", scoreManager.getScore()), 10, 30); 
+    }
+    
+    public Font getPixelFont () {
+    	return this.pixelFont;
     }
 }

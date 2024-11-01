@@ -6,10 +6,13 @@ import Objects.GameSettings;
 import javax.swing.*;
 import java.awt.*;
 
-//Clase principal que representa el juego Snake
+/**
+ * La clase SnakeGame representa el juego de Snake. Es el panel principal donde se dibujan 
+ * los elementos del juego, como el puntaje, las vidas y la serpiente. 
+ */
 public class SnakeGame extends JPanel{
 	
-    //Dimension de la ventana en X y Y
+    //Dimension de la ventana del juego
     private final int WIDTH = 1340; 
     private final int HEIGHT = 700;
     
@@ -23,7 +26,48 @@ public class SnakeGame extends JPanel{
     	initBoard(scoreManager,  dificulty);
     	this.dificulty = dificulty;
     }
+   
+    private void initBoard(ScoreManager scoreManager, GameSettings.Dificulty dificulty) {
+    	setBackground(Color.black); //Establece el fondo del panel
+        setPreferredSize(new Dimension(getWidth(), getHeight())); // stablece el tamaño preferido
+        setFocusable(true); //Permite que el panel reciba eventos de teclado
+        requestFocusInWindow(); //Solicita el foco para el panel
+
+        //Inicializa los componentes del juego(Motor de Juego y Displays)
+        this.gameEngine = new GameEngine(this, scoreManager);
+        this.scoreDisplay = new ScoreDisplay(scoreManager);
+        this.lifeDisplay = new LifeDisplay(gameEngine.getLifeManager());
+
+        //Establece la visibilidad de las vidas según la dificultad
+        if (dificulty != GameSettings.Dificulty.EASY) {
+            this.lifeDisplay.setVisible(false);
+        }
+
+        //Agrega un listener para los movimientos de la serpiente
+        addKeyListener(new MotionSnake(gameEngine.getSnake()));
+    }
     
+    public void initGameValid () {
+    	if (this.visible) gameEngine.startGame(); 
+    }
+    
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        drawObjects(g);
+    }
+
+    private void drawObjects(Graphics g) {
+    	gameEngine.getSnake().draw(g); 
+        scoreDisplay.draw(g);
+        lifeDisplay.draw(g);
+        
+        for (Entity entity: gameEngine.getEntityList()) {
+        	entity.draw(g);
+        }
+    }
+    
+    //Metodo Getters y Setters de la clase---------
     public GameEngine getGameEngine() {
     	return this.gameEngine;
     }
@@ -40,7 +84,6 @@ public class SnakeGame extends JPanel{
     	return this.dificulty;
     }
     
-    
     public int getWidth() {
     	return this.WIDTH;
     }
@@ -49,43 +92,7 @@ public class SnakeGame extends JPanel{
     	return this.HEIGHT;
     }
     
-    private void initBoard(ScoreManager scoreManager, GameSettings.Dificulty dificulty) {
-        setBackground(Color.black);
-        setPreferredSize(new Dimension(getWidth(), getHeight()));
-        setFocusable(true);
-        requestFocusInWindow();
-        
-        this.gameEngine = new GameEngine(this, scoreManager);
-        this.scoreDisplay = new ScoreDisplay(scoreManager);
-        this.lifeDisplay = new LifeDisplay(gameEngine.getLifeManager());
-        if (dificulty != GameSettings.Dificulty.EASY) {
-        	this.lifeDisplay.setVisible(false);
-        }
-        
-        addKeyListener(new MotionSnake(gameEngine.getSnake())); 
-    }
-    
     public void setVisible (boolean visible) {
     	this.visible = visible;
-    }
-    
-    public void initGameValid () {
-    	if (this.visible) gameEngine.startGame(); 
-    }
-    
-    @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        drawObjects(g);
-    }
-
-    private void drawObjects(Graphics g) {
-    	gameEngine.getSnake().draw(g); //Dibuja la manzana
-        scoreDisplay.draw(g); //Dibuja el score
-        lifeDisplay.draw(g); //Dibuja las vidas
-        
-        for (Entity entity: gameEngine.getEntityList()) {
-        	entity.draw(g);
-        }
     }
 }

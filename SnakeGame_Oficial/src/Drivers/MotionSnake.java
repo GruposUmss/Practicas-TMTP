@@ -5,6 +5,10 @@ import Objects.Snake;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+/**
+ * La clase MotionSnake se encarga de manejar los eventos de teclado
+ * para controlar el movimiento de la serpiente en el juego.
+ */
 public class MotionSnake extends KeyAdapter {
 	
 	private Snake snake;

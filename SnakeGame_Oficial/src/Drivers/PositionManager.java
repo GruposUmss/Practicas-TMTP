@@ -3,6 +3,11 @@ package Drivers;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * La clase PositionManager se encarga de gestionar las posiciones ocupadas
+ * en el juego, permitiendo agregar, eliminar y verificar colisiones entre
+ * objetos ocupando espacio en el área de juego.
+ */
 public class PositionManager {
 	
 	private List<int []> occupiedPositions;
