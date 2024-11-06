@@ -21,14 +21,14 @@ public class ScoreManager {
     }
 
     public void resetScore() {
-        score = 0; 
+        this.score = 0; 
     }
     
     public int getScore() {
-        return score;
+        return this.score;
     }
 
     public int getHighScore() {
-        return highScore;
+        return this.highScore;
     }
 }

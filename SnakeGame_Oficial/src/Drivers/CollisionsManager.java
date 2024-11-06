@@ -74,11 +74,13 @@ public class CollisionsManager {
 	}
 	
 	private void collisionOrange (Entity entity) {
-		Orange orange = (Orange)entity;
-		orange.setVisible(false);
-		orange.resetLocation();
-		gameEngine.getSnake().setSnakeSize(gameEngine.getSnake().getSnakeSize() + 3);
-		gameEngine.getScoreManager().increaseScore(200);
+		Orange orange = (Orange) entity;
+		if (orange.getVisible()) { 
+	        orange.setVisible(false);
+	        orange.resetLocation(); // Reinicia el temporizador, pero la naranja se queda invisible
+	        gameEngine.getSnake().setSnakeSize(gameEngine.getSnake().getSnakeSize() + 3);
+	        gameEngine.getScoreManager().increaseScore(200);
+	    }
 	}
 	
 	private void collisionBlackHole (Entity entity) {

@@ -18,6 +18,7 @@ public class SnakeGame extends JPanel{
     
     private LifeDisplay lifeDisplay;
     private ScoreDisplay scoreDisplay;
+    private LevelDisplay levelDisplay;// se agrego estoooooooooooooooooooooo
     private GameEngine gameEngine;
     private GameSettings.Dificulty dificulty;
     private boolean visible = true;
@@ -37,7 +38,8 @@ public class SnakeGame extends JPanel{
         this.gameEngine = new GameEngine(this, scoreManager);
         this.scoreDisplay = new ScoreDisplay(scoreManager);
         this.lifeDisplay = new LifeDisplay(gameEngine.getLifeManager());
-
+        this.levelDisplay = new LevelDisplay(gameEngine.getLevelManager()); // se agrego estoooooooooooooooooooooo
+        
         //Establece la visibilidad de las vidas según la dificultad
         if (dificulty != GameSettings.Dificulty.EASY) {
             this.lifeDisplay.setVisible(false);
@@ -61,6 +63,7 @@ public class SnakeGame extends JPanel{
     	gameEngine.getSnake().draw(g); 
         scoreDisplay.draw(g);
         lifeDisplay.draw(g);
+        levelDisplay.draw(g); // se agregoooooooooooooooo
         
         for (Entity entity: gameEngine.getEntityList()) {
         	entity.draw(g);

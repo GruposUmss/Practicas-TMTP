@@ -18,6 +18,7 @@ public class PositionManager {
 	
 	public void addPosition(int x, int y, int size) {
 		occupiedPositions.add(new int[] {x, y, size});
+		
 	}
 	
 	public void removePosition(int x, int y, int size) {
@@ -42,7 +43,11 @@ public class PositionManager {
 		int distanceX = x1 - x2;
         int distanceY = y1 - y2;
         double distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-        return (int) (distance - (size1 + size2) / 2);
+        if (y1 < 30) {
+        	return -1;
+        }else {
+        	return (int) ((distance - (size1 + size2) / 2));
+        }
 	}
 	
     public void clearPositions() {

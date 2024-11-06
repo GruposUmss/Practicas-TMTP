@@ -33,7 +33,7 @@ public class ScoreDisplay {
     public void draw(Graphics g) {
         g.setColor(Color.WHITE);
         g.setFont(pixelFont);
-        g.drawString(String.format("Score: %07d", scoreManager.getScore()), 10, 30); 
+        g.drawString(String.format("Score:%07d", scoreManager.getScore()), 10, 35); 
     }
     
     public Font getPixelFont () {

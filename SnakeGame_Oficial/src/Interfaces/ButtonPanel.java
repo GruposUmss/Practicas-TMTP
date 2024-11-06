@@ -14,7 +14,7 @@ public class ButtonPanel extends JPanel {
 
     private JToggleButton easyButton;
     private JToggleButton hardButton;
-    private JLabel highScoreLabel;
+    private JLabel highScoreLabel; 
     private Menu menu;
 
     public ButtonPanel(ScoreManager scoreManager, Menu menu) {
@@ -47,12 +47,19 @@ public class ButtonPanel extends JPanel {
         add(playButton, gbc);
     }
 
+    //Se modifico
     private JButton createPlayButton() {
         JButton playButton = new JButton("Play");
         playButton.setFont(loadPixelFont(30));
         playButton.setBackground(Color.BLUE);
         playButton.setForeground(Color.WHITE);
-        playButton.addActionListener(e -> this.menu.startGame());
+        playButton.addActionListener(e -> { 
+        	if (!easyButton.isSelected() && !hardButton.isSelected()) {
+        		mesageSelectionDificulty(); 
+        	} else {
+        		this.menu.startGame(); 
+        	}
+        });
         return playButton;
     }
 
@@ -74,6 +81,31 @@ public class ButtonPanel extends JPanel {
             easyButton.setSelected(!hardButton.isSelected());
             this.menu.setDificulty(GameSettings.Dificulty.HARD);
         }
+    }
+    
+    //se agrego
+    private void mesageSelectionDificulty() {
+    	JLabel pressDificulty = new JLabel("Select some difficulty :3");
+        pressDificulty.setFont(loadPixelFont(20)); 
+        pressDificulty.setForeground(Color.WHITE); 
+
+        setLayout(null);
+        int x = 420; 
+        int y = getHeight() - 50;
+ 
+        pressDificulty.setBounds(x, y, pressDificulty.getPreferredSize().width, pressDificulty.getPreferredSize().height);
+        add(pressDificulty);
+        mesageBlinkEfect(pressDificulty);
+    }
+    
+    //se agrego este metodo
+    private void mesageBlinkEfect (JLabel label) {
+    	Timer blinkTimer = new Timer(300, e -> label.setVisible(!label.isVisible()));
+        blinkTimer.start();
+        Timer stopTimer = new Timer(4000, e -> { blinkTimer.stop(); label.setVisible(false);});
+        
+        stopTimer.setRepeats(false);
+        stopTimer.start();
     }
 
     private Font loadPixelFont(int size) {

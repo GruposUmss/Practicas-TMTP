@@ -34,7 +34,7 @@ public class LifeDisplay extends JPanel {
         for (int i = 0; i < lifeManager.getLives(); i++) {
             Image heartImage = Images.HEART; 
             if (heartImage != null) {
-                g.drawImage(heartImage, 10 + i * 30, 40, this.HEART_SIZE, this.HEART_SIZE, null); 
+                g.drawImage(heartImage, 1210 + i * 30, 0, this.HEART_SIZE, this.HEART_SIZE, null); 
             }
         }
     }

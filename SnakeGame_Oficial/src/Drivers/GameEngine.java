@@ -104,9 +104,8 @@ public class GameEngine implements ActionListener {
 	
 	public void addPositionActuals() {
 		positionManager.clearPositions();
-		
-		positionManager.addPosition(this.snake.getSnakePosX(0) + 80, this.snake.getSnakePosY(0) + 80, this.snake.getSnakeRectSize());
-		positionManager.addPosition(this.snake.getSnakePosX(0) - 80, this.snake.getSnakePosY(0) - 80, this.snake.getSnakeRectSize());
+		positionManager.addPosition(this.snake.getSnakePosX(0) + 100, this.snake.getSnakePosY(0) + 100, this.snake.getSnakeRectSize());
+		positionManager.addPosition(this.snake.getSnakePosX(0) - 100, this.snake.getSnakePosY(0) - 100, this.snake.getSnakeRectSize());
 		for (Entity entity: this.entityList) {
 			positionManager.addPosition(entity.getX(), entity.getY(), entity.getSize());
 		}
@@ -117,10 +116,10 @@ public class GameEngine implements ActionListener {
 		if(inGame) {
 			snake.move();
 			addPositionActuals();
-			levelManager.reviewLevels();
 			collisionManager.checkCollisionLimits();
 			collisionManager.checkCollisionBody(); 
 			collisionManager.checkCollisionEntity();
+			levelManager.reviewLevels(this.scoreManager.getScore());
 		}else {
 			endGame();
 		}		
@@ -150,6 +149,10 @@ public class GameEngine implements ActionListener {
 	
 	public CollisionsManager getCollisionsManager() {
 		return this.collisionManager;
+	}
+	
+	public LevelManager getLevelManager() { //se agrego estoooooooooo
+		return this.levelManager;
 	}
 	
 	public void setInGame(boolean inGame) {

@@ -24,6 +24,6 @@ public class GameSettings {
     }
     
     public enum Levels {
-        ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGTH, NINE, TEN, ELEVEN, TWELVE, THIRTEEN
+        ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGTH, NINE, TEN, ELEVEN, TWELVE, THIRTEEN
     }
 }
