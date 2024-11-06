@@ -120,10 +120,11 @@ public class GameEngine implements ActionListener {
 			collisionManager.checkCollisionBody(); 
 			collisionManager.checkCollisionEntity();
 			levelManager.reviewLevels(this.scoreManager.getScore());
+			snakeGame.repaint();
 		}else {
 			endGame();
 		}		
-		snakeGame.repaint();
+		//snakeGame.repaint();
 	}
 	
 	//Metodos Getters y Setters de la clase--------------
