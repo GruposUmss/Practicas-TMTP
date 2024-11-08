@@ -22,10 +22,9 @@ public class GameEngine implements ActionListener {
 	private PositionManager positionManager;
 	private ScoreManager scoreManager; 
 	private LifeManager lifeManager;
-	private LevelManager levelManager;
+	private LevelManager levelManager;//se graegoo
 
 	private Timer timer;
-	
 	private final int DELAY = 90;
 	private boolean inGame = true;
 	
@@ -35,7 +34,7 @@ public class GameEngine implements ActionListener {
 		this.lifeManager = new LifeManager();
 		this.positionManager = new PositionManager();
 		this.collisionManager = new CollisionsManager(snakeGame, this);
-		this.levelManager = new LevelManager(scoreManager, this);
+		this.levelManager = new LevelManager(scoreManager, this);//se graegoo
 		this.snake = new Snake(5);
 		this.entityList = new ArrayList<Entity>();
 	}
@@ -124,7 +123,6 @@ public class GameEngine implements ActionListener {
 		}else {
 			endGame();
 		}		
-		//snakeGame.repaint();
 	}
 	
 	//Metodos Getters y Setters de la clase--------------

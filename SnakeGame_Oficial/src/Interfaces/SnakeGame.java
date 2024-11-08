@@ -3,6 +3,8 @@ package Interfaces;
 import Drivers.*;
 import Objects.Entity;
 import Objects.GameSettings;
+import Objects.Images;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -16,6 +18,7 @@ public class SnakeGame extends JPanel{
     private final int WIDTH = 1340; 
     private final int HEIGHT = 700;
     
+    private ScoreManager scoreManager;
     private LifeDisplay lifeDisplay;
     private ScoreDisplay scoreDisplay;
     private LevelDisplay levelDisplay;// se agrego estoooooooooooooooooooooo
@@ -25,14 +28,15 @@ public class SnakeGame extends JPanel{
     
     public SnakeGame(ScoreManager scoreManager, GameSettings.Dificulty dificulty) {
     	initBoard(scoreManager,  dificulty);
+    	this.scoreManager = scoreManager;
+    	this.scoreManager.setDifficultyActual(dificulty);
     	this.dificulty = dificulty;
     }
    
     private void initBoard(ScoreManager scoreManager, GameSettings.Dificulty dificulty) {
-    	setBackground(Color.black); //Establece el fondo del panel
-        setPreferredSize(new Dimension(getWidth(), getHeight())); // stablece el tamaño preferido
-        setFocusable(true); //Permite que el panel reciba eventos de teclado
-        requestFocusInWindow(); //Solicita el foco para el panel
+        setPreferredSize(new Dimension(getWidth(), getHeight())); 
+        setFocusable(true); 
+        requestFocusInWindow(); 
 
         //Inicializa los componentes del juego(Motor de Juego y Displays)
         this.gameEngine = new GameEngine(this, scoreManager);
@@ -60,6 +64,7 @@ public class SnakeGame extends JPanel{
     }
 
     private void drawObjects(Graphics g) {
+    	g.drawImage(Images.FONDO_SG1, 0, 0, this.WIDTH, this.HEIGHT, this); // se agregooooooooooooooooo    	
     	gameEngine.getSnake().draw(g); 
         scoreDisplay.draw(g);
         lifeDisplay.draw(g);

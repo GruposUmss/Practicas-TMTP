@@ -6,15 +6,20 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Menu extends JFrame {
-
+	
+    private final int WIDTH_WINDOW = 1360; 
+    private final int HEIGHT_WINDOW = 740;
     private CardLayout cardLayout;
     private JPanel mainPanel;
     private ScoreManager scoreManager;
     private GameSettings.Dificulty difficulty;
+    private AudioPlayer audioPlayer;
 
     public Menu() {
         this.difficulty = GameSettings.Dificulty.EASY;
         this.scoreManager = new ScoreManager();
+        this.audioPlayer = new AudioPlayer(); //se agrego estoo
+        this.audioPlayer.playLoop(); //se agrego estoo
         initMenu();
     }
 
@@ -26,7 +31,7 @@ public class Menu extends JFrame {
     private void initMenu() {
         setTitle("Snake Game - Menu");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1360, 740);
+        setSize(this.WIDTH_WINDOW, this.HEIGHT_WINDOW);
         setLocationRelativeTo(null);
 
         cardLayout = new CardLayout();
@@ -61,7 +66,19 @@ public class Menu extends JFrame {
         gameFrame.setLocationRelativeTo(null);
     }
     
-    public void setDificulty (GameSettings.Dificulty dificulty) {
+    public GameSettings.Dificulty getDifficulty (){ // se agrego esto
+    	return this.difficulty;
+    }
+    
+    public void setDifficulty (GameSettings.Dificulty dificulty) {
     	this.difficulty = dificulty;
+    }
+    
+    public int getWidthWindow() {
+    	return this.WIDTH_WINDOW;
+    }
+    
+    public int getHeightWindow() {
+    	return this.HEIGHT_WINDOW;
     }
 }

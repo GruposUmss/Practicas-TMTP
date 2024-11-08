@@ -3,7 +3,6 @@ package Interfaces;
 import Drivers.ScoreManager;
 import Objects.GameSettings;
 import Objects.Images;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,45 +11,61 @@ import java.io.InputStream;
 
 public class ButtonPanel extends JPanel {
 
+	private final int LLETER_SIZE = 50;
+	private final int BUTTON_WIDTH = 250;
+	private final int BUTTON_HEIGHT = 90;
+	private final int SIZE_HEART = 200;
     private JToggleButton easyButton;
     private JToggleButton hardButton;
-    private JLabel highScoreLabel; 
+    private JLabel highScoreEasy;
+    private JLabel highScoreHard;
     private Menu menu;
 
     public ButtonPanel(ScoreManager scoreManager, Menu menu) {
         this.menu = menu;
-        setLayout(new GridBagLayout());
+        setLayout(null); 
         createButtons();
-        createHighScoreLabel(scoreManager);
+        createHighScores(scoreManager);
     }
-
+    
+    //se modificooo
     private void createButtons() {
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-
         easyButton = new JToggleButton("Easy");
-        hardButton = new JToggleButton("Hard");
-
-        easyButton.setFont(loadPixelFont(20));
-        hardButton.setFont(loadPixelFont(20));
-
+        easyButton.setBounds(150, 150, this.BUTTON_WIDTH, this.BUTTON_HEIGHT); 
+        easyButton.setFont(loadPixelFont(this.LLETER_SIZE));
         easyButton.addActionListener(this::toggleDifficulty);
+        add(easyButton);
+
+        hardButton = new JToggleButton("Hard");
+        hardButton.setBounds(950, 150, this.BUTTON_WIDTH, this.BUTTON_HEIGHT); 
+        hardButton.setFont(loadPixelFont(this.LLETER_SIZE));
         hardButton.addActionListener(this::toggleDifficulty);
+        add(hardButton);
 
-        add(easyButton, gbc);
-        gbc.gridy++;
-        add(hardButton, gbc);
-
-        gbc.gridy++;
         JButton playButton = createPlayButton();
-        add(playButton, gbc);
+        playButton.setBounds(555, 520, this.BUTTON_WIDTH, this.BUTTON_HEIGHT); 
+        add(playButton);
+    }
+    
+    //se modifico
+    private void createHighScores(ScoreManager scoreManager) {
+        highScoreEasy = new JLabel("High Score Easy:" + String.format("%07d", scoreManager.getHighScoreEasy()));
+        highScoreEasy.setFont(loadPixelFont(25));
+        highScoreEasy.setForeground(Color.YELLOW);
+        highScoreEasy.setBounds(5, 110, 600, 40);
+        add(highScoreEasy);
+        
+        highScoreHard = new JLabel("High Score Hard:" + String.format("%07d", scoreManager.getHighScoreHard()));
+        highScoreHard.setFont(loadPixelFont(25));
+        highScoreHard.setForeground(Color.YELLOW);
+        highScoreHard.setBounds(750, 110, 600, 40);
+        add(highScoreHard);
     }
 
     //Se modifico
     private JButton createPlayButton() {
         JButton playButton = new JButton("Play");
-        playButton.setFont(loadPixelFont(30));
+        playButton.setFont(loadPixelFont(this.LLETER_SIZE));
         playButton.setBackground(Color.BLUE);
         playButton.setForeground(Color.WHITE);
         playButton.addActionListener(e -> { 
@@ -63,37 +78,43 @@ public class ButtonPanel extends JPanel {
         return playButton;
     }
 
-    private void createHighScoreLabel(ScoreManager scoreManager) {
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridy = 3; 
-        highScoreLabel = new JLabel("High Score: " + String.format("%07d", scoreManager.getHighScore()));
-        highScoreLabel.setFont(loadPixelFont(30)); 
-        highScoreLabel.setForeground(Color.YELLOW); 
-        add(highScoreLabel, gbc);
-    }
-
+    //se modifico
     private void toggleDifficulty(ActionEvent e) {
         JToggleButton source = (JToggleButton) e.getSource();
+
         if (source == easyButton) {
-            hardButton.setSelected(!easyButton.isSelected());
-            this.menu.setDificulty(GameSettings.Dificulty.EASY);
-        } else {
-            easyButton.setSelected(!hardButton.isSelected());
-            this.menu.setDificulty(GameSettings.Dificulty.HARD);
+            easyButton.setSelected(true);
+            easyButton.setForeground(new Color(0, 0, 255));  
+            hardButton.setSelected(false);
+            hardButton.setForeground(null);  
         }
+
+        if (source == hardButton) {
+            hardButton.setSelected(true);
+            hardButton.setForeground(new Color(0, 0, 255)); 
+            easyButton.setSelected(false);
+            easyButton.setForeground(null);  
+        }
+
+        if (easyButton.isSelected()) {
+            this.menu.setDifficulty(GameSettings.Dificulty.EASY);
+        } else if (hardButton.isSelected()) {
+            this.menu.setDifficulty(GameSettings.Dificulty.HARD);
+        }
+        easyButton.repaint();
+        hardButton.repaint();
+        revalidate();
+        repaint();
     }
     
     //se agrego
     private void mesageSelectionDificulty() {
     	JLabel pressDificulty = new JLabel("Select some difficulty :3");
-        pressDificulty.setFont(loadPixelFont(20)); 
+        pressDificulty.setFont(loadPixelFont(25)); 
         pressDificulty.setForeground(Color.WHITE); 
 
         setLayout(null);
-        int x = 420; 
-        int y = getHeight() - 50;
- 
-        pressDificulty.setBounds(x, y, pressDificulty.getPreferredSize().width, pressDificulty.getPreferredSize().height);
+        pressDificulty.setBounds(360, getHeight() - 50, pressDificulty.getPreferredSize().width, pressDificulty.getPreferredSize().height);
         add(pressDificulty);
         mesageBlinkEfect(pressDificulty);
     }
@@ -119,11 +140,17 @@ public class ButtonPanel extends JPanel {
         }
     }
     
+    //se agregoo
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g); 
         if (Images.FONDO != null) {
             g.drawImage(Images.FONDO, 0, 0, getWidth(), getHeight(), this); 
         }
+        
+        if (menu.getDifficulty() == GameSettings.Dificulty.EASY && Images.HEART != null) {
+            g.drawImage(Images.HEART, 580, 300, this.SIZE_HEART, this.SIZE_HEART, this);    
+        }
     }
+
 }

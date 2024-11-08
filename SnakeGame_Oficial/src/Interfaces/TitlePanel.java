@@ -53,7 +53,7 @@ public class TitlePanel extends JPanel {
         gbc.insets = new Insets(20, 0, 30, 0);
 
         JLabel pressKeyLabel = new JLabel("Press Enter or Space key to enter");
-        pressKeyLabel.setFont(loadPixelFont(20)); 
+        pressKeyLabel.setFont(loadPixelFont(25)); 
         pressKeyLabel.setForeground(Color.WHITE); 
         add(pressKeyLabel, gbc);
         setupBlinkingEffect(pressKeyLabel);

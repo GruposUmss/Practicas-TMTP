@@ -11,27 +11,26 @@ import Objects.GameSettings;
 public class LevelManager {
 
 	private GameEngine gameEngine;
-	//private ScoreManager scoreManager;
 	private GameSettings.Levels levelActual;
 	
 	public LevelManager (ScoreManager scoreManager, GameEngine gameEngine) {
-		//this.scoreManager = scoreManager;
 		this.gameEngine = gameEngine;
 		this.levelActual = GameSettings.Levels.ZERO;
 	}
 	
+	//Se modifico esto
 	public void reviewLevels (int score) {
-		switch (score) {
-			case 0 -> {if (this.levelActual == GameSettings.Levels.ZERO) executeLevelONE(); this.levelActual = GameSettings.Levels.ONE;}
-			case 500 -> {if (this.levelActual == GameSettings.Levels.ONE) executeLevelTWO(); this.levelActual = GameSettings.Levels.TWO;}
-			case 1000 -> {if (this.levelActual == GameSettings.Levels.TWO) executeLevelTHREE(); this.levelActual = GameSettings.Levels.THREE;}
-			case 2000 -> {if (this.levelActual == GameSettings.Levels.THREE) executeLevelFOUR(); this.levelActual = GameSettings.Levels.FOUR;}
-			case 2500 -> {if (this.levelActual == GameSettings.Levels.FOUR) executeLevelFIVE(); this.levelActual = GameSettings.Levels.FIVE;}
-			case 3500 -> {if (this.levelActual == GameSettings.Levels.FIVE) executeLevelSIX(); this.levelActual = GameSettings.Levels.SIX;}
-			case 4500 -> {if (this.levelActual == GameSettings.Levels.SIX) executeLevelSEVEN(); this.levelActual = GameSettings.Levels.SEVEN;}
-			case 5500 -> {if (this.levelActual == GameSettings.Levels.SEVEN) executeLevelEIGTH(); this.levelActual = GameSettings.Levels.EIGTH;}
-			case 6500 -> {if (this.levelActual == GameSettings.Levels.EIGTH) executeLevelNINE(); this.levelActual = GameSettings.Levels.NINE;}
-			case 8000 -> {if (this.levelActual == GameSettings.Levels.NINE) executeLevelTEN(); this.levelActual = GameSettings.Levels.TEN;}
+		switch (this.levelActual) {
+			case ZERO -> {if(score >= 0) executeLevelONE();}
+			case ONE -> {if(score >= 500) executeLevelTWO();}
+			case TWO -> {if(score >= 1000) executeLevelTHREE();}
+			case THREE -> {if(score >= 2000) executeLevelFOUR();}
+			case FOUR -> {if(score >= 2500) executeLevelFIVE();}
+			case FIVE -> {if(score >= 3500) executeLevelSIX();}
+			case SIX -> {if(score >= 4500) executeLevelSEVEN();} 
+			case SEVEN -> {if(score >= 5500) executeLevelEIGTH();}
+			case EIGTH -> {if(score >= 6500) executeLevelNINE();}
+			case NINE -> {if(score >= 8500) executeLevelTEN();}
 		}
 	}
 	
@@ -41,51 +40,61 @@ public class LevelManager {
 	}
 	
 	private void executeLevelONE() {
+		this.levelActual = GameSettings.Levels.ONE;
 		gameEngine.addEntityApple();
 	}
 	
 	private void executeLevelTWO () {
+		this.levelActual = GameSettings.Levels.TWO;
 		gameEngine.addEntityBlackHole();
 	}
 	
 	private void executeLevelTHREE () {
+		this.levelActual = GameSettings.Levels.THREE;
 		gameEngine.addEntityOrange();
 		gameEngine.removeEntityBlackHole();
 	}
 	
 	private void executeLevelFOUR () {
+		this.levelActual = GameSettings.Levels.FOUR;
 		gameEngine.addEntityApple();
 		gameEngine.addEntityBlackHole();
 		gameEngine.addEntityBlackHole();
 	}
 	
 	private void executeLevelFIVE () {
+		this.levelActual = GameSettings.Levels.FIVE;
 		gameEngine.addEntityOrange();
 		gameEngine.removeEntityBlackHole();
 	}
 	
 	private void executeLevelSIX () {
+		this.levelActual = GameSettings.Levels.SIX;
 		gameEngine.addEntityBlackHole();
 		gameEngine.addEntityBlackHole();
 	}
 	
 	private void executeLevelSEVEN () {
+		this.levelActual = GameSettings.Levels.SEVEN;
 		gameEngine.addEntityBlackHole();
 		gameEngine.addEntityApple();
 		gameEngine.removeEntityOrange();
 	}
 	
 	private void executeLevelEIGTH () {
+		this.levelActual = GameSettings.Levels.EIGTH;
 		gameEngine.addEntityOrange();
 		gameEngine.removeEntityApple();
 		gameEngine.addEntityBlackHole();
 	}
 	
 	private void executeLevelNINE () {
+		this.levelActual = GameSettings.Levels.NINE;
 		gameEngine.addEntityBlackHole();
 	}
 	
 	private void executeLevelTEN () {
+		this.levelActual = GameSettings.Levels.TEN;
 		gameEngine.addEntityBlackHole();
 	}
 }

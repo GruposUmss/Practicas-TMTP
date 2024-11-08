@@ -1,14 +1,14 @@
 package Tests;
 
-import Interfaces.*;
+import java.awt.*;                   
+import javax.swing.*;                 
+import org.junit.jupiter.api.BeforeEach; 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import Interfaces.*;                  
 import Objects.GameSettings;
 import Objects.Snake;
 import Drivers.ScoreManager;
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import java.awt.*;
-import javax.swing.*;
 
 class SGTestInterfaces extends JFrame{
 	
@@ -36,7 +36,6 @@ class SGTestInterfaces extends JFrame{
 	    assertNotNull(snakeGame.getGameEngine());
 	    assertNotNull(snakeGame.getScoreDisplay());
 	    assertNotNull(snakeGame.getLifeDisplay());
-	    assertEquals(Color.black, snakeGame.getBackground());
 	    assertEquals(1340, snakeGame.getWidth());
 	    assertEquals(700, snakeGame.getHeight());
 	}
@@ -65,11 +64,6 @@ class SGTestInterfaces extends JFrame{
 	public void testSizeWindow() {
 		assertEquals(1340, gameFrame.getContentPane().getWidth());
 		assertEquals(700, gameFrame.getContentPane().getHeight());
-	}
-	
-	@Test
-	public void testColorWindow() {
-		assertEquals(Color.black, snakeGame.getBackground());
 	}
 	
 	@Test

@@ -6,6 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="ResourcesMusicGame"/>
 	<classpathentry kind="src" path="ResourcesFontPixel"/>
 	<classpathentry kind="src" path="DiagramsUML"/>
 	<classpathentry kind="src" path="ResourcesImages"/>

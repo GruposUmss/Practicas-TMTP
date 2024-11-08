@@ -1,6 +1,8 @@
 package Interfaces;
 
 import Drivers.ScoreManager;
+import Objects.GameSettings;
+
 import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,7 +35,11 @@ public class ScoreDisplay {
     public void draw(Graphics g) {
         g.setColor(Color.WHITE);
         g.setFont(pixelFont);
-        g.drawString(String.format("Score:%07d", scoreManager.getScore()), 10, 35); 
+        if (this.scoreManager.getDifficulty() == GameSettings.Dificulty.EASY) {
+        	g.drawString(String.format("Score Easy:%07d", scoreManager.getScore()), 10, 35);
+        } else {
+        	g.drawString(String.format("Score Hard:%07d", scoreManager.getScore()), 10, 35);
+        }
     }
     
     public Font getPixelFont () {

@@ -32,7 +32,7 @@ public class LevelDisplay {
 		 String level = this.levelManager.getLevelActual().name();
 		 g.setColor(Color.WHITE);
 	     g.setFont(pixelFont);
-	     g.drawString("LEVEL:" + level , 620, 35); 
+	     g.drawString("LEVEL:" + level , 750, 35); 
 	 }
 	    
 	 public Font getPixelFont () {
