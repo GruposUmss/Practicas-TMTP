@@ -2,7 +2,6 @@ package Interfaces;
 
 import Drivers.ScoreManager;
 import Objects.GameSettings;
-
 import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;

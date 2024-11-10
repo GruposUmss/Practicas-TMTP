@@ -22,13 +22,6 @@ public class LifeDisplay extends JPanel {
         setPreferredSize(new Dimension(200, 50));
     }
     
-    public void setVisible (boolean visible) {
-    	this.visible = visible;
-    	if (!this.visible) {
-    		this.lifeManager.setVisible(this.visible);
-    	}
-    }
-    
     public void draw(Graphics g) {
     	if (!this.visible) return; 
         for (int i = 0; i < lifeManager.getLives(); i++) {
@@ -41,5 +34,12 @@ public class LifeDisplay extends JPanel {
     
     public boolean getVisible () {
     	return this.visible;
+    }
+    
+    public void setVisible (boolean visible) {
+    	this.visible = visible;
+    	if (!this.visible) {
+    		this.lifeManager.setVisible(this.visible);
+    	}
     }
 }

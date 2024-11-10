@@ -84,13 +84,13 @@ public class CollisionsManager {
 	}
 	
 	private void collisionBlackHole (Entity entity) {
-		if (gameEngine.getLifeManager().getLives() <= 0) {
+		if(gameEngine.getLifeManager().getLives() <= 0) {
 			gameEngine.setInGame(false);
 		}
+		gameEngine.getLifeManager().loseLife();
+		gameEngine.getSnake().blinkSnake();
 		BlackHole blackHole = (BlackHole)entity;
 		blackHole.setVisible(false);
 		blackHole.resetLocation();
-		gameEngine.getSnake().blinkSnake();
-		gameEngine.getLifeManager().loseLife();
 	}
 }

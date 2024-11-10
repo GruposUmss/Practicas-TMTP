@@ -4,7 +4,6 @@ import Drivers.*;
 import Objects.Entity;
 import Objects.GameSettings;
 import Objects.Images;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -21,7 +20,8 @@ public class SnakeGame extends JPanel{
     private ScoreManager scoreManager;
     private LifeDisplay lifeDisplay;
     private ScoreDisplay scoreDisplay;
-    private LevelDisplay levelDisplay;// se agrego estoooooooooooooooooooooo
+    private LevelDisplay levelDisplay;
+    private MotionSnake motionSnake; 
     private GameEngine gameEngine;
     private GameSettings.Dificulty dificulty;
     private boolean visible = true;
@@ -42,7 +42,8 @@ public class SnakeGame extends JPanel{
         this.gameEngine = new GameEngine(this, scoreManager);
         this.scoreDisplay = new ScoreDisplay(scoreManager);
         this.lifeDisplay = new LifeDisplay(gameEngine.getLifeManager());
-        this.levelDisplay = new LevelDisplay(gameEngine.getLevelManager()); // se agrego estoooooooooooooooooooooo
+        this.levelDisplay = new LevelDisplay(gameEngine.getLevelManager()); 
+        this.motionSnake = new MotionSnake(gameEngine.getSnake());
         
         //Establece la visibilidad de las vidas según la dificultad
         if (dificulty != GameSettings.Dificulty.EASY) {
@@ -50,7 +51,7 @@ public class SnakeGame extends JPanel{
         }
 
         //Agrega un listener para los movimientos de la serpiente
-        addKeyListener(new MotionSnake(gameEngine.getSnake()));
+        addKeyListener(this.motionSnake);
     }
     
     public void initGameValid () {
@@ -64,11 +65,11 @@ public class SnakeGame extends JPanel{
     }
 
     private void drawObjects(Graphics g) {
-    	g.drawImage(Images.FONDO_SG1, 0, 0, this.WIDTH, this.HEIGHT, this); // se agregooooooooooooooooo    	
+    	g.drawImage(Images.FONDO_SG, 0, 0, this.WIDTH, this.HEIGHT, this); // se agregooooooooooooooooo    	
     	gameEngine.getSnake().draw(g); 
         scoreDisplay.draw(g);
         lifeDisplay.draw(g);
-        levelDisplay.draw(g); // se agregoooooooooooooooo
+        levelDisplay.draw(g); 
         
         for (Entity entity: gameEngine.getEntityList()) {
         	entity.draw(g);
@@ -78,6 +79,14 @@ public class SnakeGame extends JPanel{
     //Metodo Getters y Setters de la clase---------
     public GameEngine getGameEngine() {
     	return this.gameEngine;
+    }
+    
+    public LevelDisplay getLevelDisplay() {
+    	return this.levelDisplay;
+    }
+    
+    public MotionSnake getMotionSnake () {
+    	return this.motionSnake;
     }
     
     public ScoreDisplay getScoreDisplay () {

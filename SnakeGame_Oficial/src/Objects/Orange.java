@@ -25,15 +25,15 @@ public class Orange extends Entity implements ActionListener {
         loadOrange();
     }
     
+    public void resetLocation() {
+    	timer.restart();
+    }
+    
     public void loadOrange() {
     	timer = new Timer(4000, this);
     	timer.start();
     } 
     
-    public void resetLocation() {
-    	timer.restart();
-    }
-
     public void locationOrange() {
         posX = ThreadLocalRandom.current().nextInt((width / ENTITY_SIZE) - 1) * ENTITY_SIZE;
         posY = ThreadLocalRandom.current().nextInt((height / ENTITY_SIZE) - 1) * ENTITY_SIZE;

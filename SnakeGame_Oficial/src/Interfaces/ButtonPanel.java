@@ -9,6 +9,13 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.io.InputStream;
 
+/*
+ * La clase ButtonPanel gestiona los botones de configuración del juego, 
+ * incluyendo la selección de dificultad (fácil o difícil), la visualización 
+ * de los puntajes más altos y la ejecución de la acción de inicio del juego.
+ * Permite al jugador elegir la dificultad antes de comenzar el juego y 
+ * proporciona retroalimentación visual si no se selecciona ninguna dificultad.
+ */
 public class ButtonPanel extends JPanel {
 
 	private final int LLETER_SIZE = 50;
@@ -19,6 +26,7 @@ public class ButtonPanel extends JPanel {
     private JToggleButton hardButton;
     private JLabel highScoreEasy;
     private JLabel highScoreHard;
+    private JButton playButton;
     private Menu menu;
 
     public ButtonPanel(ScoreManager scoreManager, Menu menu) {
@@ -27,8 +35,7 @@ public class ButtonPanel extends JPanel {
         createButtons();
         createHighScores(scoreManager);
     }
-    
-    //se modificooo
+
     private void createButtons() {
         easyButton = new JToggleButton("Easy");
         easyButton.setBounds(150, 150, this.BUTTON_WIDTH, this.BUTTON_HEIGHT); 
@@ -42,12 +49,11 @@ public class ButtonPanel extends JPanel {
         hardButton.addActionListener(this::toggleDifficulty);
         add(hardButton);
 
-        JButton playButton = createPlayButton();
+        playButton = createPlayButton();
         playButton.setBounds(555, 520, this.BUTTON_WIDTH, this.BUTTON_HEIGHT); 
         add(playButton);
     }
     
-    //se modifico
     private void createHighScores(ScoreManager scoreManager) {
         highScoreEasy = new JLabel("High Score Easy:" + String.format("%07d", scoreManager.getHighScoreEasy()));
         highScoreEasy.setFont(loadPixelFont(25));
@@ -62,7 +68,6 @@ public class ButtonPanel extends JPanel {
         add(highScoreHard);
     }
 
-    //Se modifico
     private JButton createPlayButton() {
         JButton playButton = new JButton("Play");
         playButton.setFont(loadPixelFont(this.LLETER_SIZE));
@@ -78,7 +83,6 @@ public class ButtonPanel extends JPanel {
         return playButton;
     }
 
-    //se modifico
     private void toggleDifficulty(ActionEvent e) {
         JToggleButton source = (JToggleButton) e.getSource();
 
@@ -107,7 +111,6 @@ public class ButtonPanel extends JPanel {
         repaint();
     }
     
-    //se agrego
     private void mesageSelectionDificulty() {
     	JLabel pressDificulty = new JLabel("Select some difficulty :3");
         pressDificulty.setFont(loadPixelFont(25)); 
@@ -119,7 +122,6 @@ public class ButtonPanel extends JPanel {
         mesageBlinkEfect(pressDificulty);
     }
     
-    //se agrego este metodo
     private void mesageBlinkEfect (JLabel label) {
     	Timer blinkTimer = new Timer(300, e -> label.setVisible(!label.isVisible()));
         blinkTimer.start();
@@ -140,7 +142,6 @@ public class ButtonPanel extends JPanel {
         }
     }
     
-    //se agregoo
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g); 
@@ -152,5 +153,16 @@ public class ButtonPanel extends JPanel {
             g.drawImage(Images.HEART, 580, 300, this.SIZE_HEART, this.SIZE_HEART, this);    
         }
     }
-
+    
+    public  JToggleButton getEasyButton () {
+    	return this.easyButton;
+    }
+    
+    public  JToggleButton getHardButton () {
+    	return this.hardButton;
+    }
+    
+    public  JButton getPlayButton () {
+    	return this.playButton;
+    }
 }

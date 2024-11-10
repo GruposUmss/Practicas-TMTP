@@ -22,7 +22,7 @@ public class GameEngine implements ActionListener {
 	private PositionManager positionManager;
 	private ScoreManager scoreManager; 
 	private LifeManager lifeManager;
-	private LevelManager levelManager;//se graegoo
+	private LevelManager levelManager;
 
 	private Timer timer;
 	private final int DELAY = 90;
@@ -34,7 +34,7 @@ public class GameEngine implements ActionListener {
 		this.lifeManager = new LifeManager();
 		this.positionManager = new PositionManager();
 		this.collisionManager = new CollisionsManager(snakeGame, this);
-		this.levelManager = new LevelManager(scoreManager, this);//se graegoo
+		this.levelManager = new LevelManager(scoreManager, this);
 		this.snake = new Snake(5);
 		this.entityList = new ArrayList<Entity>();
 	}
@@ -78,10 +78,6 @@ public class GameEngine implements ActionListener {
 		}
 	}
 	
-	public List<Entity> getEntityList () {
-		return this.entityList;
-	}
-	
 	public void startGame() {
 		addPositionActuals();
 		timer = new Timer(DELAY, this);
@@ -95,10 +91,6 @@ public class GameEngine implements ActionListener {
 	        SwingUtilities.getWindowAncestor(snakeGame).dispose();
 	    }
 	    new Menu(this.scoreManager).setVisible(true);
-	}
-	
-	public void removePositionActual(int x, int y, int size) {
-		positionManager.removePosition(x, y, size);
 	}
 	
 	public void addPositionActuals() {
@@ -125,9 +117,21 @@ public class GameEngine implements ActionListener {
 		}		
 	}
 	
+	public void removePositionActual(int x, int y, int size) {
+		positionManager.removePosition(x, y, size);
+	}
+	
 	//Metodos Getters y Setters de la clase--------------
 	public boolean getInGame() {
 		return this.inGame;
+	}
+	
+	public List<Entity> getEntityList () {
+		return this.entityList;
+	}
+	
+	public SnakeGame getSnakeGame() {
+		return this.snakeGame;
 	}
 	
 	public Snake getSnake() {
@@ -150,8 +154,12 @@ public class GameEngine implements ActionListener {
 		return this.collisionManager;
 	}
 	
-	public LevelManager getLevelManager() { //se agrego estoooooooooo
+	public LevelManager getLevelManager() {
 		return this.levelManager;
+	}
+	
+	public Timer getTimer() {
+		return this.timer;
 	}
 	
 	public void setInGame(boolean inGame) {

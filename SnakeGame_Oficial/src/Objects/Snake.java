@@ -126,8 +126,12 @@ public class Snake {
     public boolean movingDown() {
     	return direction == GameSettings.Directions.DOWN;
     }
+    
+    public GameSettings.Directions getDirection () {
+    	return this.direction;
+    }
    
-    public GameSettings.Directions getDirection (int n) {
+    public GameSettings.Directions getRegisterDirection (int n) {
     	return this.registerDirection[n];
     }
     

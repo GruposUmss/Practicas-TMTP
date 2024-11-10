@@ -23,10 +23,7 @@ public class Images {
 	public static final Image SNAKE_BODY_DOWN = loadImage("/SNAKE BODY DOWN.png");
 	public static final Image HEART = loadImage("/HEART.png"); 
 	public static final Image FONDO = loadImage("/FONDO.png");
-	public static final Image FONDO_SG1 = loadImage("/FONDO_SG1.jpg");
-	public static final Image FONDO_SG2 = loadImage("/FONDO_SG2.png");
-	public static final Image FONDO_SG3 = loadImage("/FONDO_SG3.jpg");
-	public static final Image FONDO_SG4 = loadImage("/FONDO_SG4.jpg");
+	public static final Image FONDO_SG = loadImage("/FONDO_SG1.jpg");
 	
 	private static Image loadImage(String path) {
 		return new ImageIcon(Images.class.getResource(path)).getImage();

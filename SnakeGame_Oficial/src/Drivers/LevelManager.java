@@ -17,8 +17,7 @@ public class LevelManager {
 		this.gameEngine = gameEngine;
 		this.levelActual = GameSettings.Levels.ZERO;
 	}
-	
-	//Se modifico esto
+
 	public void reviewLevels (int score) {
 		switch (this.levelActual) {
 			case ZERO -> {if(score >= 0) executeLevelONE();}
@@ -32,11 +31,6 @@ public class LevelManager {
 			case EIGTH -> {if(score >= 6500) executeLevelNINE();}
 			case NINE -> {if(score >= 8500) executeLevelTEN();}
 		}
-	}
-	
-	//se agrego esto
-	public GameSettings.Levels getLevelActual() {
-		return this.levelActual;
 	}
 	
 	private void executeLevelONE() {
@@ -96,5 +90,9 @@ public class LevelManager {
 	private void executeLevelTEN () {
 		this.levelActual = GameSettings.Levels.TEN;
 		gameEngine.addEntityBlackHole();
+	}
+	
+	public GameSettings.Levels getLevelActual() {
+		return this.levelActual;
 	}
 }

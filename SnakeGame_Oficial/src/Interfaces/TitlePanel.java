@@ -5,12 +5,21 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.FontFormatException;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
-
+/*
+ * La clase TitlePanel maneja la pantalla de título del juego. Muestra los títulos 
+ * "SNAKE", "GAME" y "GALACTIC" con fuentes personalizadas en diferentes colores
+ * Además, incluye un efecto de parpadeo en el texto y maneja la entrada de teclas 
+ * para comenzar el juego.
+ */
 public class TitlePanel extends JPanel {
+	
+	private JLabel snakeLabel;
+	private JLabel gameLabel;
+	private JLabel galacticLabel;
+	private JLabel pressKeyLabel;
 
     public TitlePanel() {
         setLayout(new GridBagLayout());
@@ -24,22 +33,22 @@ public class TitlePanel extends JPanel {
         gbc.gridx = 0;
         gbc.gridy = 0;
 
-        JLabel snakeLabel = new JLabel("SNAKE");
-        snakeLabel.setFont(loadPixelFont(77));
-        snakeLabel.setForeground(Color.GREEN);
-        add(snakeLabel, gbc);
+        this.snakeLabel = new JLabel("SNAKE");
+        this.snakeLabel.setFont(loadPixelFont(77));
+        this.snakeLabel.setForeground(Color.GREEN);
+        add(this.snakeLabel, gbc);
 
         gbc.gridy++;
-        JLabel gameLabel = new JLabel("GAME");
-        gameLabel.setFont(loadPixelFont(77));
-        gameLabel.setForeground(Color.RED);
-        add(gameLabel, gbc);
+        this.gameLabel = new JLabel("GAME");
+        this.gameLabel.setFont(loadPixelFont(77));
+        this.gameLabel.setForeground(Color.RED);
+        add(this.gameLabel, gbc);
 
         gbc.gridy++;
-        JLabel galacticLabel = new JLabel("GALACTIC");
-        galacticLabel.setFont(loadPixelFont(77));
-        galacticLabel.setForeground(Color.BLUE);
-        add(galacticLabel, gbc);
+        this.galacticLabel = new JLabel("GALACTIC");
+        this.galacticLabel.setFont(loadPixelFont(77));
+        this.galacticLabel.setForeground(Color.BLUE);
+        add(this.galacticLabel, gbc);
 
         gbc.gridy++;
         gbc.weighty = 1.0;
@@ -52,11 +61,11 @@ public class TitlePanel extends JPanel {
         gbc.anchor = GridBagConstraints.SOUTH;
         gbc.insets = new Insets(20, 0, 30, 0);
 
-        JLabel pressKeyLabel = new JLabel("Press Enter or Space key to enter");
-        pressKeyLabel.setFont(loadPixelFont(25)); 
-        pressKeyLabel.setForeground(Color.WHITE); 
-        add(pressKeyLabel, gbc);
-        setupBlinkingEffect(pressKeyLabel);
+        this.pressKeyLabel = new JLabel("Press Enter or Space key to enter");
+        this.pressKeyLabel.setFont(loadPixelFont(25)); 
+        this.pressKeyLabel.setForeground(Color.WHITE); 
+        add(this.pressKeyLabel, gbc);
+        setupBlinkingEffect(this.pressKeyLabel);
     }
 
     private void setupBlinkingEffect(JLabel label) {
@@ -94,5 +103,21 @@ public class TitlePanel extends JPanel {
         if (Images.FONDO != null) {
             g.drawImage(Images.FONDO, 0, 0, getWidth(), getHeight(), this); 
         }
+    }
+    
+    public JLabel getSnakeLabel () {
+    	return this.snakeLabel;
+    }
+    
+    public JLabel getGameLabel () {
+    	return this.gameLabel;
+    }
+    
+    public JLabel getGalacticLabel () {
+    	return this.galacticLabel;
+    }
+    
+    public JLabel getPressKeyLabel () {
+    	return this.pressKeyLabel;
     }
 }

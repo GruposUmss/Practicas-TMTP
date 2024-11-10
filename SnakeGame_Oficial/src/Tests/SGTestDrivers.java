@@ -1,8 +1,10 @@
 package Tests;
 
-import static org.junit.jupiter.api.Assertions.*; 
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach; 
-import org.junit.jupiter.api.Test; 
+import org.junit.jupiter.api.Test;
+
+import Interfaces.Menu;
 import Interfaces.SnakeGame;
 import Objects.*;
 import Drivers.*;
@@ -20,7 +22,10 @@ public class SGTestDrivers {
         this.snakeGame = new SnakeGame(this.scoreManager, GameSettings.Dificulty.HARD); 
         collisionsManager = new CollisionsManager(this.snakeGame, this.snakeGame.getGameEngine());
     }
-
+    
+    /* CollisionManager
+     * Test para verificar la colision entre los limites y la serpiente(mundo toloidal)
+     */
     @Test
     public void testCheckCollisionLimits() {
         this.snakeGame.getGameEngine().getSnake().setSnakePosX(0); 
@@ -35,6 +40,9 @@ public class SGTestDrivers {
         assertEquals(0, this.snakeGame.getGameEngine().getSnake().getSnakePosX(0)); 
     }
 
+    /* CollisionManager
+     * Test para verificar la colision entre la cabeza y su cuerpo
+     */
     @Test
     public void testCheckCollisionBody() {
     	this.snakeGame.getGameEngine().getSnake().setSnakeSize(3);
@@ -49,6 +57,9 @@ public class SGTestDrivers {
         assertFalse(this.snakeGame.getGameEngine().getInGame()); 
     }
 
+    /* CollisionManager
+     * Test para verificar la colision entre la serpiente y alguna entidad(apple, orange, black hole)
+     */
     @Test
     public void testCheckCollisionEntity() {
     	this.snakeGame.setVisible(false);
@@ -65,6 +76,9 @@ public class SGTestDrivers {
         assertEquals(100, this.snakeGame.getGameEngine().getScoreManager().getScore()); 
     }
     
+    /* GameEngine
+     * Test para verificar que el motor de juego se ejecute
+     */
     @Test
     public void testGameInitialization() {
     	this.snakeGame.initGameValid();
@@ -73,6 +87,9 @@ public class SGTestDrivers {
         assertEquals(0, this.snakeGame.getGameEngine().getScoreManager().getScore()); 
     }
     
+    /* GameEngine
+     * Test para verificar que se añadan manzanas a la lista del motor de juego
+     */
     @Test
     public void testAddEntityApple() {
     	this.snakeGame.initGameValid();
@@ -81,6 +98,9 @@ public class SGTestDrivers {
         assertTrue(this.snakeGame.getGameEngine().getEntityList().get(0) instanceof Apple); 
     }
     
+    /* GameEngine
+     * Test para verificar que añadan naranjas a la lista del motor de juego
+     */
     @Test
     public void testAddEntityOrange() {
     	this.snakeGame.initGameValid();
@@ -89,6 +109,9 @@ public class SGTestDrivers {
         assertTrue(this.snakeGame.getGameEngine().getEntityList().get(0) instanceof Orange); 
     }
     
+    /* GameEngine
+     * Test para verificar que se añadan agujeros negros a la lista del motor de juego
+     */
     @Test
     public void testAddEntityBlackHole() {
     	this.snakeGame.initGameValid();
@@ -97,6 +120,9 @@ public class SGTestDrivers {
         assertTrue(this.snakeGame.getGameEngine().getEntityList().get(0) instanceof BlackHole); 
     }
     
+    /* GameEngine
+     * Test para verificar que se remuevan entidades de la lista del motor de juego
+     */
     @Test
     public void testRemoveEntityApple() {
     	this.snakeGame.initGameValid();
@@ -106,6 +132,9 @@ public class SGTestDrivers {
         assertEquals(0, this.snakeGame.getGameEngine().getEntityList().size()); 
     }
     
+    /* GameEngine
+     * Test para verificar que el estado visible de la serpiente se alterne al entrar en blink
+     */
     @Test
     public void testBlinkSnake() throws InterruptedException {
     	this.snakeGame.initGameValid();
@@ -116,4 +145,61 @@ public class SGTestDrivers {
         Thread.sleep(8000);
         assertTrue(this.snakeGame.getGameEngine().getSnake().getVisible());
     }
+    
+    /* LevelManager
+     * Test para comprobar que si se esten ejecutando los niveles
+     */
+    @Test
+    public void testExecuteLevel () {
+    	this.snakeGame.getGameEngine().getLevelManager().reviewLevels(0);
+    	assertEquals(GameSettings.Levels.ONE, this.snakeGame.getGameEngine().getLevelManager().getLevelActual());
+    	
+    	this.snakeGame.getGameEngine().getLevelManager().reviewLevels(500);
+    	assertEquals(GameSettings.Levels.TWO, this.snakeGame.getGameEngine().getLevelManager().getLevelActual());
+    }
+    
+    /* LifeManager
+     * Test para comprobar que el juego termine, cuando las vidas esten desactivadas
+     */
+    @Test
+    public void testLoseLifes () {
+    	this.snakeGame.getGameEngine().getLifeManager().setVisible(false);
+    	assertEquals(0, this.snakeGame.getGameEngine().getLifeManager().getLives());
+    }
+    
+    /* PositionManager
+     * Test para confirmar que el verificador de posiciones dar true cuando hay una
+     * sobreposicion
+     */
+    @Test
+    public void testOverlayPositions() {
+    	this.snakeGame.getGameEngine().getPositionManager().addPosition(10, 10, 20);
+    	assertTrue(this.snakeGame.getGameEngine().getPositionManager().overlay(10, 10, 20));
+    }
+    
+    /* ScoreManager
+     * Test para verificar que el incremente del High Score sea independiente
+     */
+    @Test
+    public void testScoreHardAndEasy () {
+    	SnakeGame sg1 = new SnakeGame(this.scoreManager, GameSettings.Dificulty.HARD);
+    	sg1.getGameEngine().getScoreManager().increaseScore(100);
+    	
+    	SnakeGame sg2 = new SnakeGame(this.scoreManager, GameSettings.Dificulty.EASY);
+    	sg2.getGameEngine().getScoreManager().increaseScore(300);
+    	
+    	assertNotEquals(sg1.getGameEngine().getScoreManager().getHighScoreEasy(),
+    					sg2.getGameEngine().getScoreManager().getHighScoreHard());
+    }
+    
+    /* AudioPlayer 
+	 * Test para verificar que la musica del juego se obtenga y
+	 * pueda ejecutarse debidamente
+	 */
+	@Test
+	public void testInitMusicGame() {
+		Menu menu = new Menu();
+		menu.getAudioPlayer().playLoop();
+		assertTrue(menu.getAudioPlayer().getClip().isRunning());
+	}
 }

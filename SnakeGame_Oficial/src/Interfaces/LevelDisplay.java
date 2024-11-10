@@ -8,6 +8,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import Drivers.LevelManager;
 
+/**
+ * La clase LevelDisplay se encarga de mostrar el nivel actual del juego en la interfaz gráfica.
+ * Utiliza una fuente personalizada (Pixel Font) para renderizar el texto en la pantalla.
+ * El nivel actual es obtenido de un objeto LevelManager, y el texto es dibujado en color blanco
+ * en una posición fija de la ventana.
+ */
 public class LevelDisplay {
 	private LevelManager levelManager;
 	private Font pixelFont;

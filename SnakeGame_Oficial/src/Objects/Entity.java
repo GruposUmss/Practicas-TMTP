@@ -1,8 +1,8 @@
 package Objects;
 
-import Drivers.PositionManager;
 import java.awt.*;
 import java.util.concurrent.ThreadLocalRandom;
+import Drivers.PositionManager;
 
 /**
  * La clase Entity representa un objeto general en el juego con una posición

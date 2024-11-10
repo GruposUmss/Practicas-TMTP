@@ -1,10 +1,16 @@
 package Interfaces;
 
 import Objects.GameSettings;
+import Drivers.AudioPlayer;
 import Drivers.ScoreManager;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * La clase Menu gestiona la pantalla principal del juego, mostrando el menú de inicio. 
+ * Permite la configuración de la dificultad, la reproducción de audio, y el manejo de 
+ * puntuaciones.
+ */
 public class Menu extends JFrame {
 	
     private final int WIDTH_WINDOW = 1360; 
@@ -18,8 +24,8 @@ public class Menu extends JFrame {
     public Menu() {
         this.difficulty = GameSettings.Dificulty.EASY;
         this.scoreManager = new ScoreManager();
-        this.audioPlayer = new AudioPlayer(); //se agrego estoo
-        this.audioPlayer.playLoop(); //se agrego estoo
+        this.audioPlayer = new AudioPlayer(); 
+        this.audioPlayer.playLoop(); 
         initMenu();
     }
 
@@ -66,12 +72,12 @@ public class Menu extends JFrame {
         gameFrame.setLocationRelativeTo(null);
     }
     
-    public GameSettings.Dificulty getDifficulty (){ // se agrego esto
+    public GameSettings.Dificulty getDifficulty (){ 
     	return this.difficulty;
     }
     
-    public void setDifficulty (GameSettings.Dificulty dificulty) {
-    	this.difficulty = dificulty;
+    public AudioPlayer getAudioPlayer() {
+    	return this.audioPlayer;
     }
     
     public int getWidthWindow() {
@@ -80,5 +86,9 @@ public class Menu extends JFrame {
     
     public int getHeightWindow() {
     	return this.HEIGHT_WINDOW;
+    }
+    
+    public void setDifficulty (GameSettings.Dificulty dificulty) {
+    	this.difficulty = dificulty;
     }
 }
